@@ -64,18 +64,8 @@ class _HomeState extends State<Home> {
               )
             )    
           ],
-         ),
-         SizedBox(height: 10.0),
-         Container(
-           height: 700.0,
-           child: ListView(
-             scrollDirection: Axis.horizontal,
-             children: <Widget>[
-
-             ],
-           ),
          )
-        ],
+        ]
       )
     );
   }
