@@ -18,22 +18,24 @@ class _TabelaState extends State<Tabela> {
             children: <Widget>[
               Text('1,25m',
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 30.0
+              fontSize: 21.0
               ),
               ),
               Container(
-            width: 140.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Carl Zeiss',
+                Text("Lentes multifocais\n"
+                     "de alta qualidade \n"
+                     "ao alcance de todos.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 15.0
+              fontSize: 21.0
               ),
               ),
                 Text('J6',
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 15.0
+              fontSize: 21.0
               ),
                 )
               ],
@@ -45,14 +47,28 @@ class _TabelaState extends State<Tabela> {
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('1,00m'),
+              Text('1,00m',
+               style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 17.0
+              ),
+              ),
               Container(
-            width: 140.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Carl Zeiss'),
-                Text('J5')
+                Text("As lentes fotossensíveis \n"
+                     "protegem seus olhos \n"
+                     "contra os raios solares.\n",
+                      style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 17.0
+              ),
+              ),
+                Text('J5',
+                 style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 17.0
+              ),
+              )
               ],
             ),
           )
@@ -62,14 +78,28 @@ class _TabelaState extends State<Tabela> {
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('0,75m'),
+              Text('0,75m',
+              style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 16.0
+              ),
+              ),
               Container(
-            width: 140.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Carl Zeiss'),
-                Text('J4')
+                Text("Lentes multifocais\n"
+                     "de alta qualidade \n"
+                     "ao alcance de todos.\n",
+                     style: TextStyle(fontFamily: ('Varela'),
+                    fontSize: 16.0
+              ),
+                     ),
+                Text('J4',
+              style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 16.0
+              ),
+                )
               ],
             ),
           )
