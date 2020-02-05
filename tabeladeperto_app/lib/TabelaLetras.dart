@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Tabela extends StatefulWidget {
+class TabelaLetras extends StatefulWidget {
   @override
-  _TabelaState createState() => _TabelaState();
+  _TabelaLetrasState createState() => _TabelaLetrasState();
 }
 
-class _TabelaState extends State<Tabela> {
+class _TabelaLetrasState extends State<TabelaLetras> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
