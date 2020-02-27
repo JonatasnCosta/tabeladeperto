@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:tabeladeperto_app/TabelaLetras.dart';
-//import 'package:tabeladeperto_app/TabelaNumerica.dart';
 import 'package:tabeladeperto_app/Home.dart';
 
 

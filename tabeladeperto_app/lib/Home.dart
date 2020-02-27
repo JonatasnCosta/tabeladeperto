@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MenuBotoes.dart';
-
-
-
+import 'Menus/MenuBotoes.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,8 +14,7 @@ TabController _tabController;
    super.initState();
    _tabController = TabController(length: 3, vsync: this);
  }
-
-  @override
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
@@ -102,10 +98,8 @@ TabController _tabController;
                 MenuBotoes(),
                 MenuBotoes(),
                 MenuBotoes(),
-              
               ],
             ),
-
           )
         ],
       ),

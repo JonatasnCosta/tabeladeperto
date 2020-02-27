@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MenuBotoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,13 +19,13 @@ class MenuBotoes extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               _buildCard('Tabela numerica', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
                false, false, context),
-               _buildCard('Tabela numerica', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
                false, false, context),
-               _buildCard('Tabela numerica', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
                false, false, context),
-               _buildCard('Tabela numerica', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
                false, false, context)
               ],
             ),
@@ -52,8 +51,43 @@ class MenuBotoes extends StatelessWidget {
             ],
             color: Colors.white
           ),
+          child: Column(
+            children: <Widget>[
+             Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                    Icon(Icons.favorite_border, color: Color(0xffef7532))
+                  ]
+                )
+              ),
+              Hero(
+              tag: imgPath,
+              child: Container(
+                height: 75.0,
+                width: 75.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                  image: AssetImage(imgPath),
+                  fit: BoxFit.contain 
+                  )
+                ),
+              ),
+              ),
+             SizedBox(height: 7.0,),
+             Text(name,
+               style: TextStyle(
+                 fontFamily: 'Varela',
+                 fontSize: 14.0,
+                 color: Color(0xff575e67)
+               ),
+             ) 
+            ],
+          ),
         )
       )
-      );
+    );
  }
 }
