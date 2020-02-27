@@ -19,13 +19,13 @@ class MenuBotoes extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/logo.jpg',
+               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
                false, false, context)
               ],
             ),
