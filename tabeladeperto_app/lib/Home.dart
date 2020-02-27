@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'MenuBotoes.dart';
+
+
 
 
 class Home extends StatefulWidget {
@@ -6,67 +9,107 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home>
+with SingleTickerProviderStateMixin {
+TabController _tabController;
+@override
+ void initState(){
+   super.initState();
+   _tabController = TabController(length: 3, vsync: this);
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar( 
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color(0xff545d68)),
+            onPressed: (){},
+        ) ,
+        title: Text("Tabela de Perto",
+        style: TextStyle(
+          fontFamily: 'Varela',
+          fontSize: 20.0,
+          color: Color(0xff545d68)
+        ),
+        ),
+        actions: <Widget>[
+          IconButton(
+          icon: Icon(
+            Icons.more_vert,
+            color: Color(0xff545d68)),
+            onPressed: (){},
+        ) ,
+        ],
+      ),
       body: ListView(
-        padding: EdgeInsets.only(left: 15.0),
+        padding: EdgeInsets.only(left: 20.0),
         children: <Widget>[
-          SizedBox(height: 50.0,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-             Text('Tabela de leitura',
-             style: TextStyle(fontFamily: 'Varela',
-             fontSize: 30.0,
-             fontWeight: FontWeight.bold,
-             color: Color(0xff473d3a)
-             )
-             ),
-           Padding(
-             padding: EdgeInsets.only(right: 15.0),
-             child: Container(
-               height: 40.0,
-               width: 40.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-               image:   DecorationImage(
-                  image: AssetImage('assets/logo.jpg'),
-                  fit: BoxFit.cover
-               )
-              ),
-             )
-           )
-           ],
-          ),
-          SizedBox(height: 10.0,),
-          Padding(
-            padding: EdgeInsets.only( right: 45.0),
-            child: Container(
-            child: Text('Tabela de leitua de perto digital ! .',
-            style: TextStyle(fontFamily: 'Nunito',
-            fontSize: 17.0,
-            fontWeight: FontWeight.w300,
-            color: Color(0xffb0aaa7)
-               )
-              )
-             )
-          ),
           SizedBox(height: 15.0,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Text('Selecione uma tabela abaixo:',
-              style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 17.0,
-              color: Color(0xff473d3a)
-              )
-            )    
-          ],
-         )
-        ]
-      )
+          Text('Categorias',
+          style: TextStyle(
+            fontFamily: 'Varela',
+            fontSize: 42.0,
+            fontWeight: FontWeight.bold
+          ),
+          ),
+          SizedBox(height: 15.0),
+          TabBar(
+           controller: _tabController,
+           indicatorColor: Colors.transparent,
+           labelColor: Color(0xffc88d67),
+           isScrollable: true,
+           labelPadding: EdgeInsets.only(right: 45.0),
+           unselectedLabelColor: Color(0xffcdcdcd),
+           tabs: <Widget>[
+             Tab(
+               child: Text('Letras',
+               style: TextStyle(
+                 fontFamily: 'Varela',
+                 fontSize: 21.0,
+               ),
+               ),
+             ),
+             Tab(
+               child: Text('Numérica',
+               style: TextStyle(
+                 fontFamily: 'Varela',
+                 fontSize: 21.0,
+               ),
+               ),
+             ),
+             Tab(
+               child: Text('Direcional',
+               style: TextStyle(
+                 fontFamily: 'Varela',
+                 fontSize: 21.0,
+               ),
+               ),
+             )
+            ],
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height  ,
+            width: double.infinity,
+            child: TabBarView(
+              controller: _tabController,
+              children: <Widget>[
+                MenuBotoes(),
+                MenuBotoes(),
+                MenuBotoes(),
+              
+              ],
+            ),
+
+          )
+        ],
+      ),
     );
   }
 }
+
