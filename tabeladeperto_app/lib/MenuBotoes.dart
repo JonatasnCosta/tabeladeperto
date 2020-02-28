@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'Tabelas/TesteDetalis.dart';
+
+
 
 class MenuBotoes extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +23,13 @@ class MenuBotoes extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
+               _buildCard('Letras', 'assets/letras.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
+               _buildCard('Letras', 'assets/direcional.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
+               _buildCard('Letras', 'assets/numerica.jpg',
                false, false, context),
-               _buildCard('Letras', '\$1234', 'assets/letras.jpg',
+               _buildCard('Letras'  , 'assets/direcional.jpg',
                false, false, context)
               ],
             ),
@@ -34,11 +38,17 @@ class MenuBotoes extends StatelessWidget {
       ),
     );
   }
-   Widget _buildCard(String name, String price, String imgPath, bool added, bool isFavorite, context){
+   Widget _buildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
-      padding: EdgeInsets.only(top: 15.0, bottom: 5.0, left: 5.0, right: 5.0),
+      padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
-        onTap: (){},
+        onTap: (){
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => TesteDetalis(
+               cookiename: name,
+               assetPath: imgPath
+            )));
+        },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
@@ -61,11 +71,9 @@ class MenuBotoes extends StatelessWidget {
                     isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
                     Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                )
+                ),
               ),
-              Hero(
-              tag: imgPath,
-              child: Container(
+               Container(
                 height: 75.0,
                 width: 75.0,
                 decoration: BoxDecoration(
@@ -75,7 +83,7 @@ class MenuBotoes extends StatelessWidget {
                   )
                 ),
               ),
-              ),
+              
              SizedBox(height: 7.0,),
              Text(name,
                style: TextStyle(

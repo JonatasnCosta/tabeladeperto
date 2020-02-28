@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Menus/MenuBotoes.dart';
+import 'MenuBotoes.dart';
+
+
 
 class Home extends StatefulWidget {
   @override
@@ -90,7 +92,7 @@ TabController _tabController;
             ],
           ),
           Container(
-            height: MediaQuery.of(context).size.height  ,
+            height: MediaQuery.of(context).size.height - 50.0 ,
             width: double.infinity,
             child: TabBarView(
               controller: _tabController,

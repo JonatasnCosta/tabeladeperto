@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 
+
 class TesteDetalis extends StatelessWidget {
-  final assetPath, cookieprice, cookiename;
-  TesteDetalis({this.assetPath, this.cookieprice, this.cookiename});
+  final assetPath, cookiename;
+  TesteDetalis({this.assetPath, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
+     appBar: AppBar( 
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
@@ -35,10 +36,10 @@ class TesteDetalis extends StatelessWidget {
         ) ,
         ],
       ),
-      body: ListView(
+      body:  ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
         children: <Widget>[
-          SizedBox(height: 100.0,),
+          SizedBox(height: 50.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -222,6 +223,8 @@ class TesteDetalis extends StatelessWidget {
         )
       ],
       ),
-      );
+         
+    );
+        
   }
 }
