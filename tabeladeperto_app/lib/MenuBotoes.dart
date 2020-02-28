@@ -4,10 +4,6 @@ import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
 
-
-
-
-
 class MenuBotoes extends StatelessWidget {
 
   @override
@@ -24,7 +20,7 @@ class MenuBotoes extends StatelessWidget {
             child: GridView.count(
               crossAxisCount: 2,
               primary: false,
-              crossAxisSpacing: 10.0,
+              crossAxisSpacing:10.0,
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
@@ -39,9 +35,9 @@ class MenuBotoes extends StatelessWidget {
                ],
             ),
           ),
-         ],
+        ],
       ),
-    );
+      );
   }
    Widget _buildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
@@ -53,7 +49,9 @@ class MenuBotoes extends StatelessWidget {
             TabelaLetras(
                cookiename: name,
                assetPath: imgPath
-            )));
+            )
+            )
+          );
         },
         child: Container(
           decoration: BoxDecoration(
@@ -103,7 +101,6 @@ class MenuBotoes extends StatelessWidget {
       )
     );
  }
- 
 }
  Widget buildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
@@ -142,7 +139,7 @@ class MenuBotoes extends StatelessWidget {
                 ),
               ),
                Container(
-                height: 100.0,
+                height:100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -225,7 +222,7 @@ class MenuBotoes extends StatelessWidget {
       )
     );
  }
- 
+
  Widget maculabuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),

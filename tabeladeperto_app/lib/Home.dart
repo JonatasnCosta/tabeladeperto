@@ -102,7 +102,7 @@ TabController _tabController;
                 MenuBotoes(),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
