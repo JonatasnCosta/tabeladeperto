@@ -4,7 +4,7 @@ import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
 
-class MenuBotoes extends StatelessWidget {
+class MenuLetras extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +26,11 @@ class MenuBotoes extends StatelessWidget {
               children: <Widget>[
                _buildCard('Letras','assets/letras.jpg',
                false, false, context),
-               buildCard('Numérica','assets/numerica.jpg',
+               buildCard('Snellen','assets/snellen.jpg',
                false, false, context),
-               direcionalbuildCard('Direcional','assets/direcional.jpg',
+               direcionalbuildCard('Frases Português','assets/portugues.jpg',
                false, false, context),
-               maculabuildCard('Macula','assets/macula.jpg',
+               maculabuildCard('Frases Inglês','assets/ingles.jpg',
                false, false, context)
                ],
             ),

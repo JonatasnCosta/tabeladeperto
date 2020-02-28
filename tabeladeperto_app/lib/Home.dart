@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'MenuBotoes.dart';
+import 'package:tabeladeperto_app/MenuDirecional.dart';
+import 'package:tabeladeperto_app/MenuLetras.dart';
+import 'package:tabeladeperto_app/MenuNumerica.dart';
+
 
 
 
@@ -25,7 +28,7 @@ TabController _tabController;
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back,
+            Icons.blur_on,
             color: Color(0xff545d68)),
             onPressed: (){},
         ) ,
@@ -97,9 +100,9 @@ TabController _tabController;
             child: TabBarView(
               controller: _tabController,
               children: <Widget>[
-                MenuBotoes(),
-                MenuBotoes(),
-                MenuBotoes(),
+                MenuLetras(),
+                MenuNumerica(),
+                MenuDirecional(),
               ],
             ),
           ),
