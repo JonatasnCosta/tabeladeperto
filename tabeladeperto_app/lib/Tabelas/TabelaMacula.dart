@@ -2,19 +2,61 @@ import 'package:flutter/material.dart';
 
 
 
-class Teste extends StatefulWidget {
+class TabelaMacula extends StatefulWidget {
+  final assetPath, cookiename;
+  TabelaMacula({this.assetPath, this.cookiename});
   @override
-  _TesteState createState() => _TesteState();
+  _TabelaMaculaState createState() => _TabelaMaculaState();
 }
 
-class _TesteState extends State<Teste> {
+class _TabelaMaculaState extends State<TabelaMacula> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView(
+    return Scaffold(
+       appBar: AppBar( 
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color(0xff545d68)),
+            onPressed: (){ 
+              Navigator.of(context).pop();
+              },
+        ) ,
+        title: Text("Tabela de Perto",
+        style: TextStyle(
+          fontFamily: 'Varela',
+          fontSize: 20.0,
+          color: Color(0xff545d68)
+        ),
+        ),
+        actions: <Widget>[
+          IconButton(
+          icon: Icon(
+            Icons.more_vert,
+            color: Color(0xff545d68)),
+            onPressed: (){},
+        ) ,
+        ],
+      ),
+      body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
         children: <Widget>[
-          SizedBox(height: 100.0,),
+           SizedBox(height: 15.0,),
+          Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Text('Teste de Macula',
+            style: TextStyle(
+              fontFamily: 'Varela',
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+              color: Color(0xfff17532)
+            )
+          )
+          ),
+          SizedBox(height: 50.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

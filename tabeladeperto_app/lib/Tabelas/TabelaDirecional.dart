@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
-class TabelaLetras extends StatelessWidget {
+
+
+class TabelaDirecional extends StatefulWidget {
    final assetPath, cookiename;
-  TabelaLetras({this.assetPath, this.cookiename});
+  TabelaDirecional({this.assetPath, this.cookiename});
+  @override
+  _TabelaDirecionalState createState() => _TabelaDirecionalState();
+}
+
+class _TabelaDirecionalState extends State<TabelaDirecional> {
   @override
   Widget build(BuildContext context) {
-    return 
-      Scaffold(
-        appBar: AppBar( 
+    return Scaffold(
+      appBar: AppBar( 
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
@@ -35,21 +41,20 @@ class TabelaLetras extends StatelessWidget {
         ) ,
         ],
       ),
-       body: 
-       ListView(
+      body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
         children: <Widget>[
-          SizedBox(height: 15.0,),
+           SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Tabela de Letras',
+            child: Text('Tabela Direcional',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
               color: Color(0xfff17532)
             )
-          ),
+          )
           ),
           SizedBox(height: 50.0,),
           Row(
@@ -65,8 +70,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("C  O  H  Z  V  L  G\n"
-                     "S  Z  N  D  C  J  X \n",
+                Text("8  4  6  2\n"
+                     "7  3  8  6   \n",
                      //"ao alcance de todos.\n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
@@ -96,8 +101,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("  K  C  N  R  D  B  S \n"
-                     "  V  O  Y  W  S  J  L  \n",
+                Text("  6  7  2  6 \n"
+                     "  1  8  5  9  \n",
                      //"contra os raios solares.\n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 17.0
@@ -127,8 +132,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("     M  N  Q  O  W  M\n"
-                     "     L  D  S  A  N  Z  X \n",
+                Text("     8  5  4  9\n"
+                     "     3  2  7  6\n",
                     style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 13.0
               ),
@@ -157,8 +162,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("       P  B  M  N  Q  O  W  M  \n"
-                     "          F  C  L  D  S  A  N  Z \n",
+                Text("       7  8  3  4  7  \n"
+                     "       6  9  7  5  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 10.0
                   ),
@@ -187,8 +192,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("          P  B  M  N  Q  O  W  M\n"
-                     "          F  C  L  D  S  A  N  Z  X \n",
+                Text("          7  8  3  4  7\n"
+                     "          6  9  7  5  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 9.0
                   ),
@@ -217,8 +222,8 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("              P  B  M  N  Q  O  W  M\n"
-                     "              F  C  L  D  S  A  N  Z  X \n",
+                Text("              8  5  4  9  8  8\n"
+                     "              3  2  7  6  3  3 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 8.0
                   ),
@@ -236,11 +241,5 @@ class TabelaLetras extends StatelessWidget {
       ],
       ),
     );
-  
   }
 }
-
-
- 
-      
-    
