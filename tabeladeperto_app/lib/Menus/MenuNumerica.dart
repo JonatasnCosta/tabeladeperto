@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaConvergencia.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaLenteContato.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
+
 
 
 
@@ -30,9 +32,9 @@ class MenuNumerica extends StatelessWidget {
                false, false, context),
                adicaobuildCard('Tabela de Adição','assets/adicao.png',
                false, false, context),
-               direcionalbuildCard('Tabela Convergência','assets/numerica.jpg',
+               convergenciabuildCard('Tabela Convergência','assets/convergencia.png',
                false, false, context),
-               maculabuildCard('Lente de contato','assets/lentedecontato.png',
+               lentedecontatobuildCard('Lente de contato','assets/lentedecontato.png',
                false, false, context)
                ],
             ),
@@ -164,14 +166,14 @@ class MenuNumerica extends StatelessWidget {
       )
     );
  }
- Widget direcionalbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
+ Widget convergenciabuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaDirecional(
+            TabelaConvergencia(
                cookiename: name_3,
                assetPath: imgPath_3
             )));
@@ -225,14 +227,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 
- Widget maculabuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
+ Widget lentedecontatobuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaMacula(
+            TabelaLenteContato(
                cookiename: name_4,
                assetPath: imgPath_4
             )));
