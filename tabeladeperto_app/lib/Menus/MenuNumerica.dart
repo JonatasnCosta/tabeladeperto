@@ -32,7 +32,7 @@ class MenuNumerica extends StatelessWidget {
                false, false, context),
                direcionalbuildCard('Tabela Convergência','assets/numerica.jpg',
                false, false, context),
-               maculabuildCard('Lente de contato','assets/numerica.jpg',
+               maculabuildCard('Lente de contato','assets/lentedecontato.png',
                false, false, context)
                ],
             ),

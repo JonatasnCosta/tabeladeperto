@@ -89,7 +89,7 @@ final assetPath, cookiename;
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('41-44 Anos         ADD + 1.25',
+              Text('41-44 Anos        ADD + 1.25',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -100,7 +100,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('45 Anos               ADD + 1.50',
+              Text('45 Anos              ADD + 1.50',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -122,7 +122,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('50 Anos               ADD + 2.00',
+              Text('50 Anos              ADD + 2.00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -133,7 +133,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('51-54 Anos        ADD + 2.25',
+              Text('51-54 Anos       ADD + 2.25',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -144,7 +144,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('55 Anos               ADD + 2.50',
+              Text('55 Anos             ADD + 2.50',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -155,7 +155,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('56-59 Anos        ADD + 2.75',
+              Text('56-59 Anos       ADD + 2.75',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -166,7 +166,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('60 Anos               ADD + 3.00',
+              Text('60 Anos             ADD + 3.00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),

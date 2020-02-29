@@ -73,7 +73,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               children: <Widget>[
              Text("Suas lentes\n"
                   "tem correção visual,\n"
-                  "Cuide bem delas.\n",
+                  "cuide bem delas.\n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
