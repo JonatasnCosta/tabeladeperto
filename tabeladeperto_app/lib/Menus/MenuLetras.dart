@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaSnellen.dart';
 
 
@@ -27,11 +27,11 @@ class MenuLetras extends StatelessWidget {
               children: <Widget>[
                _buildCard('Letras','assets/letras.jpg',
                false, false, context),
-               buildCard('Snellen','assets/snellen.jpg',
+               snellenbuildCard('Snellen','assets/snellen.jpg',
                false, false, context),
-               direcionalbuildCard('Frases Português','assets/portugues.jpg',
+               portuguesbuildCard('Frases Português','assets/portugues.jpg',
                false, false, context),
-               maculabuildCard('Frases Inglês','assets/ingles.jpg',
+               inglesbuildCard('Frases Inglês','assets/ingles.jpg',
                false, false, context)
                ],
             ),
@@ -103,7 +103,7 @@ class MenuLetras extends StatelessWidget {
     );
  }
 }
- Widget buildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+ Widget snellenbuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -163,14 +163,14 @@ class MenuLetras extends StatelessWidget {
       )
     );
  }
- Widget direcionalbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
+ Widget portuguesbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaDirecional(
+            TabelaPortugues(
                cookiename: name_3,
                assetPath: imgPath_3
             )));
@@ -224,14 +224,14 @@ class MenuLetras extends StatelessWidget {
     );
  }
 
- Widget maculabuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
+ Widget inglesbuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaMacula(
+            TabelaIngles(
                cookiename: name_4,
                assetPath: imgPath_4
             )));
