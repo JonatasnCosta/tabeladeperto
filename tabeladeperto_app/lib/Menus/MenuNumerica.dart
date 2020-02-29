@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
 
@@ -26,13 +26,13 @@ class MenuNumerica extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               _buildCard('1','assets/numerica.jpg',
+               numericabuildCard('Numérica','assets/numerica.jpg',
                false, false, context),
-               buildCard(' 2','assets/numerica.jpg',
+               adicaobuildCard('Tabela de Adição','assets/adicao.png',
                false, false, context),
-               direcionalbuildCard('3','assets/numerica.jpg',
+               direcionalbuildCard('Tabela Convergência','assets/numerica.jpg',
                false, false, context),
-               maculabuildCard('4','assets/numerica.jpg',
+               maculabuildCard('Lente de contato','assets/numerica.jpg',
                false, false, context)
                ],
             ),
@@ -41,14 +41,14 @@ class MenuNumerica extends StatelessWidget {
       ),
       );
   }
-   Widget _buildCard(String name, String imgPath, bool added, bool isFavorite, context){
+   Widget numericabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaLetras(
+            TabelaNumerica(
                cookiename: name,
                assetPath: imgPath
             )
@@ -104,14 +104,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 }
- Widget buildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+ Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaAdicao(
                cookiename: name_1,
                assetPath: imgPath_1
             )));

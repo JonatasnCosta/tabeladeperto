@@ -72,7 +72,6 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               children: <Widget>[
                 Text("     8  4  6  2\n"
                      "     7  3  8  6   \n",
-                     //"ao alcance de todos.\n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),

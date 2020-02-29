@@ -5,9 +5,6 @@ import 'package:tabeladeperto_app/Menus/MenuNumerica.dart';
 
 
 
-
-
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
