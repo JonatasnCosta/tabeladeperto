@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaMacula.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaSnellen.dart';
+
 
 class MenuLetras extends StatelessWidget {
 
@@ -109,7 +110,7 @@ class MenuLetras extends StatelessWidget {
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaSnellen(
                cookiename: name_1,
                assetPath: imgPath_1
             )));

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/MenuDirecional.dart';
-import 'package:tabeladeperto_app/MenuLetras.dart';
-import 'package:tabeladeperto_app/MenuNumerica.dart';
+import 'package:tabeladeperto_app/Menus/MenuDirecional.dart';
+import 'package:tabeladeperto_app/Menus/MenuLetras.dart';
+import 'package:tabeladeperto_app/Menus/MenuNumerica.dart';
+
+
 
 
 

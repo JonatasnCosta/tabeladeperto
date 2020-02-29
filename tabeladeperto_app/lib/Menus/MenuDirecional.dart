@@ -24,13 +24,13 @@ class MenuDirecional extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               _buildCard('5','assets/letras.jpg',
+               _buildCard('5','assets/direcional.jpg',
                false, false, context),
-               buildCard('6','assets/snellen.jpg',
+               buildCard('6','assets/direcional.jpg',
                false, false, context),
-               direcionalbuildCard('7','assets/portugues.jpg',
+               direcionalbuildCard('7','assets/direcional.jpg',
                false, false, context),
-               maculabuildCard('8','assets/ingles.jpg',
+               maculabuildCard('8','assets/direcional.jpg',
                false, false, context)
                ],
             ),
