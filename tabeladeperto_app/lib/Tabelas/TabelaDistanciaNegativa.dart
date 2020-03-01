@@ -1,0 +1,138 @@
+import 'package:flutter/material.dart';
+
+
+
+class TabelaDistanciaNegativa extends StatelessWidget {
+  final assetPath, cookiename;
+    TabelaDistanciaNegativa({this.assetPath, this.cookiename});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar( 
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color(0xff545d68)),
+            onPressed: (){ 
+              Navigator.of(context).pop();
+              },
+        ) ,
+        title: Text("Tabela de Perto",
+        style: TextStyle(
+          fontFamily: 'Varela',
+          fontSize: 20.0,
+          color: Color(0xff545d68)
+        ),
+        ),
+        actions: <Widget>[
+          IconButton(
+          icon: Icon(
+            Icons.more_vert,
+            color: Color(0xff545d68)),
+            onPressed: (){},
+        ) ,
+        ],
+      ),
+      body: ListView(
+        padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
+        children: <Widget>[
+           SizedBox(height: 15.0,),
+          Padding(
+            padding: EdgeInsets.only(left: 20.0),
+            child: Text('Distância Vértice Lente Negativa',
+            style: TextStyle(
+              fontFamily: 'Varela',
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+              color: Color(0xfff17532)
+            )
+          )
+          ),
+          SizedBox(height: 50.0,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text('Rx                    Lente de Contato',
+              style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 21.0
+              ),
+              ),   
+         ],
+        ),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
+        Row(
+           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           children: <Widget>[
+              Text('- 5.00                    - 4.75\n'
+                   '- 5.25                    - 5.50\n'
+                   '- 5.50                    - 5.75\n'
+                   '- 5.75                    - 6.00\n'
+                   '- 6.00                    - 6.25\n'
+                   '- 6.25                    - 6.75\n'
+                   '- 6.50                    - 7.00\n'
+                   '- 6.75                    - 7.50\n'
+                   '- 7.00                    - 7.75\n'
+                   '- 7.25                    - 8.00\n'
+                   '- 7.50                    - 8.25\n'
+                   '- 7.75                    - 8.50\n'
+                   '- 8.00                    - 8.75\n' 
+                   '- 8.25                    - 9.00\n'
+                   '- 8.50                    - 9.50\n'
+                   '- 8.75                    - 9.75\n'
+                   '- 9.00                    -10.00\n'
+                   '- 9.25                    -10.50\n'
+                   '- 9.50                    -11.00\n'
+                   '- 9.75                    -11.25\n'
+                   '-10.00                    -11.50\n'
+                   '-10.25                    -11.75\n'
+                   '-10.50                    -11.75\n'
+                   '-10.75                    -12.50\n'
+                   '-11.00                    -12.75\n'
+                   '-11.25                    -13.00\n'
+                   '-11.50                    -13.50\n'
+                   '-11.75                    -13.75\n'
+                   '-12.00                    -14.00\n'
+                   '-12.50                    -14.75\n'
+                   '-12.75                    -15.00\n'
+                   '-13.00                    -15.50\n'
+                   '-13.50                    -16.25\n'
+                   '-13.75                    -16.75\n'
+                   '-14.00                    -17.00\n'
+                   '-14.25                    -17.25\n'
+                   '-14.50                    -17.50\n'
+                   '-14.75                    -18.00\n'
+                   '-15.00                    -18.50\n'
+                   '-15.50                    -19.00\n'
+                   '-15.75                    -19.50\n'
+                   '-16.25                    -20.00\n'
+                   '-16.75                    -21.00\n'
+                   '-17.00                    -11.75\n'
+                   '-17.25                    -22.00\n'
+                   '-17.50                    -11.75\n'
+                   '-18.00                    -23.00\n'
+                   '-18.50                    -24.00\n'
+                   '-19.00                    -11.75\n'
+                   '-19.50                    -11.75\n'
+                   '-20.00                    -26.50\n'
+                   '-21.00                    -11.75\n'
+                   '-22.00                    -11.75\n'
+                   '-23.00                    -11.75\n'
+                   '-24.00                    -11.75\n'
+                   '-25.00                    -11.75\n'
+                   '-26.50                    -11.75\n'
+                   '-27.00                    -11.75\n' ,
+               style: TextStyle(fontFamily: ('Varela'),
+              fontSize: 21.0
+              ),
+              ),
+         ],
+        )  
+      ],
+      ),
+    );
+  }
+}
+

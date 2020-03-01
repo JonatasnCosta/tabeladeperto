@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaNegativa.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaPositiva.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaSnellen.dart';
 
 
 class MenuLenteContato extends StatelessWidget {
@@ -28,7 +27,7 @@ class MenuLenteContato extends StatelessWidget {
               children: <Widget>[
                ditanciapositivabuildCard('Distância vertice +','assets/lentedecontato.png',
                false, false, context),
-               snellenbuildCard('Distância vertice -','assets/lentedecontato.png',
+               distancianegativabuildCard('Distância vertice -','assets/lentedecontato.png',
                false, false, context),
                portuguesbuildCard('Lente de Contato','assets/lentedecontato.png',
                false, false, context),
@@ -104,14 +103,14 @@ class MenuLenteContato extends StatelessWidget {
     );
  }
 }
- Widget snellenbuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+ Widget distancianegativabuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaSnellen(
+            TabelaDistanciaNegativa(
                cookiename: name_1,
                assetPath: imgPath_1
             )));
