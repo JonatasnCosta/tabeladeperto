@@ -5,8 +5,10 @@ class TabelaLenteContato extends StatelessWidget {
   final assetPath, cookiename;
     TabelaLenteContato({this.assetPath, this.cookiename});
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar( 
+  
+   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar( 
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,

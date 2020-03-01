@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaConvergencia.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaPositiva.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaSnellen.dart';
 
 
+class MenuLenteContato extends StatelessWidget {
 
-
-
-class MenuNumerica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,13 +26,13 @@ class MenuNumerica extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               numericabuildCard('Numérica','assets/numerica.jpg',
+               ditanciapositivabuildCard('Distância vertice +','assets/lentedecontato.png',
                false, false, context),
-               adicaobuildCard('Tabela de Adição','assets/adicao.png',
+               snellenbuildCard('Distância vertice -','assets/lentedecontato.png',
                false, false, context),
-               convergenciabuildCard('Tabela Convergência','assets/convergencia.png',
+               portuguesbuildCard('Lente de Contato','assets/lentedecontato.png',
                false, false, context),
-               numericabuildCard('Numérica','assets/numerica.jpg',
+               inglesbuildCard('Lente de Contato','assets/lentedecontato.png',
                false, false, context)
                ],
             ),
@@ -41,14 +41,14 @@ class MenuNumerica extends StatelessWidget {
       ),
       );
   }
-   Widget numericabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
+   Widget ditanciapositivabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaDistanciaPositiva(
                cookiename: name,
                assetPath: imgPath
             )
@@ -104,14 +104,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 }
- Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+ Widget snellenbuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaAdicao(
+            TabelaSnellen(
                cookiename: name_1,
                assetPath: imgPath_1
             )));
@@ -164,14 +164,14 @@ class MenuNumerica extends StatelessWidget {
       )
     );
  }
- Widget convergenciabuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
+ Widget portuguesbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaConvergencia(
+            TabelaPortugues(
                cookiename: name_3,
                assetPath: imgPath_3
             )));
@@ -225,14 +225,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 
- Widget numericabuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
+ Widget inglesbuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaIngles(
                cookiename: name_4,
                assetPath: imgPath_4
             )));
