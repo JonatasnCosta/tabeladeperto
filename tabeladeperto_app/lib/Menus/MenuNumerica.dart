@@ -28,11 +28,11 @@ class MenuNumerica extends StatelessWidget {
               children: <Widget>[
                numericabuildCard('Numérica','assets/numerica.jpg',
                false, false, context),
-               adicaobuildCard('Tabela de Adição','assets/adicao.png',
+               adicaobuildCard('Tabela de Adição','assets/adicao.jpg',
                false, false, context),
                convergenciabuildCard('Tabela Convergência','assets/convergencia.png',
                false, false, context),
-               numericabuildCard('Numérica','assets/numerica.jpg',
+               numericabuildCard('Numérica','assets/numerica_2.jpg',
                false, false, context)
                ],
             ),

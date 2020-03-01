@@ -49,9 +49,13 @@ flutter:
     - assets/snellen.jpg
     - assets/ingles.jpg
     - assets/portugues.jpg
-    - assets/adicao.png
+    - assets/adicao.jpg
     - assets/lentedecontato.png
     - assets/convergencia.png
+    - assets/lente_2.jpg
+    - assets/lente_3.jpg
+    - assets/conversao.jpg
+    - assets/numerica_2.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

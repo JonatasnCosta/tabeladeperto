@@ -42,7 +42,7 @@ class TabelaDistanciaPositiva extends StatelessWidget {
            SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Distância Vértice Lente Positivas',
+            child: Text('Distância-Vértice Lente Positivas',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,

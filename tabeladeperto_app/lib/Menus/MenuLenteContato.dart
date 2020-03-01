@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaConversaoDiopitrias.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaNegativa.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaPositiva.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
+
 
 
 class MenuLenteContato extends StatelessWidget {
@@ -25,11 +26,11 @@ class MenuLenteContato extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               ditanciapositivabuildCard('Distância vertice +','assets/lentedecontato.png',
+               ditanciapositivabuildCard('Distância-Vértice +','assets/lente_3.jpg',
                false, false, context),
-               distancianegativabuildCard('Distância vertice -','assets/lentedecontato.png',
+               distancianegativabuildCard('Distância-Vértice - ','assets/lente_2.jpg',
                false, false, context),
-               portuguesbuildCard('Lente de Contato','assets/lentedecontato.png',
+               conversaobuildCard('Conversão Dioptrias ','assets/conversao.jpg',
                false, false, context),
                inglesbuildCard('Lente de Contato','assets/lentedecontato.png',
                false, false, context)
@@ -163,14 +164,14 @@ class MenuLenteContato extends StatelessWidget {
       )
     );
  }
- Widget portuguesbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
+ Widget conversaobuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaPortugues(
+            TabelaConversaoDiopitrias(
                cookiename: name_3,
                assetPath: imgPath_3
             )));

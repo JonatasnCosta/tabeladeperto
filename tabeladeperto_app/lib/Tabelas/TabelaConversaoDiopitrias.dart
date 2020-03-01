@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 
 
-class TabelaDistanciaNegativa extends StatelessWidget {
+class TabelaConversaoDiopitrias extends StatelessWidget {
   final assetPath, cookiename;
-    TabelaDistanciaNegativa({this.assetPath, this.cookiename});
+    TabelaConversaoDiopitrias({this.assetPath, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,8 @@ class TabelaDistanciaNegativa extends StatelessWidget {
            SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Distância-Vértice Lente Negativa',
+            child: Text('Tabela de Conversão\n'
+                        'Dioptrias - mm\n',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
@@ -51,7 +52,7 @@ class TabelaDistanciaNegativa extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 50.0,),
+          SizedBox(height: 20.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -66,8 +67,8 @@ class TabelaDistanciaNegativa extends StatelessWidget {
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('- 5.00                    - 4.75\n'
-                   '- 5.25                    - 4.75\n'
+              Text('35.00 = 9.64      35.25 = 9.57 \n',
+                 /*  '- 5.25                    - 4.75\n'
                    '- 5.50                    - 5.25\n'
                    '- 5.75                    - 5.25\n'
                    '- 6.00                    - 5.50\n'
@@ -123,11 +124,11 @@ class TabelaDistanciaNegativa extends StatelessWidget {
                    '-24.00                    -18.50\n'
                    '-25.00                    -19.25\n'
                    '-26.50                    -20.00\n'
-                   '-27.00                    -20.50\n' ,
+                   '-27.00                    -20.50\n' ,*/
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
-              ),
+            )
          ],
         )  
       ],
