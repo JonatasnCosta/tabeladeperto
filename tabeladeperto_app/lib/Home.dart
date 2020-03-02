@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tabeladeperto_app/Menus/MenuDirecional.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
-import 'package:tabeladeperto_app/Menus/MenuLetras.dart';
-import 'package:tabeladeperto_app/Menus/MenuNumerica.dart';
+import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
+import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
+
 
 
 
@@ -69,7 +70,7 @@ TabController _tabController;
            unselectedLabelColor: Color(0xffcdcdcd),
            tabs: <Widget>[
              Tab(
-               child: Text('Letras',
+               child: Text('Tabelas de leitura',
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,
@@ -77,7 +78,7 @@ TabController _tabController;
                ),
              ),
              Tab(
-               child: Text('Numérica',
+               child: Text('Tabelas Refração',
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,
@@ -108,8 +109,8 @@ TabController _tabController;
             child: TabBarView(
               controller: _tabController,
               children: <Widget>[
-                MenuLetras(),
-                MenuNumerica(),
+                MenuTabelasLeitura(),
+                MenuTabelasRefracao(),
                 MenuLenteContato(),
                 MenuDirecional(),
                ],

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaConvergencia.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
 
 
 
+class MenuTabelasLeitura extends StatelessWidget {
 
-
-class MenuNumerica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,13 +26,13 @@ class MenuNumerica extends StatelessWidget {
               mainAxisSpacing: 15.0,
               childAspectRatio: 0.8,
               children: <Widget>[
-               numericabuildCard('Numérica','assets/numerica.jpg',
+               _buildCard('Letras','assets/letras.jpg',
                false, false, context),
-               adicaobuildCard('Tabela de Adição','assets/adicao.jpg',
+               numericabuildCard('Númerica','assets/numerica.jpg',
                false, false, context),
-               convergenciabuildCard('Tabela Convergência','assets/convergencia.png',
+               portuguesbuildCard('Frases Português','assets/portugues.jpg',
                false, false, context),
-               numericabuildCard('Numérica','assets/numerica_2.jpg',
+               direcionalbuildCard('Direcional','assets/direcional.jpg',
                false, false, context)
                ],
             ),
@@ -41,14 +41,14 @@ class MenuNumerica extends StatelessWidget {
       ),
       );
   }
-   Widget numericabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
+   Widget _buildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaLetras(
                cookiename: name,
                assetPath: imgPath
             )
@@ -104,14 +104,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 }
- Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+ Widget numericabuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaAdicao(
+            TabelaNumerica(
                cookiename: name_1,
                assetPath: imgPath_1
             )));
@@ -164,14 +164,14 @@ class MenuNumerica extends StatelessWidget {
       )
     );
  }
- Widget convergenciabuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
+ Widget portuguesbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaConvergencia(
+            TabelaPortugues(
                cookiename: name_3,
                assetPath: imgPath_3
             )));
@@ -225,14 +225,14 @@ class MenuNumerica extends StatelessWidget {
     );
  }
 
- Widget numericabuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
+ Widget direcionalbuildCard(String name_4, String imgPath_4, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaNumerica(
+            TabelaIngles(
                cookiename: name_4,
                assetPath: imgPath_4
             )));
