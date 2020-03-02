@@ -56,7 +56,7 @@ final assetPath, cookiename;
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text('Idade                    ADD/Diopitria',
+              Text('Idade                       Desconto',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -67,7 +67,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('39 Anos               ADD + 0.75',
+              Text('Até 40                     0,75/1,00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -78,7 +78,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('40 Anos               ADD + 1.00',
+              Text('41-44                          1,25',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -89,7 +89,7 @@ final assetPath, cookiename;
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('41-44 Anos        ADD + 1.25',
+              Text('45-48                      1,50/1,75',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -100,7 +100,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('45 Anos              ADD + 1.50',
+              Text('49-52                          2,00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -111,7 +111,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('46-49 Anos        ADD + 1.75',
+              Text('53-56                          2,25',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -122,7 +122,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('50 Anos              ADD + 2.00',
+              Text('57-60                          2,50',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -133,7 +133,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('51-54 Anos       ADD + 2.25',
+              Text('61-64                          2,75',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -144,37 +144,15 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
-              Text('55 Anos             ADD + 2.50',
+              Text('   + 64                          3,00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),
+              )
+            )
          ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('56-59 Anos       ADD + 2.75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('60 Anos             ADD + 3.00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-      ],
-      ),
-      );
-  }
+        ),  
+      ]
+    ),
+  );
+ }
 }

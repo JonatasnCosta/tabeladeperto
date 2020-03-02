@@ -94,7 +94,7 @@ TabController _tabController;
                ),
              ),
              Tab(
-               child: Text('Direcional',
+               child: Text('Teste',
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,

@@ -46,8 +46,6 @@ flutter:
     - assets/numerica.jpg
     - assets/direcional.jpg
     - assets/macula.jpg
-    - assets/snellen.jpg
-    - assets/ingles.jpg
     - assets/portugues.jpg
     - assets/adicao.jpg
     - assets/lentedecontato.png
@@ -55,7 +53,8 @@ flutter:
     - assets/lente_2.jpg
     - assets/lente_3.jpg
     - assets/conversao.jpg
-    - assets/numerica_2.jpg
+    - assets/acomodacao.jpg
+    - assets/dinamica.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
