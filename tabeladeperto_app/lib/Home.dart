@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Menus/MenuDirecional.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
@@ -18,7 +17,7 @@ TabController _tabController;
 @override
  void initState(){
    super.initState();
-   _tabController = TabController(length: 4, vsync: this);
+   _tabController = TabController(length: 3, vsync: this);
  }
 @override
   Widget build(BuildContext context) {
@@ -93,14 +92,6 @@ TabController _tabController;
                ),
                ),
              ),
-             Tab(
-               child: Text('Teste',
-               style: TextStyle(
-                 fontFamily: 'Varela',
-                 fontSize: 21.0,
-               ),
-               ),
-             )
             ],
           ),
            Container(
@@ -112,7 +103,6 @@ TabController _tabController;
                 MenuTabelasLeitura(),
                 MenuTabelasRefracao(),
                 MenuLenteContato(),
-                MenuDirecional(),
                ],
             ),
           ),

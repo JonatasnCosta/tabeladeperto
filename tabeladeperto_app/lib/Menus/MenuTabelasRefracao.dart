@@ -3,7 +3,7 @@ import 'package:tabeladeperto_app/Tabelas/TabelaAcomodacao.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaAmplitude.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDinamicaCC.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
+
 
 
 

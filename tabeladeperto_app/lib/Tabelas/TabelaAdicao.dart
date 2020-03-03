@@ -54,7 +54,7 @@ final assetPath, cookiename;
           ),
           SizedBox(height: 50.0,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Idade                       Desconto',
               style: TextStyle(fontFamily: ('Varela'),
@@ -65,7 +65,7 @@ final assetPath, cookiename;
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('Até 40                     0,75/1,00',
                style: TextStyle(fontFamily: ('Varela'),
@@ -76,7 +76,7 @@ final assetPath, cookiename;
         ),
        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('41-44                          1,25',
                style: TextStyle(fontFamily: ('Varela'),
@@ -87,7 +87,7 @@ final assetPath, cookiename;
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('45-48                      1,50/1,75',
                style: TextStyle(fontFamily: ('Varela'),
@@ -98,7 +98,7 @@ final assetPath, cookiename;
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('49-52                          2,00',
                style: TextStyle(fontFamily: ('Varela'),
@@ -109,7 +109,7 @@ final assetPath, cookiename;
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('53-56                          2,25',
                style: TextStyle(fontFamily: ('Varela'),
@@ -120,7 +120,7 @@ final assetPath, cookiename;
         ),
           Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('57-60                          2,50',
                style: TextStyle(fontFamily: ('Varela'),
@@ -131,7 +131,7 @@ final assetPath, cookiename;
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('61-64                          2,75',
                style: TextStyle(fontFamily: ('Varela'),
@@ -142,7 +142,7 @@ final assetPath, cookiename;
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('   + 64                          3,00',
                style: TextStyle(fontFamily: ('Varela'),
@@ -153,6 +153,7 @@ final assetPath, cookiename;
         ),  
       ]
     ),
+
   );
  }
 }

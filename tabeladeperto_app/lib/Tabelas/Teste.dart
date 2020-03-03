@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 
 
-class TabelaAcomodacao extends StatelessWidget {
+class Teste extends StatelessWidget {
   final assetPath, cookiename;
-    TabelaAcomodacao({this.assetPath, this.cookiename});
+    Teste({this.assetPath, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar( 
@@ -35,7 +35,8 @@ class TabelaAcomodacao extends StatelessWidget {
         ) ,
         ],
       ),
-      body: ListView(
+      body: Center(
+        child: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
         children: <Widget>[
            SizedBox(height: 15.0,),
@@ -73,6 +74,7 @@ class TabelaAcomodacao extends StatelessWidget {
         )
       ],
       ),
+      )
     );
   }
 }
