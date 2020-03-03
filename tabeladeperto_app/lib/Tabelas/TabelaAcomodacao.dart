@@ -51,10 +51,23 @@ class TabelaAcomodacao extends StatelessWidget {
           )
           ),
           SizedBox(height: 50.0,),
-          Row(
+          Container(
+          padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+           child: 
+           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Distância                 ACC(D)s\n'
+               Text(
+                   'Distância                 ACC(D)s\n'
                    '  6 m                           0,16\n'
                    '  3 m                           0,33\n'
                    '  1 m                           1,00\n'
@@ -63,14 +76,14 @@ class TabelaAcomodacao extends StatelessWidget {
                    ' 33 cm                        3,00\n'
                    ' 20 cm                        5,00\n'
                    ' 10 cm                       10,00\n'
-                   '   5 cm                       20,00\n'
-                   ,
+                   '   5 cm                       20,00\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
               ),   
          ],
         )
+       )
       ],
       ),
     );
