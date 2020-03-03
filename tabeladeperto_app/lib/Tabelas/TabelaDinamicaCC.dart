@@ -66,20 +66,20 @@ class TabelaDinamicaCC extends StatelessWidget {
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Text(
-                   'Idade                           Adição\n'
-                   'Até 40 Anos                 -1,25\n'
+               Text( 
+                   '     Idade                        Adição\n'
+                   'Até40 Anos                  -1,25\n'
                    '41-44 Anos                  -1,50\n'
                    '45-49 Anos                  -1,75\n'
                    '50-54 Anos                  -2,00\n'
                    '55-59 Anos                  -2,25\n'
                    '60-64 Anos                  -2,50\n'
                    '65-69 Anos                  -2,75\n'
-                   '  +70 Anos                  -3,00\n',
+                   '  +70   Anos                  -3,00\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),   
+              )
+              )   
          ],
         )
        )

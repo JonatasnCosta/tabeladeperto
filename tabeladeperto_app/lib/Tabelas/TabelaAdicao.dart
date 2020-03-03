@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 
 
 class TabelaAdicao extends StatelessWidget {
-final assetPath, cookiename;
+  final assetPath, cookiename;
     TabelaAdicao({this.assetPath, this.cookiename});
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar( 
+    return Scaffold(appBar: AppBar( 
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
@@ -53,107 +51,40 @@ final assetPath, cookiename;
           )
           ),
           SizedBox(height: 50.0,),
-          Row(
+          Container(
+          padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+           child: 
+           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Idade                       Desconto',
+               Text( 
+                   ' Idade                       Desconto\n'
+                   'Até 40                     0,75/1,00\n'
+                   '41-44                          1,25\n'
+                   '45-48                      1,50/1,75\n'
+                   '49-52                          2,00\n'
+                   '53-56                          2,25\n'
+                   '57-60                          2,50\n'
+                   '61-64                          2,75\n'
+                   '   + 64                          3,00\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),   
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('     Até 40                     0,75/1,00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-       Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('41-44                          1,25',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-         Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('     45-48                      1,50/1,75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('49-52                          2,00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('53-56                          2,25',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-          Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('57-60                          2,50',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('61-64                          2,75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('   + 64                          3,00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
               )
-            )
+              )   
          ],
-        ),  
-      ]
-    ),
-
-  );
- }
+        )
+       )
+      ],
+      ),
+    );
+  }
 }

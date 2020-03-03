@@ -51,7 +51,18 @@ class TabelaAmplitude extends StatelessWidget {
           )
           ),
           SizedBox(height: 50.0,),
-          Row(
+          Container(
+             padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+            child:  Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Idade                    AA\n'
@@ -61,14 +72,14 @@ class TabelaAmplitude extends StatelessWidget {
                    '  30                         6\n'
                    '  40                         4\n'
                    '  50                         1\n'
-                   '  60                        0,50\n'
-                   ,
+                   '  60                        0,50\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
               ),   
          ],
-        )
+         ) 
+        )  
       ],
       ),
     );

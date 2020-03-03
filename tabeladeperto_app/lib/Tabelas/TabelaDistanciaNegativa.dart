@@ -52,21 +52,23 @@ class TabelaDistanciaNegativa extends StatelessWidget {
           )
           ),
           SizedBox(height: 50.0,),
-          Row(
+          Container(
+             padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+            child:  Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('          Rx          Lente de Contato',
-              style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),   
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('- 5.00                    - 4.75\n'
+              Text(
+                   '  Rx            Lente de Contato \n'
+                   '- 5.00                    - 4.75\n'
                    '- 5.25                    - 4.75\n'
                    '- 5.50                    - 5.25\n'
                    '- 5.75                    - 5.25\n'
@@ -129,7 +131,8 @@ class TabelaDistanciaNegativa extends StatelessWidget {
               ),
               ),
          ],
-        )  
+         )  
+       )  
       ],
       ),
     );

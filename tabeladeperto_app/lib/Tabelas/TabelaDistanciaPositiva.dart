@@ -51,22 +51,23 @@ class TabelaDistanciaPositiva extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 50.0,),
-          Row(
+          SizedBox(height: 30.0,),
+          Container(
+            padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+            child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('       Rx            Lente de Contato',
-              style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),   
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('+ 4.75                    + 5.00\n'
+              Text(' Rx            Lente de Contato\n'
+                   '+ 4.75                    + 5.00\n'
                    '+ 5.00                    + 5.50\n'
                    '+ 5.25                    + 5.75\n'
                    '+ 5.50                    + 6.00\n'
@@ -121,8 +122,9 @@ class TabelaDistanciaPositiva extends StatelessWidget {
               fontSize: 21.0
               ),
               ),
-         ],
-        )  
+           ],
+         )  
+       )   
       ],
       ),
     );
