@@ -52,7 +52,7 @@ class TabelaAmplitude extends StatelessWidget {
           ),
           SizedBox(height: 50.0,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Idade                    AA\n'
                    '  5                          18\n'

@@ -54,7 +54,7 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
           ),
           SizedBox(height: 20.0,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Diopti = mm      Diopti = mm',
               style: TextStyle(fontFamily: ('Varela'),
@@ -65,7 +65,7 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('35.00 = 9.64      35.25 = 9.57 \n'
                    '35.50 = 9.51      35.75 = 9.44 \n'
@@ -114,19 +114,7 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
                    '58.00 = 5.82      58.50 = 5.76 \n'
                    '59.00 = 5.72      59.50 = 5.67 \n'
                    '60.00 = 5.62      61.00 = 5.53 \n'
-                   '62.00 = 5.44      63.00 = 5.36 \n'
-                  
-                   
-                   ,
-                
-                
-                
-                
-                
-                
-                
-                
-                 
+                   '62.00 = 5.44      63.00 = 5.36 \n',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),

@@ -67,7 +67,7 @@ final assetPath, cookiename;
         Row(
            mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
-              Text('Até 40                     0,75/1,00',
+              Text('     Até 40                     0,75/1,00',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -89,7 +89,7 @@ final assetPath, cookiename;
          Row(
            mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
-              Text('45-48                      1,50/1,75',
+              Text('     45-48                      1,50/1,75',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),

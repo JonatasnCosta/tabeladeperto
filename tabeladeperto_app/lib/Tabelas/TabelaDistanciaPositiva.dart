@@ -53,9 +53,9 @@ class TabelaDistanciaPositiva extends StatelessWidget {
           ),
           SizedBox(height: 50.0,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Rx                    Lente de Contato',
+              Text('       Rx            Lente de Contato',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -64,7 +64,7 @@ class TabelaDistanciaPositiva extends StatelessWidget {
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           mainAxisAlignment: MainAxisAlignment.center,
            children: <Widget>[
               Text('+ 4.75                    + 5.00\n'
                    '+ 5.00                    + 5.50\n'
