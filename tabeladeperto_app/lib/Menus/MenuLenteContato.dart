@@ -4,12 +4,9 @@ import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaNegativa.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDistanciaPositiva.dart';
 
-
-
-
 class MenuLenteContato extends StatelessWidget {
 
-  @override
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfffcfaf8),
@@ -35,12 +32,12 @@ class MenuLenteContato extends StatelessWidget {
                false, false, context),
                inglesbuildCard('Lente de Contato','assets/lentedecontato.png',
                false, false, context)
-               ],
-            ),
-          ),
-        ],
-      ),
-      );
+               ]
+            )
+          )
+        ]
+      )
+    );
   }
    Widget ditanciapositivabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
@@ -50,11 +47,11 @@ class MenuLenteContato extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
             TabelaDistanciaPositiva(
-               cookiename: name,
-               assetPath: imgPath
+            cookiename: name,
+            assetPath: imgPath
             )
-            )
-          );
+          )
+        );
         },
         child: Container(
           decoration: BoxDecoration(
@@ -73,33 +70,33 @@ class MenuLenteContato extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+                ]
+              )
+            ),
                Container(
                 height: 100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                image: DecorationImage(
+                image: AssetImage(imgPath),
+                fit: BoxFit.contain 
+                )
+              )
+            ),
             SizedBox(height: 7.0,),
              Text(name,
                style: TextStyle(
-                 fontFamily: 'Varela',
-                 fontSize: 14.0,
-                 color: Color(0xff575e67)
-               ),
+                fontFamily: 'Varela',
+                fontSize: 14.0,
+                color: Color(0xff575e67)
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -132,15 +129,15 @@ class MenuLenteContato extends StatelessWidget {
           child: Column(
             children: <Widget>[
              Padding(
-                padding: EdgeInsets.all(5.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
+              padding: EdgeInsets.all(5.0),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+              isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                           Icon(Icons.favorite_border, color: Color(0xffef7532))
+              ]
+            )
+          ),
                Container(
                 height:100.0,
                 width: 100.0,
@@ -149,7 +146,7 @@ class MenuLenteContato extends StatelessWidget {
                   image: AssetImage(imgPath_1),
                   fit: BoxFit.contain 
                   )
-                ),
+                )
               ),
             SizedBox(height: 7.0,),
              Text(name_1,
@@ -157,10 +154,10 @@ class MenuLenteContato extends StatelessWidget {
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -194,12 +191,12 @@ class MenuLenteContato extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
                     Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                ),
+                )
               ),
                Container(
                 height: 100.0,
@@ -209,7 +206,7 @@ class MenuLenteContato extends StatelessWidget {
                   image: AssetImage(imgPath_3),
                   fit: BoxFit.contain 
                   )
-                ),
+                )
               ),
             SizedBox(height: 7.0,),
              Text(name_3,
@@ -217,10 +214,10 @@ class MenuLenteContato extends StatelessWidget {
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -255,12 +252,12 @@ class MenuLenteContato extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
                     Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                ),
+                )
               ),
                Container(
                 height: 100.0,
@@ -270,7 +267,7 @@ class MenuLenteContato extends StatelessWidget {
                   image: AssetImage(imgPath_4),
                   fit: BoxFit.contain 
                   )
-                ),
+                )
               ),
             SizedBox(height: 7.0,),
              Text(name_4,
@@ -278,10 +275,10 @@ class MenuLenteContato extends StatelessWidget {
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );

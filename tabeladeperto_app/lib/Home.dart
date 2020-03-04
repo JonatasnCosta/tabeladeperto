@@ -3,9 +3,6 @@ import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
 
-
-
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -37,7 +34,7 @@ TabController _tabController;
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -45,7 +42,7 @@ TabController _tabController;
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
+        )
         ],
       ),
       body: ListView(
@@ -57,7 +54,7 @@ TabController _tabController;
             fontFamily: 'Varela',
             fontSize: 42.0,
             fontWeight: FontWeight.bold
-          ),
+          )
           ),
           SizedBox(height: 15.0),
           TabBar(
@@ -73,29 +70,29 @@ TabController _tabController;
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,
-               ),
-               ),
+               )
+              )
              ),
              Tab(
                child: Text('Tabelas Refração',
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,
-               ),
-               ),
+               )
+              )
              ),
               Tab(
                child: Text('Lente de Contato',
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 21.0,
-               ),
-               ),
-             ),
+               )
+              )
+             )
             ],
           ),
            Container(
-            height: MediaQuery.of(context).size.height - 50.0 ,
+            height: MediaQuery.of(context).size.height - 50.0,
             width: double.infinity,
             child: TabBarView(
               controller: _tabController,
@@ -103,11 +100,11 @@ TabController _tabController;
                 MenuTabelasLeitura(),
                 MenuTabelasRefracao(),
                 MenuLenteContato(),
-               ],
-            ),
-          ),
-        ],
-      ),
+               ]
+            )
+          )
+        ]
+      )
     );
   }
 }

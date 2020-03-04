@@ -4,8 +4,6 @@ import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
 
-
-
 class MenuTabelasLeitura extends StatelessWidget {
 
   @override
@@ -34,11 +32,11 @@ class MenuTabelasLeitura extends StatelessWidget {
                false, false, context),
                direcionalbuildCard('Direcional','assets/direcional.jpg',
                false, false, context)
-               ],
-            ),
-          ),
-        ],
-      ),
+               ]
+            )
+          )
+        ]
+      )
       );
   }
    Widget _buildCard(String name, String imgPath, bool added, bool isFavorite, context){
@@ -49,8 +47,8 @@ class MenuTabelasLeitura extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
             TabelaLetras(
-               cookiename: name,
-               assetPath: imgPath
+            cookiename: name,
+            assetPath: imgPath
             )
             )
           );
@@ -60,9 +58,9 @@ class MenuTabelasLeitura extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3.0,
-                blurRadius: 5.0
+              color:Colors.grey.withOpacity(0.2),
+              spreadRadius: 3.0,
+              blurRadius: 5.0
               )
             ],
             color: Colors.white
@@ -72,33 +70,33 @@ class MenuTabelasLeitura extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
-               Container(
-                height: 100.0,
-                width: 100.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+              ]
+            )
+          ),
+             Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                image: AssetImage(imgPath),
+                fit: BoxFit.contain 
+            )
+          )
+        ),
             SizedBox(height: 7.0,),
              Text(name,
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -135,10 +133,10 @@ class MenuTabelasLeitura extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
+                  isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                  Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                ),
+                )
               ),
                Container(
                 height:100.0,
@@ -148,7 +146,7 @@ class MenuTabelasLeitura extends StatelessWidget {
                   image: AssetImage(imgPath_1),
                   fit: BoxFit.contain 
                   )
-                ),
+                )
               ),
             SizedBox(height: 7.0,),
              Text(name_1,
@@ -156,14 +154,14 @@ class MenuTabelasLeitura extends StatelessWidget {
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
+            ]
           ),
         )
       )
     );
- }
+  }
  Widget portuguesbuildCard(String name_3, String imgPath_3, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
@@ -175,7 +173,7 @@ class MenuTabelasLeitura extends StatelessWidget {
                cookiename: name_3,
                assetPath: imgPath_3
             )));
-        },
+          },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
@@ -195,10 +193,10 @@ class MenuTabelasLeitura extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
+                  isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                  Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                ),
+                )
               ),
                Container(
                 height: 100.0,
@@ -208,7 +206,7 @@ class MenuTabelasLeitura extends StatelessWidget {
                   image: AssetImage(imgPath_3),
                   fit: BoxFit.contain 
                   )
-                ),
+                )
               ),
             SizedBox(height: 7.0,),
              Text(name_3,
@@ -216,10 +214,10 @@ class MenuTabelasLeitura extends StatelessWidget {
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -256,31 +254,31 @@ class MenuTabelasLeitura extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
+                  isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                  Icon(Icons.favorite_border, color: Color(0xffef7532))
                   ]
-                ),
+                )
               ),
                Container(
                 height: 100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath_4),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                image: DecorationImage(
+                image: AssetImage(imgPath_4),
+                fit: BoxFit.contain 
+              )
+            )
+          ),
             SizedBox(height: 7.0,),
              Text(name_4,
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );

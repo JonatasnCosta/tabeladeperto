@@ -4,11 +4,6 @@ import 'package:tabeladeperto_app/Tabelas/TabelaAdicao.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaAmplitude.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaDinamicaCC.dart';
 
-
-
-
-
-
 class MenuTabelasRefracao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,12 +31,12 @@ class MenuTabelasRefracao extends StatelessWidget {
                false, false, context),
                acomodacaobuildCard('Acomodação','assets/acomodacao.jpg',
                false, false, context)
-               ],
-            ),
-          ),
-        ],
-      ),
-      );
+               ]
+            )
+          )
+        ]
+      )
+   );
   }
    Widget dinamicabuildCard(String name, String imgPath, bool added, bool isFavorite, context){
     return Padding(
@@ -54,9 +49,9 @@ class MenuTabelasRefracao extends StatelessWidget {
                cookiename: name,
                assetPath: imgPath
             )
-            )
-          );
-        },
+          )
+        );
+      },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
@@ -74,39 +69,39 @@ class MenuTabelasRefracao extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
-               Container(
-                height: 100.0,
-                width: 100.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
-            SizedBox(height: 7.0,),
-             Text(name,
-               style: TextStyle(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+              ]
+            )
+          ),
+          Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage(imgPath),
+              fit: BoxFit.contain 
+            )
+          )
+        ),
+          SizedBox(height: 7.0,),
+            Text(name,
+            style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
  }
 }
- Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
+Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavorite, context){
     return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -114,8 +109,8 @@ class MenuTabelasRefracao extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
             TabelaAdicao(
-               cookiename: name_1,
-               assetPath: imgPath_1
+            cookiename: name_1,
+            assetPath: imgPath_1
             )));
         },
         child: Container(
@@ -135,33 +130,33 @@ class MenuTabelasRefracao extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+                ]
+              )
+            ),
                Container(
                 height:100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath_1),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                image: DecorationImage(
+                image: AssetImage(imgPath_1),
+                fit: BoxFit.contain 
+                )
+              )
+            ),
             SizedBox(height: 7.0,),
              Text(name_1,
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -195,33 +190,33 @@ class MenuTabelasRefracao extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
-               Container(
-                height: 100.0,
-                width: 100.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath_3),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+                ]
+              )
+            ),
+              Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage(imgPath_3),
+              fit: BoxFit.contain 
+              )
+            )
+          ),
             SizedBox(height: 7.0,),
              Text(name_3,
                style: TextStyle(
                  fontFamily: 'Varela',
                  fontSize: 14.0,
                  color: Color(0xff575e67)
-               ),
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
@@ -256,33 +251,33 @@ class MenuTabelasRefracao extends StatelessWidget {
              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
-                    Icon(Icons.favorite_border, color: Color(0xffef7532))
-                  ]
-                ),
-              ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                isFavorite ? Icon(Icons.favorite, color: Color(0xffef7532)):
+                Icon(Icons.favorite_border, color: Color(0xffef7532))
+                ]
+              )
+            ),
                Container(
                 height: 100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                  image: AssetImage(imgPath_4),
-                  fit: BoxFit.contain 
-                  )
-                ),
-              ),
+                image: DecorationImage(
+                image: AssetImage(imgPath_4),
+                fit: BoxFit.contain 
+                )
+              )
+            ),
             SizedBox(height: 7.0,),
              Text(name_4,
                style: TextStyle(
-                 fontFamily: 'Varela',
-                 fontSize: 14.0,
-                 color: Color(0xff575e67)
-               ),
+               fontFamily: 'Varela',
+               fontSize: 14.0,
+               color: Color(0xff575e67)
+               )
              ) 
-            ],
-          ),
+            ]
+          )
         )
       )
     );
