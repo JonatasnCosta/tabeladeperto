@@ -42,7 +42,7 @@ class TabelaLenteContato extends StatelessWidget {
            SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Distância Vértice',
+            child: Text('Noções de Contatologia',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
@@ -52,128 +52,38 @@ class TabelaLenteContato extends StatelessWidget {
           )
           ),
           SizedBox(height: 50.0,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text('Idade                    ADD/Diopitria',
-              style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),   
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('39 Anos               ADD + 0.75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-       Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('40 Anos               ADD + 1.00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-         Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('41-44 Anos        ADD + 1.25',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('45 Anos              ADD + 1.50',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('46-49 Anos        ADD + 1.75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-          Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('50 Anos              ADD + 2.00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('51-54 Anos       ADD + 2.25',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('55 Anos             ADD + 2.50',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('56-59 Anos       ADD + 2.75',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-              Text('60 Anos             ADD + 3.00',
-               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),
-         ],
-        ),
-      ],
-      ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+            child: 
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset('assets/olhohumano.png'
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10.00)
+                ),
+                Text('Pequenas noções de anatomia ocular.\n'
+                     'Da anatomia ocular nos ocuparemos principalmente da córnea, superfície onde as lentes de contato se adaptam. Informaremos as dimensões nominais reservando-nos a explicar que poderão existir outras medidas, mas que não representam a média das mesmas e são  pouco comuns.\n',
+                style: TextStyle(
+                fontFamily: 'Varela',
+                fontSize: 15.0,
+                )
+               ),
+               Image.asset('assets/anatomiadacornea.png')
+              ]
+            )
+          )
+        ]
+      )
     );
   }
 }
