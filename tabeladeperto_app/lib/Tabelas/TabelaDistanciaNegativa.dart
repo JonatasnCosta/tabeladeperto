@@ -51,7 +51,7 @@ class TabelaDistanciaNegativa extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 50.0,),
+          SizedBox(height: 30.0,),
           Container(
              padding: EdgeInsets.only(top: 20.0),
             decoration: BoxDecoration(

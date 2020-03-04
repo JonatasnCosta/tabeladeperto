@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaDistanciaPositiva extends StatelessWidget {
   final assetPath, cookiename;
     TabelaDistanciaPositiva({this.assetPath, this.cookiename});
@@ -33,9 +31,9 @@ class TabelaDistanciaPositiva extends StatelessWidget {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
-        ],
-      ),
+        ) 
+      ]
+    ),
       body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
         children: <Widget>[
@@ -50,7 +48,7 @@ class TabelaDistanciaPositiva extends StatelessWidget {
               color: Color(0xfff17532)
             )
           )
-          ),
+        ),
           SizedBox(height: 30.0,),
           Container(
             padding: EdgeInsets.only(top: 20.0),

@@ -50,7 +50,7 @@ class TabelaAmplitude extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 50.0,),
+          SizedBox(height: 90.0,),
           Container(
              padding: EdgeInsets.only(top: 20.0),
             decoration: BoxDecoration(

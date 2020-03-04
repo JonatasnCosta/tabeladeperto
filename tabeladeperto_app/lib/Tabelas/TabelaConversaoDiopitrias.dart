@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaConversaoDiopitrias extends StatelessWidget {
   final assetPath, cookiename;
     TabelaConversaoDiopitrias({this.assetPath, this.cookiename});
@@ -120,12 +118,12 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
               fontSize: 21.0
               ),
             )
-           ],
+           ]
           ) 
-        ),
-        ],
-      ),
-    );
-  }
+        )
+      ]
+    )
+  );
+}
 }
 
