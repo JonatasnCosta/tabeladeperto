@@ -67,7 +67,6 @@ class TabelaLetras extends StatelessWidget {
               children: <Widget>[
                 Text("C  O  H  Z  V  L  G\n"
                      "S  Z  N  D  C  J  X \n",
-                     //"ao alcance de todos.\n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -98,7 +97,6 @@ class TabelaLetras extends StatelessWidget {
               children: <Widget>[
                 Text("  K  C  N  R  D  B  S \n"
                      "  V  O  Y  W  S  J  L  \n",
-                     //"contra os raios solares.\n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 17.0
               ),

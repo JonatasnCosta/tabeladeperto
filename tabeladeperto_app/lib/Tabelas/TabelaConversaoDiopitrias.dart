@@ -53,21 +53,22 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
           )
           ),
           SizedBox(height: 20.0,),
-          Row(
+          Container(
+            padding: EdgeInsets.only(top: 20.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+              width: 1.0
+             ),
+             borderRadius: BorderRadius.all(
+               Radius.circular(10.0
+               )
+             )
+            ),
+            child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Diopti = mm      Diopti = mm',
-              style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
-              ),
-              ),   
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-        Row(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-              Text('35.00 = 9.64      35.25 = 9.57 \n'
+              Text('Diopti = mm      Diopti = mm \n'
+                   '35.00 = 9.64      35.25 = 9.57 \n'
                    '35.50 = 9.51      35.75 = 9.44 \n'
                    '36.00 = 9.38      36.25 = 9.31 \n'
                    '36.50 = 9.25      36.75 = 9.18 \n'
@@ -119,9 +120,10 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
               fontSize: 21.0
               ),
             )
-         ],
-        )  
-      ],
+           ],
+          ) 
+        ),
+        ],
       ),
     );
   }

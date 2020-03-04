@@ -74,11 +74,6 @@ flutter:
         - asset: fonts/Varela_Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-     - family: Nunito
-       fonts:
-        - asset: fonts/Nunito_Regular.ttf
-        - asset: fonts/Nunito_Light.ttf
-          weight: 300
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
