@@ -16,14 +16,14 @@ class TabelaDistanciaPositiva extends StatelessWidget {
             color: Color(0xff545d68)),
             onPressed: (){ 
               Navigator.of(context).pop();
-              },
+          },
         ) ,
         title: Text("Tabela de Perto",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -114,17 +114,16 @@ class TabelaDistanciaPositiva extends StatelessWidget {
                    '+18.00                    +23.00\n'
                    '+18.50                    +24.00\n'
                    '+19.25                    +25.00\n' 
-                   '+20.00                    +26.50\n'         
-                   ,
+                   '+20.00                    +26.50\n',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),
-           ],
+              )
+            )
+           ]
          )  
        )   
-      ],
-      ),
-    );
-  }
+     ]
+   )
+  );
+ }
 }

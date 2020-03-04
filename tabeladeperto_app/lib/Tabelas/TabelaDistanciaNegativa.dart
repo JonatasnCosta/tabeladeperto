@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaDistanciaNegativa extends StatelessWidget {
   final assetPath, cookiename;
-    TabelaDistanciaNegativa({this.assetPath, this.cookiename});
+  TabelaDistanciaNegativa({this.assetPath, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +16,14 @@ class TabelaDistanciaNegativa extends StatelessWidget {
             color: Color(0xff545d68)),
             onPressed: (){ 
               Navigator.of(context).pop();
-              },
+           },
         ) ,
         title: Text("Tabela de Perto",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -33,8 +31,8 @@ class TabelaDistanciaNegativa extends StatelessWidget {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
-        ],
+         ) 
+        ]
       ),
       body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
@@ -49,7 +47,7 @@ class TabelaDistanciaNegativa extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Color(0xfff17532)
             )
-          )
+           )
           ),
           SizedBox(height: 30.0,),
           Container(
@@ -66,8 +64,7 @@ class TabelaDistanciaNegativa extends StatelessWidget {
             child:  Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                   '  Rx            Lente de Contato \n'
+              Text('  Rx            Lente de Contato \n'
                    '- 5.00                    - 4.75\n'
                    '- 5.25                    - 4.75\n'
                    '- 5.50                    - 5.25\n'
@@ -125,17 +122,17 @@ class TabelaDistanciaNegativa extends StatelessWidget {
                    '-24.00                    -18.50\n'
                    '-25.00                    -19.25\n'
                    '-26.50                    -20.00\n'
-                   '-27.00                    -20.50\n' ,
+                   '-27.00                    -20.50\n',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),
-         ],
+              )
+            )
+          ]
          )  
        )  
-      ],
-      ),
-    );
-  }
+      ]
+    )
+  );
+}
 }
 

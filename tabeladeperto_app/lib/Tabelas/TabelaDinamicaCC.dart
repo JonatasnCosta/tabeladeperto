@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaDinamicaCC extends StatelessWidget {
   final assetPath, cookiename;
     TabelaDinamicaCC({this.assetPath, this.cookiename});
@@ -32,7 +30,7 @@ class TabelaDinamicaCC extends StatelessWidget {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
+         ) 
         ],
       ),
       body: ListView(
@@ -66,8 +64,7 @@ class TabelaDinamicaCC extends StatelessWidget {
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Text( 
-                   '     Idade                        Adição\n'
+               Text('     Idade                        Adição\n'
                    'Até40 Anos                  -1,25\n'
                    '41-44 Anos                  -1,50\n'
                    '45-49 Anos                  -1,75\n'
@@ -79,12 +76,12 @@ class TabelaDinamicaCC extends StatelessWidget {
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               )
-              )   
-         ],
+            )   
+         ]
         )
        )
-      ],
-      ),
-    );
-  }
+      ]
+    )
+  );
+}
 }

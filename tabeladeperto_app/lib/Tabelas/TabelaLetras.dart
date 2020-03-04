@@ -49,7 +49,7 @@ class TabelaLetras extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Color(0xfff17532)
             )
-          ),
+          )
           ),
           SizedBox(height: 50.0,),
           Row(
@@ -58,7 +58,7 @@ class TabelaLetras extends StatelessWidget {
               Text('1,25m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -69,17 +69,17 @@ class TabelaLetras extends StatelessWidget {
                      "S  Z  N  D  C  J  X \n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
                 Text('J6',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
                 )
-              ],
-            ),
+              ]
+            )
           )
-         ],
+         ]
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
@@ -88,7 +88,7 @@ class TabelaLetras extends StatelessWidget {
               Text('1,00m',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -99,17 +99,17 @@ class TabelaLetras extends StatelessWidget {
                      "  V  O  Y  W  S  J  L  \n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 17.0
-              ),
+              )
               ),
                 Text('J5',
                  style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+               )
               )
-              ],
-            ),
+             ]
+            )
           )
-         ],
+         ]
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
@@ -118,7 +118,7 @@ class TabelaLetras extends StatelessWidget {
               Text('0,75m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -134,12 +134,12 @@ class TabelaLetras extends StatelessWidget {
                 Text('J4',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
-          )
-         ],
+              )
+            )
+          ]
+         )
+       )
+      ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
@@ -148,7 +148,7 @@ class TabelaLetras extends StatelessWidget {
               Text('0,62m',
                 style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -159,17 +159,17 @@ class TabelaLetras extends StatelessWidget {
                      "          F  C  L  D  S  A  N  Z \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 10.0
-                  ),
+                  )
                   ),
                 Text('J3',
                   style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+             )
+           ]
           )
-         ],
+        )
+        ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
          Row(
@@ -178,7 +178,7 @@ class TabelaLetras extends StatelessWidget {
               Text('0,50m',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -189,17 +189,17 @@ class TabelaLetras extends StatelessWidget {
                      "          F  C  L  D  S  A  N  Z  X \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 9.0
-                  ),
+                  )
                 ),
                 Text('J2',
                 style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+             )
+            ]
           )
-         ],
+        )
+      ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 40.0, right: 15.0 )),
          Row(
@@ -208,7 +208,7 @@ class TabelaLetras extends StatelessWidget {
               Text('0,37m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -219,22 +219,21 @@ class TabelaLetras extends StatelessWidget {
                      "              F  C  L  D  S  A  N  Z  X \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 8.0
-                  ),
+                  )
                 ),
                 Text('J1',
                  style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
-                )
-              ],
-            ),
+              )
+              ]
+            )
           )
-         ],
+         ]
         )
-      ],
-      ),
+      ]
+    )
     );
-  
   }
 }
 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaAcomodacao extends StatelessWidget {
   final assetPath, cookiename;
     TabelaAcomodacao({this.assetPath, this.cookiename});
@@ -24,7 +22,7 @@ class TabelaAcomodacao extends StatelessWidget {
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -32,8 +30,8 @@ class TabelaAcomodacao extends StatelessWidget {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
-        ],
+         ) 
+        ]
       ),
       body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
@@ -66,8 +64,7 @@ class TabelaAcomodacao extends StatelessWidget {
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Text(
-                   'Distância                 ACC(D)s\n'
+               Text('Distância                 ACC(D)s\n'
                    '  6 m                           0,16\n'
                    '  3 m                           0,33\n'
                    '  1 m                           1,00\n'
@@ -79,13 +76,13 @@ class TabelaAcomodacao extends StatelessWidget {
                    '   5 cm                       20,00\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),   
-         ],
+              )
+            )   
+         ]
         )
        )
-      ],
-      ),
-    );
-  }
+      ]
+    )
+  );
+}
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaAmplitude extends StatelessWidget {
   final assetPath, cookiename;
     TabelaAmplitude({this.assetPath, this.cookiename});
@@ -24,7 +22,7 @@ class TabelaAmplitude extends StatelessWidget {
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -32,8 +30,8 @@ class TabelaAmplitude extends StatelessWidget {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
-        ],
+        ) 
+        ]
       ),
       body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
@@ -75,13 +73,13 @@ class TabelaAmplitude extends StatelessWidget {
                    '  60                        0,50\n',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-              ),   
-         ],
-         ) 
-        )  
-      ],
-      ),
-    );
-  }
+            )
+           )   
+         ]
+        ) 
+      )  
+    ]
+  )
+ );
+}
 }

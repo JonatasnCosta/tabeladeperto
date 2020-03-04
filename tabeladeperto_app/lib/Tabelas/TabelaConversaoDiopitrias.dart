@@ -50,7 +50,7 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(height: 30.0,),
           Container(
             padding: EdgeInsets.only(top: 20.0),
             decoration: BoxDecoration(

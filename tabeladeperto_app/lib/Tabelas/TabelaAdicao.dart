@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class TabelaAdicao extends StatelessWidget {
   final assetPath, cookiename;
     TabelaAdicao({this.assetPath, this.cookiename});
@@ -24,7 +22,7 @@ class TabelaAdicao extends StatelessWidget {
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -66,8 +64,7 @@ class TabelaAdicao extends StatelessWidget {
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Text( 
-                   ' Idade                       Desconto\n'
+               Text(' Idade                       Desconto\n'
                    'Até 40                     0,75/1,00\n'
                    '41-44                          1,25\n'
                    '45-48                      1,50/1,75\n'
@@ -79,12 +76,12 @@ class TabelaAdicao extends StatelessWidget {
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               )
-              )   
-         ],
+           )   
+         ]
         )
        )
-      ],
-      ),
-    );
-  }
+      ]
+    )
+  );
+}
 }

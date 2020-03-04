@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 
-
-
-class TabelaNumerica extends StatefulWidget {
+class TabelaNumerica extends StatelessWidget {
     final assetPath, cookiename;
     TabelaNumerica({this.assetPath, this.cookiename});
-  @override
-  _TabelaNumericaState createState() => _TabelaNumericaState();
-}
-
-class _TabelaNumericaState extends State<TabelaNumerica> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +23,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
           fontFamily: 'Varela',
           fontSize: 20.0,
           color: Color(0xff545d68)
-        ),
+        )
         ),
         actions: <Widget>[
           IconButton(
@@ -38,8 +31,8 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
             Icons.more_vert,
             color: Color(0xff545d68)),
             onPressed: (){},
-        ) ,
-        ],
+         ) 
+        ]
       ),
       body: ListView(
         padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
@@ -55,7 +48,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               color: Color(0xfff17532)
             )
           )
-          ),
+        ),
           SizedBox(height: 50.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,7 +56,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               Text('1,25m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -74,26 +67,26 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                      "     7  3  8  6   \n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
                 Text('J6',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
-          )
-         ],
-        ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+              )
+            )
+          ]
+        )
+      )
+    ]
+    ),
+      Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
               Text('1,00m',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -105,17 +98,17 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                      //"contra os raios solares.\n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 17.0
-              ),
+              )
               ),
                 Text('J5',
                  style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               )
               ],
-            ),
+            )
           )
-         ],
+         ]
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
@@ -124,7 +117,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               Text('0,75m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -140,12 +133,12 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                 Text('J4',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+             )
+            ]
+           )
           )
-         ],
+         ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
@@ -154,7 +147,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               Text('0,62m',
                 style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -165,17 +158,17 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                      "                6  9  7  5  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 10.0
-                  ),
-                  ),
+                  )
+                ),
                 Text('J3',
                   style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+              )
+             ]
+           )
           )
-         ],
+         ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
          Row(
@@ -184,7 +177,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               Text('0,50m',
                style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -195,17 +188,17 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                      "                   6  9  7  5  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 9.0
-                  ),
+                  )
                 ),
                 Text('J2',
                 style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+             )
+            ]
           )
-         ],
+        )
+      ]
         ),
          Padding(padding: EdgeInsets.only(left: 15.0, top: 40.0, right: 15.0 )),
          Row(
@@ -214,7 +207,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               Text('0,37m',
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
+              )
               ),
               Container(
             width: 230.0,
@@ -225,21 +218,21 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                      "                    3  2  7  6  3  3 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 8.0
-                  ),
+                  )
                 ),
                 Text('J1',
                  style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
-              ),
-                )
-              ],
-            ),
+              )
+             )
+            ]
           )
-         ],
         )
-      ],
-      ),
-    );
+      ]
+    )
+   ]
+  )
+);
   
   }
 }
