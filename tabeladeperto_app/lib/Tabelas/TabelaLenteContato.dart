@@ -42,7 +42,7 @@ class TabelaLenteContato extends StatelessWidget {
            SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Noções de Contatologia',
+            child: Text('Noções de anatomia ocular',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
@@ -71,14 +71,12 @@ class TabelaLenteContato extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: 10.00)
                 ),
-                Text('Pequenas noções de anatomia ocular.\n'
-                     'Da anatomia ocular nos ocuparemos principalmente da córnea, superfície onde as lentes de contato se adaptam. Informaremos as dimensões nominais reservando-nos a explicar que poderão existir outras medidas, mas que não representam a média das mesmas e são  pouco comuns.\n',
+                Text('Noções de Contatologia.',
                 style: TextStyle(
                 fontFamily: 'Varela',
                 fontSize: 15.0,
                 )
-               ),
-               Image.asset('assets/anatomiadacornea.png')
+               )
               ]
             )
           )

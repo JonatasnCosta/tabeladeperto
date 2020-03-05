@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaDirecional.dart';
+import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
 import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
@@ -26,11 +26,11 @@ class MenuTabelasLeitura extends StatelessWidget {
               children: <Widget>[
                _buildCard('Letras','assets/letras.jpg',
                false, false, context),
-               numericabuildCard('Númerica','assets/numerica.jpg',
+               numericabuildCard('Numérica','assets/numerica.jpg',
                false, false, context),
                portuguesbuildCard('Frases Português','assets/portugues.jpg',
                false, false, context),
-               direcionalbuildCard('Direcional','assets/direcional.jpg',
+               direcionalbuildCard('Frases Inglês','assets/ingles.jpg',
                false, false, context)
                ]
             )
@@ -230,7 +230,7 @@ class MenuTabelasLeitura extends StatelessWidget {
         onTap: (){
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => 
-            TabelaDirecional(
+            TabelaIngles(
                cookiename: name_4,
                assetPath: imgPath_4
             )));

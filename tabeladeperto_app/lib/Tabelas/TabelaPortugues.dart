@@ -41,7 +41,7 @@ class TabelaPortugues extends StatelessWidget {
           SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Tabela frases em português',
+            child: Text('Tabela frase em português',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
@@ -203,7 +203,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
     ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -217,7 +217,7 @@ class TabelaPortugues extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Estas lentes são para você, além de estar \n"
+                Text("Essas lentes são para você, além de estar\n"
                      "de acordo com algo mais refinado.\n",
                      
                      style: TextStyle(fontFamily: ('Varela'),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class TabelaDirecional extends StatelessWidget {
+class TabelaIngles extends StatelessWidget {
   final assetPath, cookiename;
-    TabelaDirecional({this.assetPath, this.cookiename});
+    TabelaIngles({this.assetPath, this.cookiename});
   @override
   
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class TabelaDirecional extends StatelessWidget {
            SizedBox(height: 15.0,),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Tabela Direcional',
+            child: Text('Tabela Frase em Inglês',
             style: TextStyle(
               fontFamily: 'Varela',
               fontSize: 20.0,
@@ -64,8 +64,9 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("     8  4  6  2\n"
-                     "     7  3  8  6   \n",
+                Text("Your lenses  \n"
+                     "have correction, \n"
+                     "take care of them.\n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
@@ -94,8 +95,8 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("        6  7  2  6 \n"
-                     "        1  8  5  9  \n",
+                Text("They offer sharp vision  \n"
+                     "and smooth transitions.   \n",
                      //"contra os raios solares.\n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 17.0
@@ -125,8 +126,9 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("            8  5  4  9\n"
-                     "            3  2  7  6\n",
+                Text("Consult the conditions\n"
+                     "and warranty coverage\n"
+                     "of your lenses.\n",
                     style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 13.0
               ),
@@ -155,8 +157,9 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[ 
-                Text("                7  8  3  4  7  \n"
-                     "                6  9  7  5  2 \n",
+                Text("       The revolutionary lenses\n"
+                     "       reinvent near-sight \n"
+                     "       for people over 40.\n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 10.0
                   ),
@@ -185,8 +188,8 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("                   7  8  3  4  7\n"
-                     "                   6  9  7  5  2 \n",
+                Text("People are always between \n"
+                     "computer, tablet and smartphone.\n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 9.0
                   ),
@@ -201,7 +204,7 @@ class TabelaDirecional extends StatelessWidget {
           )
          ],
         ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 40.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -215,8 +218,9 @@ class TabelaDirecional extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("                    8  5  4  9  8  8\n"
-                     "                    3  2  7  6  3  3 \n",
+                Text("     These lenses are for you, in \n"
+                     "     addition to complying with \n"
+                     "     something more refined.\n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 8.0
                   ),
