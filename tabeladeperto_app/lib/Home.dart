@@ -29,7 +29,7 @@ TabController _tabController;
             color: Color(0xff545d68)),
             onPressed: (){},
         ) ,
-        title: Text("Tabela de Perto",
+        title: Text("Tabelas App",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,

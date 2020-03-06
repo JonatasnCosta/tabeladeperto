@@ -18,7 +18,7 @@ class TabelaNumerica extends StatelessWidget {
               Navigator.of(context).pop();
             },
         ) ,
-        title: Text("Tabela de Perto",
+        title: Text("Tabelas App",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,
