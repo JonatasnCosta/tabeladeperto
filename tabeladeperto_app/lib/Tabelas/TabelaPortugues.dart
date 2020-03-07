@@ -68,7 +68,7 @@ class TabelaPortugues extends StatelessWidget {
                   "tem correção visual,\n"
                   "cuide bem delas.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
+              fontSize: 22.0
               )
               ),
                 Text('J6',
@@ -98,7 +98,7 @@ class TabelaPortugues extends StatelessWidget {
                 Text("Oferecem visão nítida\n"
                      "e transições suaves.\n",
                 style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 17.0
+              fontSize: 18.0
               )
               ),
                 Text('J5',
@@ -129,7 +129,7 @@ class TabelaPortugues extends StatelessWidget {
                      "e coberturas da garantia\n"
                      "das suas lentes.\n",
                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 13.0
+                    fontSize: 14.0
               )
                     ),
                 Text('J4',
@@ -160,7 +160,7 @@ class TabelaPortugues extends StatelessWidget {
                      " reinventam a visão de perto para \n"
                      " pessoas com mais de 40 anos.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 10.0
+                    fontSize: 11.0
                   )
                   ),
                 Text('J3',
@@ -190,7 +190,7 @@ class TabelaPortugues extends StatelessWidget {
                 Text(" As pessoas estão o tempo inteiro \n"
                      "entre computador, tablet e smartphone.\n",
                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 9.0
+                    fontSize: 10.0
                   )
                 ),
                 Text('J2',
@@ -221,7 +221,7 @@ class TabelaPortugues extends StatelessWidget {
                      "de acordo com algo mais refinado.\n",
                      
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 8.0
+                    fontSize: 9.0
                   )
                 ),
                 Text('J1',

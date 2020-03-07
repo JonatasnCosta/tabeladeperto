@@ -68,7 +68,7 @@ class TabelaIngles extends StatelessWidget {
                      "have correction, \n"
                      "take care of them.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
+              fontSize: 22.0
               ),
               ),
                 Text('J6',
@@ -97,9 +97,8 @@ class TabelaIngles extends StatelessWidget {
               children: <Widget>[
                 Text("They offer sharp vision  \n"
                      "and smooth transitions.   \n",
-                     //"contra os raios solares.\n",
                       style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 17.0
+              fontSize: 18.0
               ),
               ),
                 Text('J5',
@@ -130,7 +129,7 @@ class TabelaIngles extends StatelessWidget {
                      "and warranty coverage\n"
                      "of your lenses.\n",
                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 13.0
+                    fontSize: 14.0
               ),
                      ),
                 Text('J4',
@@ -161,7 +160,7 @@ class TabelaIngles extends StatelessWidget {
                      "       reinvent near-sight \n"
                      "       for people over 40.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 10.0
+                    fontSize: 11.0
                   ),
                   ),
                 Text('J3',
@@ -191,7 +190,7 @@ class TabelaIngles extends StatelessWidget {
                 Text("People are always between \n"
                      "computer, tablet and smartphone.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 9.0
+                    fontSize: 10.0
                   ),
                 ),
                 Text('J2',
@@ -222,14 +221,14 @@ class TabelaIngles extends StatelessWidget {
                      "     addition to complying with \n"
                      "     something more refined.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 8.0
+                    fontSize: 9.0
                   ),
                 ),
                 Text('J1',
                  style: TextStyle(fontFamily: ('Varela'),
               fontSize: 21.0
               ),
-                )
+              )
               ],
             ),
           )

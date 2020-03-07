@@ -68,7 +68,7 @@ class TabelaLetras extends StatelessWidget {
                 Text("C  O  H  Z  V  L  G\n"
                      "S  Z  N  D  C  J  X \n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
+              fontSize: 22.0
               )
               ),
                 Text('J6',
@@ -98,7 +98,7 @@ class TabelaLetras extends StatelessWidget {
                 Text("  K  C  N  R  D  B  S \n"
                      "  V  O  Y  W  S  J  L  \n",
                       style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 17.0
+              fontSize: 18.0
               )
               ),
                 Text('J5',
@@ -128,7 +128,7 @@ class TabelaLetras extends StatelessWidget {
                 Text("     M  N  Q  O  W  M\n"
                      "     L  D  S  A  N  Z  X \n",
                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 13.0
+                    fontSize: 14.0
               ),
                      ),
                 Text('J4',
@@ -185,10 +185,10 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("          P  B  M  N  Q  O  W  M\n"
-                     "          F  C  L  D  S  A  N  Z  X \n",
+                Text("          S  C  O  A  Q  V  P  N\n"
+                     "          Z  X  L  D  G  H  C  M  R \n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 9.0
+                    fontSize: 10.0
                   )
                 ),
                 Text('J2',
@@ -215,10 +215,10 @@ class TabelaLetras extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("              P  B  M  N  Q  O  W  M\n"
-                     "              F  C  L  D  S  A  N  Z  X \n",
+                Text("              X  V  T  D  A  P  S  A\n"
+                     "              L  R  S  F  Q  L  E  O  V \n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 8.0
+                    fontSize: 9.0
                   )
                 ),
                 Text('J1',
