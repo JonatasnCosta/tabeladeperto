@@ -64,8 +64,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("     8  4  6  2\n"
-                     "     2  3  5  9   \n",
+                Text("    8  4  6  2\n"
+                     "    2  3  5  9   \n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 22.0
               )
@@ -80,9 +80,9 @@ class TabelaNumerica extends StatelessWidget {
       )
     ]
     ),
+     // fonte J5
       Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-       // fonte J5
-        Row(
+       Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
               Text('1,00m',
@@ -95,8 +95,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("        6  8  3  2 \n"
-                     "        5  2  7  9  \n",
+                Text("      6  8  3  2 \n"
+                     "      5  2  7  9  \n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 18.0
               )
@@ -111,8 +111,8 @@ class TabelaNumerica extends StatelessWidget {
           )
          ]
         ),
+          // fonte J4
         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
-         // fonte J4
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -126,8 +126,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("            8  5  4  9\n"
-                     "            6  2  8  3\n",
+                Text("          8  5  4  9\n"
+                     "          6  2  8  3\n",
                     style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 14.0
               ),
@@ -142,8 +142,8 @@ class TabelaNumerica extends StatelessWidget {
           )
          ]
         ),
+        // fonte J3
          Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
-          // fonte J3
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -157,8 +157,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[ 
-                Text("                2  8  3  4  6  \n"
-                     "                6  9  2  5  2 \n",
+                Text("         2  8  3  4  6  \n"
+                     "         6  9  2  5  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 13.0
                   )
@@ -173,8 +173,8 @@ class TabelaNumerica extends StatelessWidget {
           )
          ]
         ),
+        // fonte J2
          Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
-          // fonte J2
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -188,8 +188,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("                   4  2  8  3  9\n"
-                     "                   9  5  3  8  2 \n",
+                Text("          4  2  8  3  9\n"
+                     "          9  5  3  8  2 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 12.0
                   )
@@ -204,9 +204,9 @@ class TabelaNumerica extends StatelessWidget {
         )
       ]
         ),
+         // fonte J1
          Padding(padding: EdgeInsets.only(left: 15.0, top: 40.0, right: 15.0 )),
-          // fonte J1
-         Row(
+          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
               Text('0,37m',
@@ -219,8 +219,8 @@ class TabelaNumerica extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("                    6  2  3  9  6  4\n"
-                     "                    9  3  4  7  5  8 \n",
+                Text("          6  2  3  9  6  4\n"
+                     "          9  3  4  7  5  8 \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 11.0
                   )

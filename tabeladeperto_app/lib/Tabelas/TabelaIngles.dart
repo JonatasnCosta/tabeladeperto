@@ -68,7 +68,7 @@ class TabelaIngles extends StatelessWidget {
                      "have correction, \n"
                      "take care of them.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 22.0
+              fontSize: 21.0
               ),
               ),
                 Text('J6',
@@ -98,7 +98,7 @@ class TabelaIngles extends StatelessWidget {
                 Text("They offer sharp vision  \n"
                      "and smooth transitions.   \n",
                       style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 18.0
+              fontSize: 17.0
               ),
               ),
                 Text('J5',
@@ -156,11 +156,11 @@ class TabelaIngles extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[ 
-                Text("       The revolutionary lenses\n"
-                     "       reinvent near-sight \n"
-                     "       for people over 40.\n",
+                Text(" The revolutionary lenses\n"
+                     " reinvent near-sight \n"
+                     " for people over 40.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 11.0
+                    fontSize: 13.0
                   ),
                   ),
                 Text('J3',
@@ -190,7 +190,7 @@ class TabelaIngles extends StatelessWidget {
                 Text("People are always between \n"
                      "computer, tablet and smartphone.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 10.0
+                    fontSize: 12.0
                   ),
                 ),
                 Text('J2',
@@ -217,11 +217,11 @@ class TabelaIngles extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("     These lenses are for you, in \n"
-                     "     addition to complying with \n"
-                     "     something more refined.\n",
+                Text("  These lenses are for you, in \n"
+                     "  addition to complying with \n"
+                     "  something more refined.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 9.0
+                    fontSize: 11.0
                   ),
                 ),
                 Text('J1',

@@ -68,7 +68,7 @@ class TabelaPortugues extends StatelessWidget {
                   "tem correção visual,\n"
                   "cuide bem delas.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 22.0
+              fontSize: 21.0
               )
               ),
                 Text('J6',
@@ -156,11 +156,12 @@ class TabelaPortugues extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(" As revolucionárias lentes \n"
-                     " reinventam a visão de perto para \n"
+                Text(" As revolucionárias lentes\n"
+                     " reinventam a visão\n"
+                      "de perto para\n"
                      " pessoas com mais de 40 anos.\n",
                      style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 11.0
+                    fontSize: 13.0
                   )
                   ),
                 Text('J3',
@@ -187,10 +188,11 @@ class TabelaPortugues extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(" As pessoas estão o tempo inteiro \n"
-                     "entre computador, tablet e smartphone.\n",
+                Text(" As pessoas estão\n"
+                     " o tempo inteiro entre \n"
+                     " computador, tablet e smartphone.\n",
                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 10.0
+                    fontSize: 12.0
                   )
                 ),
                 Text('J2',
@@ -203,7 +205,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
     ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
+       Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -217,11 +219,11 @@ class TabelaPortugues extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Essas lentes são para você, além de estar\n"
-                     "de acordo com algo mais refinado.\n",
-                     
-                     style: TextStyle(fontFamily: ('Varela'),
-                    fontSize: 9.0
+                Text("Essas lentes são para você,\n"
+                     "além de estar de acordo\n"
+                     " com algo mais refinado.\n",
+                    style: TextStyle(fontFamily: ('Varela'),
+                    fontSize: 11.0
                   )
                 ),
                 Text('J1',
