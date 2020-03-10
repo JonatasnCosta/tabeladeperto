@@ -50,7 +50,7 @@ class TabelaPortugues extends StatelessWidget {
             )
           )
         ),
-          SizedBox(height: 50.0,),
+          SizedBox(height: 20.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -81,7 +81,7 @@ class TabelaPortugues extends StatelessWidget {
         )
       ]
         ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 8.0, right: 15.0 )),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 5.0, right: 15.0 )),
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -142,7 +142,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
     ),
-      Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
+      Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -174,7 +174,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
   ),
-    Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
+    Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -205,7 +205,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
     ),
-       Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
+       Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
