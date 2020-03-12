@@ -7,3 +7,4 @@ void main() {
     home: Home(),
   ));
 }
+//Ponto de intermédio para receber o firebase
