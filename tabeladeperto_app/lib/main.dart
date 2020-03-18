@@ -5,5 +5,6 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Home(),
+    //Criado o ponto de restauração para integrar o firebase
   ));
 }
