@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357023934631",
+    "firebase_url": "https://optometria-tabelas.firebaseio.com",
+    "project_id": "optometria-tabelas",
+    "storage_bucket": "optometria-tabelas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357023934631:android:081d3cab2578d2c01cd382",
+        "android_client_info": {
+          "package_name": "com.jonatasprogramador.tabeladeperto_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357023934631-tisn2pbo6rd44vhncgujnjrguvgrvnd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9HfW7dlYSr8gHXFBJS_a3XVBzwO0sA1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357023934631-tisn2pbo6rd44vhncgujnjrguvgrvnd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
