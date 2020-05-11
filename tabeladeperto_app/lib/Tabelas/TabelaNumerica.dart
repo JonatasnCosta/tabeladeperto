@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
 class TabelaNumerica extends StatelessWidget {
     final assetPath, cookiename;
     TabelaNumerica({this.assetPath, this.cookiename});
   @override
   Widget build(BuildContext context) {
+    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-7677202089790115~4215733257");
+   
+    myBanner
+  // typically this happens well before the ad is shown
+  ..load()
+  ..show(
+    // Positions the banner ad 60 pixels from the bottom of the screen
+    anchorOffset: 60.0,
+    // Positions the banner ad 10 pixels from the center of the screen to the right
+    horizontalCenterOffset: 10.0,
+    // Banner Position
+    anchorType: AnchorType.bottom,
+  );
+
     return Scaffold(
        appBar: AppBar( 
         backgroundColor: Colors.white,
@@ -258,9 +273,29 @@ class TabelaNumerica extends StatelessWidget {
         )
       ]
     ),
-    Padding(padding: EdgeInsets.only(bottom: 100.0))
+    Padding(padding: EdgeInsets.only(bottom: 150.0))
    ]
   )
 );
 }
 }
+
+MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+  keywords: <String>['optometry', 'beautiful apps'],
+  contentUrl: 'https://flutter.io',
+  childDirected: false,
+   // or MobileAdGender.female, MobileAdGender.unknown
+  testDevices: <String>[], // Android emulators are considered test devices
+);
+
+BannerAd myBanner = BannerAd(
+  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
+  // https://developers.google.com/admob/android/test-ads
+  // https://developers.google.com/admob/ios/test-ads
+  adUnitId: BannerAd.testAdUnitId,
+  size: AdSize.smartBanner,
+  targetingInfo: targetingInfo,
+  listener: (MobileAdEvent event) {
+    print("BannerAd event is $event");
+  },
+);
