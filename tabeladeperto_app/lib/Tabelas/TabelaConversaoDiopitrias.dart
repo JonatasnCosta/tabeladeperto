@@ -120,7 +120,8 @@ class TabelaConversaoDiopitrias extends StatelessWidget {
             )
            ]
           ) 
-        )
+        ),
+         Padding(padding: EdgeInsets.only(bottom: 100.0))
       ]
     )
   );

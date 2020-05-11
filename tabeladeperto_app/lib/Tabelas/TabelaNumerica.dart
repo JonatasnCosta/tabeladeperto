@@ -252,13 +252,13 @@ class TabelaNumerica extends StatelessWidget {
               fontSize: 21.0
               )
              )
+              // fonte J1
             ]
           )
         )
       ]
     ),
     Padding(padding: EdgeInsets.only(bottom: 100.0))
-      // fonte J1
    ]
   )
 );

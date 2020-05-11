@@ -36,7 +36,7 @@ class TabelaIngles extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
+        padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
         children: <Widget>[
            SizedBox(height: 15.0,),
           Padding(
@@ -50,7 +50,7 @@ class TabelaIngles extends StatelessWidget {
             )
           )
           ),
-          SizedBox(height: 30.0,),
+          SizedBox(height: 50.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -68,7 +68,7 @@ class TabelaIngles extends StatelessWidget {
                      "have correction, \n"
                      "take care of them.\n",
               style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 21.0
+              fontSize: 22.0
               ),
               ),
                 Text('J6',
@@ -81,7 +81,7 @@ class TabelaIngles extends StatelessWidget {
           )
          ],
         ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -95,10 +95,10 @@ class TabelaIngles extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("They offer sharp vision  \n"
-                     "and smooth transitions.   \n",
+                Text("They offer sharp vision\n"
+                     "and smooth transitions.\n",
                       style: TextStyle(fontFamily: ('Varela'),
-              fontSize: 17.0
+              fontSize: 18.0
               ),
               ),
                 Text('J5',
@@ -111,7 +111,7 @@ class TabelaIngles extends StatelessWidget {
           )
          ],
         ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -173,7 +173,7 @@ class TabelaIngles extends StatelessWidget {
           )
          ],
         ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -203,7 +203,7 @@ class TabelaIngles extends StatelessWidget {
           )
          ],
         ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -233,7 +233,8 @@ class TabelaIngles extends StatelessWidget {
             ),
           )
          ],
-        )
+        ),
+         Padding(padding: EdgeInsets.only(bottom: 100.0))
       ],
       ),
     );

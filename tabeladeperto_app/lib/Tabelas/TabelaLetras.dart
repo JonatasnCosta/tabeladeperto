@@ -37,7 +37,7 @@ class TabelaLetras extends StatelessWidget {
       ),
        body: 
        ListView(
-        padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
+        padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
         children: <Widget>[
           SizedBox(height: 15.0,),
           Padding(
@@ -69,6 +69,7 @@ class TabelaLetras extends StatelessWidget {
                      "S  Z  N  D  C  J  X \n",
               style: TextStyle(fontFamily: ('Varela'),
               fontSize: 22.0
+              //Tamanho fonte J6
               )
               ),
                 Text('J6',
@@ -81,7 +82,7 @@ class TabelaLetras extends StatelessWidget {
           )
          ]
         ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
         Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -99,6 +100,7 @@ class TabelaLetras extends StatelessWidget {
                      "  V  O  Y  W  S  J  L  \n",
                       style: TextStyle(fontFamily: ('Varela'),
               fontSize: 18.0
+               //Tamanho fonte J5
               )
               ),
                 Text('J5',
@@ -111,7 +113,7 @@ class TabelaLetras extends StatelessWidget {
           )
          ]
         ),
-        Padding(padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0 )),
+        Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -129,6 +131,7 @@ class TabelaLetras extends StatelessWidget {
                      "     L  D  S  A  N  Z  X \n",
                     style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 14.0
+                     //Tamanho fonte J4
               ),
                      ),
                 Text('J4',
@@ -159,6 +162,7 @@ class TabelaLetras extends StatelessWidget {
                      "       F  C  L  D  S  A  N \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 13.0
+                     //Tamanho fonte J3
                   )
                   ),
                 Text('J3',
@@ -171,7 +175,7 @@ class TabelaLetras extends StatelessWidget {
         )
         ]
         ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 30.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -189,6 +193,7 @@ class TabelaLetras extends StatelessWidget {
                      "        Z  X  L  D  G  H  C\n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 12.0
+                     //Tamanho fonte J2
                   )
                 ),
                 Text('J2',
@@ -201,7 +206,7 @@ class TabelaLetras extends StatelessWidget {
         )
       ]
         ),
-         Padding(padding: EdgeInsets.only(left: 15.0, top: 40.0, right: 15.0 )),
+         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            children: <Widget>[
@@ -219,6 +224,7 @@ class TabelaLetras extends StatelessWidget {
                      "           L  R  S  F  Q  L  E  \n",
                      style: TextStyle(fontFamily: ('Varela'),
                     fontSize: 11.0
+                     //Tamanho fonte J1
                   )
                 ),
                 Text('J1',
@@ -230,7 +236,8 @@ class TabelaLetras extends StatelessWidget {
             )
           )
          ]
-        )
+        ),
+         Padding(padding: EdgeInsets.only(bottom: 100.0))
       ]
     )
     );

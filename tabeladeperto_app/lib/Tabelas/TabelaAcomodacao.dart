@@ -34,7 +34,7 @@ class TabelaAcomodacao extends StatelessWidget {
         ]
       ),
       body: ListView(
-        padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0),
+        padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
         children: <Widget>[
            SizedBox(height: 15.0,),
           Padding(
@@ -80,7 +80,8 @@ class TabelaAcomodacao extends StatelessWidget {
             )   
          ]
         )
-       )
+       ),
+        Padding(padding: EdgeInsets.only(bottom: 100.0))
       ]
     )
   );
