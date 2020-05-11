@@ -11,3 +11,4 @@ void main() {
 }
 //Ponto de intermédio para receber o firebase
 //Criado o ponto de restauração para integrar o firebase
+//Criado o ponto para integrar firebase
