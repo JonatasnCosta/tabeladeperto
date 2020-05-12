@@ -1,25 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 
-class TabelaNumerica extends StatelessWidget {
-    final assetPath, cookiename;
+const String testDevice = '721A33913C7D7D311A5FB39652B0084B';
+
+class TabelaNumerica extends StatefulWidget {
+  final assetPath, cookiename;
     TabelaNumerica({this.assetPath, this.cookiename});
   @override
-  Widget build(BuildContext context) {
-    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-7677202089790115~4215733257");
-   
-    myBanner
-  // typically this happens well before the ad is shown
-  ..load()
-  ..show(
-    // Positions the banner ad 60 pixels from the bottom of the screen
-    anchorOffset: 60.0,
-    // Positions the banner ad 10 pixels from the center of the screen to the right
-    horizontalCenterOffset: 10.0,
-    // Banner Position
-    anchorType: AnchorType.bottom,
-  );
+ 
+  _TabelaNumericaState createState() => _TabelaNumericaState();
+}
 
+class _TabelaNumericaState extends State<TabelaNumerica> {
+  static const  MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    testDevices: testDevice != null ? <String>[testDevice] : null,
+    nonPersonalizedAds: true,
+    keywords: <String>['Mortgage', 'Attorney'],
+  );
+ 
+   BannerAd _bannerAd;
+   BannerAd createBannerAd(){
+    return BannerAd(
+    adUnitId: 'ca-app-pub-7677202089790115/3393606173', 
+    size: AdSize.smartBanner,
+     targetingInfo: targetingInfo,
+     listener: (MobileAdEvent event) {
+    print("BannerAd $event");
+     });
+ }
+ @override
+ void initState(){
+ FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-7677202089790115~4215733257' );
+ _bannerAd = createBannerAd()
+ ..load()
+ ..show();
+  super.initState();
+ }
+
+ @override
+  void dispose() {
+    _bannerAd.dispose();
+    super.dispose();
+  }
+  
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar( 
         backgroundColor: Colors.white,
@@ -273,29 +298,10 @@ class TabelaNumerica extends StatelessWidget {
         )
       ]
     ),
-    Padding(padding: EdgeInsets.only(bottom: 150.0))
+    Padding(padding: EdgeInsets.only(bottom: 60.0))
    ]
   )
 );
 }
 }
 
-MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-  keywords: <String>['optometry', 'beautiful apps'],
-  contentUrl: 'https://flutter.io',
-  childDirected: false,
-   // or MobileAdGender.female, MobileAdGender.unknown
-  testDevices: <String>[], // Android emulators are considered test devices
-);
-
-BannerAd myBanner = BannerAd(
-  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
-  // https://developers.google.com/admob/android/test-ads
-  // https://developers.google.com/admob/ios/test-ads
-  adUnitId: BannerAd.testAdUnitId,
-  size: AdSize.smartBanner,
-  targetingInfo: targetingInfo,
-  listener: (MobileAdEvent event) {
-    print("BannerAd event is $event");
-  },
-);

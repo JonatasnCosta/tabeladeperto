@@ -207,7 +207,7 @@ Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavor
               )
             )
           ),
-            SizedBox(height: 7.0,),
+            SizedBox(height: 3.0,),
              Text(name_3,
                style: TextStyle(
                  fontFamily: 'Varela',
@@ -268,7 +268,7 @@ Widget adicaobuildCard(String name_1, String imgPath_1, bool added, bool isFavor
                 )
               )
             ),
-            SizedBox(height: 7.0,),
+            SizedBox(height: 3.0,),
              Text(name_4,
                style: TextStyle(
                fontFamily: 'Varela',

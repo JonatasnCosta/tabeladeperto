@@ -1,8 +1,51 @@
 import 'package:flutter/material.dart';
 
-class TabelaPortugues extends StatelessWidget {
-   final assetPath, cookiename;
+import 'package:firebase_admob/firebase_admob.dart';
+
+const String testDevice = '721A33913C7D7D311A5FB39652B0084B';
+
+class TabelaPortugues extends StatefulWidget {
+  final assetPath, cookiename;
     TabelaPortugues({this.assetPath, this.cookiename});
+  @override
+ 
+  _TabelaPortuguesState createState() => _TabelaPortuguesState();
+}
+
+class _TabelaPortuguesState extends State<TabelaPortugues> {
+  static const  MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    testDevices: testDevice != null ? <String>[testDevice] : null,
+    nonPersonalizedAds: true,
+    keywords: <String>['Credit','Lawyer'],
+  );
+ 
+   BannerAd _bannerAd;
+   BannerAd createBannerAd(){
+    return BannerAd(
+    adUnitId: 'ca-app-pub-7677202089790115/3393606173', 
+    size: AdSize.smartBanner,
+     targetingInfo: targetingInfo,
+     listener: (MobileAdEvent event) {
+    print("BannerAd $event");
+     });
+ }
+ @override
+ void initState(){
+ FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-7677202089790115~4215733257' );
+ _bannerAd = createBannerAd()
+ ..load()
+ ..show();
+  super.initState();
+ }
+
+ @override
+  void dispose() {
+    _bannerAd.dispose();
+    super.dispose();
+  }
+
+
+
   @override
  Widget build(BuildContext context) {
     return Scaffold(
@@ -242,7 +285,7 @@ class TabelaPortugues extends StatelessWidget {
       )
     ]
   ),
-    Padding(padding: EdgeInsets.only(bottom: 100.0))
+    Padding(padding: EdgeInsets.only(bottom: 60.0))
 ]
 )
 );

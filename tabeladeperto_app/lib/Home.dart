@@ -3,19 +3,30 @@ import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
 
+
+
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
+
+
 class _HomeState extends State<Home>
 with SingleTickerProviderStateMixin {
+
+ 
+
 TabController _tabController;
 @override
  void initState(){
    super.initState();
    _tabController = TabController(length: 3, vsync: this);
+ 
+ 
  }
+
 @override
   Widget build(BuildContext context) {
     return Scaffold(

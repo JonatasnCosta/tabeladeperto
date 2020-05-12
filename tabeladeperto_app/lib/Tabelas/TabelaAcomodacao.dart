@@ -1,8 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
-class TabelaAcomodacao extends StatelessWidget {
+const String testDevice = '721A33913C7D7D311A5FB39652B0084B';
+
+class TabelaAcomodacao extends StatefulWidget {
   final assetPath, cookiename;
     TabelaAcomodacao({this.assetPath, this.cookiename});
+  @override
+ 
+  _TabelaAcomodacaoState createState() => _TabelaAcomodacaoState();
+}
+
+class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
+  static const  MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    testDevices: testDevice != null ? <String>[testDevice] : null,
+    nonPersonalizedAds: true,
+    keywords: <String>['Hosting', 'Claim'],
+  );
+ 
+   BannerAd _bannerAd;
+   BannerAd createBannerAd(){
+    return BannerAd(
+    adUnitId: 'ca-app-pub-7677202089790115/3393606173', 
+    size: AdSize.smartBanner,
+     targetingInfo: targetingInfo,
+     listener: (MobileAdEvent event) {
+    print("BannerAd $event");
+     });
+ }
+ @override
+ void initState(){
+ FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-7677202089790115~4215733257' );
+ _bannerAd = createBannerAd()
+ ..load()
+ ..show();
+  super.initState();
+ }
+
+ @override
+  void dispose() {
+    _bannerAd.dispose();
+    super.dispose();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar( 
