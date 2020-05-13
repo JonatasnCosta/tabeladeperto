@@ -16,6 +16,7 @@ class _TabelaLenteContatoState extends State<TabelaLenteContato> {
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
     keywords: <String>['Insurance', 'Loans'],
+    childDirected: false,
   );
  
    BannerAd _bannerAd;
