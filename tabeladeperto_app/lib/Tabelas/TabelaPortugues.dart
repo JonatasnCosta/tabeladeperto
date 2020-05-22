@@ -62,7 +62,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               Navigator.of(context).pop();
               },
         ) ,
-        title: Text("Tabelas App",
+        title: Text("Optical tabelas",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,

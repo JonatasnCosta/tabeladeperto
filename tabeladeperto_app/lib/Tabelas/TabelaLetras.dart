@@ -64,7 +64,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               Navigator.of(context).pop();
               },
         ) ,
-        title: Text("Tabelas App",
+        title: Text("Optical tabelas",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,

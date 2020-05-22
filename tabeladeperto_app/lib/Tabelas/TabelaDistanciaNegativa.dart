@@ -61,7 +61,7 @@ class _TabelaDistanciaNegativaState extends State<TabelaDistanciaNegativa> {
               Navigator.of(context).pop();
            },
         ) ,
-        title: Text("Tabelas App",
+        title: Text("Optical tabelas",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,

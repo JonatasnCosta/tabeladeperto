@@ -41,7 +41,7 @@ TabController _tabController;
             color: Color(0xff545d68)),
             onPressed: (){},
         ) ,
-        title: Text("Tabelas App",
+        title: Text("Optical tabelas",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,

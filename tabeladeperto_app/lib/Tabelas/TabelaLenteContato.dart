@@ -60,7 +60,7 @@ class _TabelaLenteContatoState extends State<TabelaLenteContato> {
               Navigator.of(context).pop();
               },
         ) ,
-        title: Text("Tabelas App",
+        title: Text("Optical tabelas",
         style: TextStyle(
           fontFamily: 'Varela',
           fontSize: 20.0,
