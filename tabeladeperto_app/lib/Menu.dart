@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 
@@ -251,20 +252,20 @@ class Menu extends StatelessWidget {
         )
       ),
       SizedBox(height: 20.0,),
-       Container(
-            width: 230.0,
-            child: Row(
+      InkWell(
+        child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Copyright &copy; JonatasProgrammer. Todos os direitos reservados.",
+                Text("Copyright & copy; JonatasProgrammer. Todos os direitos reservados.",
               style: TextStyle(
               fontFamily: ('Varela'),
               fontSize: 10.0
-               //Frases em português
+               //Url portifólio
               )
               )
           ]
-        )
+        ),
+        onTap: () => launch('https://docs.flutter.io/flutter/services/UrlLauncher-class.html'),
       ),
        SizedBox(height: 30.0,),
         ],
