@@ -101,7 +101,7 @@ class _TabelaLenteContatoState extends State<TabelaLenteContato> {
               width: 1.0
              ),
              borderRadius: BorderRadius.all(
-               Radius.circular(10.0
+               Radius.circular(2.0
                )
              )
             ),
@@ -109,8 +109,7 @@ class _TabelaLenteContatoState extends State<TabelaLenteContato> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset('assets/olhohumano.png'
-                ),
+                Image.asset('assets/olho.jpg'),
                 Padding(
                   padding: EdgeInsets.only(top: 10.00)
                 ),
