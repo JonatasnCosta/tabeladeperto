@@ -42,6 +42,231 @@ class Menu extends StatelessWidget {
             )
           )
         ),
+         SizedBox(height: 50.0,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text('Informações sobre o aplicativo:',
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 20.0
+              )
+              ), 
+        ]
+           ),
+           SizedBox(height: 10.0,),
+            Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("O aplicativo é composto pelas funções.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+         Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de leitura de letras.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de leitura númerica.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de leitura de frases em português.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de leitura de frases em inglês.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela dinamica 40 cm.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de adição.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de amplitude ACC.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de acomodação.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de distância-vértice positiva.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de distância-vértice negativa.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Tabela de conversão de dioptrias.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Modelo do globo ocular.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+      SizedBox(height: 20.0,),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Copyright &copy; JonatasProgrammer. Todos os direitos reservados.",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 10.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+       SizedBox(height: 30.0,),
         ],
       ),
     );
