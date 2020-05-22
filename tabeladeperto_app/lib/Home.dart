@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tabeladeperto_app/Menu.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
@@ -52,7 +53,10 @@ TabController _tabController;
           icon: Icon(
             Icons.more_vert,
             color: Color(0xff545d68)),
-            onPressed: (){},
+            onPressed: (){
+               Navigator.push(context, MaterialPageRoute(
+            builder: (context) => Menu()));
+            },
         )
         ],
       ),

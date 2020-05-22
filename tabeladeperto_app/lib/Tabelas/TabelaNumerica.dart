@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
+import 'package:tabeladeperto_app/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
@@ -70,7 +71,10 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
           icon: Icon(
             Icons.more_vert,
             color: Color(0xff545d68)),
-            onPressed: (){},
+            onPressed: (){
+               Navigator.push(context, MaterialPageRoute(
+            builder: (context) => Menu()));
+            },
          ) 
         ]
       ),
