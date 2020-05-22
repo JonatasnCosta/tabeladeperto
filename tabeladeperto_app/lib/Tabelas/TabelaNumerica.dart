@@ -104,7 +104,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -139,7 +139,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -174,7 +174,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -208,7 +208,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[ 
@@ -243,7 +243,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -278,7 +278,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

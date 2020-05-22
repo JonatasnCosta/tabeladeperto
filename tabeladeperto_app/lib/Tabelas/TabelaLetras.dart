@@ -108,8 +108,9 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               fontSize: 21.0
               )
               ),
-              Container(
-            width: 230.0,
+             Padding(padding: EdgeInsets.only(left: 5.0),
+             child:Container(
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -127,7 +128,8 @@ class _TabelaLetrasState extends State<TabelaLetras> {
                 )
               ]
             )
-          )
+          ) ,
+             )
          ]
         ),
         Padding(padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0 )),
@@ -140,7 +142,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -171,7 +173,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -202,7 +204,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -233,7 +235,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -264,7 +266,7 @@ class _TabelaLetrasState extends State<TabelaLetras> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

@@ -107,7 +107,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
             ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -139,7 +139,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -170,7 +170,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -202,7 +202,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -235,7 +235,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -267,7 +267,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               )
               ),
               Container(
-            width: 230.0,
+            width: 250.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
