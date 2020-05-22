@@ -265,7 +265,7 @@ class Menu extends StatelessWidget {
               )
           ]
         ),
-        onTap: () => launch('https://docs.flutter.io/flutter/services/UrlLauncher-class.html'),
+        onTap: () => launch('https://jonatascosta.com'),
       ),
        SizedBox(height: 30.0,),
         ],
