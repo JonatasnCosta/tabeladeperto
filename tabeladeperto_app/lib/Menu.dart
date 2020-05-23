@@ -265,7 +265,7 @@ class Menu extends StatelessWidget {
               )
           ]
         ),
-        onTap: () => launch('https://jonatascosta.com'),
+        onTap: () => launch('http://jonatascosta.com'),
       ),
        SizedBox(height: 30.0,),
         ],
