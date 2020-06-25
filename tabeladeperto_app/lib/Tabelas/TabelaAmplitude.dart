@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:tabeladeperto_app/Menu.dart';
 
-const String testDevice = 'Mobile_id';
+const String testDevice = '721A33913C7D7D311A5FB39652B0084B';
 
 class TabelaAmplitude extends StatefulWidget {
   final assetPath, cookiename;
@@ -123,7 +123,8 @@ class _TabelaAmplitudeState extends State<TabelaAmplitude> {
            )   
          ]
         ) 
-      )  
+      ),
+       Padding(padding: EdgeInsets.only(bottom: 100.0))   
     ]
   )
  );
