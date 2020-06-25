@@ -57,7 +57,13 @@ flutter:
     - assets/dinamica.png
     - assets/olho.jpg
     - assets/ingles.jpg
-  #  - images/a_dot_ham.jpeg
+    - assets/emdesenvolvimento.png
+    - assets/figura1.png
+    - assets/figura2.png
+    - assets/figura3.png
+    - assets/figura4.png
+    - assets/figura5.png
+    - assets/figura6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

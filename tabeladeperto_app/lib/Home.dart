@@ -3,6 +3,7 @@ import 'package:tabeladeperto_app/Menu.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
+import 'package:tabeladeperto_app/Menus/MenuTestes.dart';
 
 
 
@@ -23,7 +24,7 @@ TabController _tabController;
 @override
  void initState(){
    super.initState();
-   _tabController = TabController(length: 3, vsync: this);
+   _tabController = TabController(length: 4, vsync: this);
  
  
  }
@@ -103,7 +104,15 @@ TabController _tabController;
                  fontSize: 21.0,
                )
               )
-             )
+             ),
+              Tab(
+               child: Text('Teste',
+               style: TextStyle(
+                 fontFamily: 'Varela',
+                 fontSize: 21.0,
+               )
+              )
+             ),
             ],
           ),
            Container(
@@ -115,6 +124,7 @@ TabController _tabController;
                 MenuTabelasLeitura(),
                 MenuTabelasRefracao(),
                 MenuLenteContato(),
+                MenuTestes()
                ]
             )
           )

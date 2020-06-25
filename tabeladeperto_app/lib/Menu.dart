@@ -251,6 +251,21 @@ class Menu extends StatelessWidget {
           ]
         )
       ),
+       Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Teste de Ishihara.\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
       SizedBox(height: 20.0,),
       InkWell(
         child: Row(
@@ -268,8 +283,25 @@ class Menu extends StatelessWidget {
         onTap: () => launch('http://jonatascosta.com'),
       ),
        SizedBox(height: 30.0,),
+        Container(
+            width: 230.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("\n",
+              style: TextStyle(
+              fontFamily: ('Varela'),
+              fontSize: 15.0
+               //Frases em português
+              )
+              )
+          ]
+        )
+      ),
+      Padding(padding: EdgeInsets.only(bottom: 25.0))
         ],
       ),
+      
     );
   }
 }
