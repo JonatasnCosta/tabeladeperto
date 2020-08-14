@@ -25,6 +25,11 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_admob: ^0.9.3+4
   url_launcher: ^5.5.0
+  pdf: 1.10.1
+  path_provider: ^1.6.5
+  flutter_full_pdf_viewer: ^1.0.6
+  printing: ^3.3.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,6 +69,8 @@ flutter:
     - assets/figura4.png
     - assets/figura5.png
     - assets/figura6.png
+    - assets/olho-humano.png
+    - assets/logoreceitaexpress.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

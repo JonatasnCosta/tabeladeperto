@@ -81,7 +81,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         fontSize: 21.0,
                       ))),
               Tab(
-                  child: Text('Teste',
+                  child: Text('Teste & Receita',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,

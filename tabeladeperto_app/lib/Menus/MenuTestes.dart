@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabeladeperto_app/Teste/Ishihara.dart';
+import 'package:tabeladeperto_app/Teste/ReceitaExpress.dart';
 
 class MenuTestes extends StatelessWidget {
   @override
@@ -21,8 +22,8 @@ class MenuTestes extends StatelessWidget {
                   children: <Widget>[
                     ditanciapositivabuildCard('Teste de Ishihara',
                         'assets/figura1.png', false, false, context),
-                    distancianegativabuildCard('Em desenvolvimento',
-                        'assets/emdesenvolvimento.png', false, false, context),
+                    distancianegativabuildCard('Receita Express',
+                        'assets/logoreceitaexpress.png', false, false, context),
                     conversaobuildCard('Em desenvolvimento',
                         'assets/emdesenvolvimento.png', false, false, context),
                     inglesbuildCard('Em desenvolvimento',
@@ -86,7 +87,10 @@ Widget distancianegativabuildCard(
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ReceitaExpress()));
+          },
           child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
