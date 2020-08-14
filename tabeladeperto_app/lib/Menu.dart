@@ -29,7 +29,7 @@ class Menu extends StatelessWidget {
           ),
           Padding(
               padding: EdgeInsets.only(left: 90.0),
-              child: Text('Versão 1.0.0+1',
+              child: Text('Versão 2.0.0',
                   style: TextStyle(
                       fontFamily: 'Varela',
                       fontSize: 20.0,
@@ -183,6 +183,16 @@ class Menu extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text("Teste de Ishihara.\n",
+                        style: TextStyle(fontFamily: ('Varela'), fontSize: 15.0
+                            //Frases em português
+                            ))
+                  ])),
+          Container(
+              width: 230.0,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("Compartilhamento de receita.\n",
                         style: TextStyle(fontFamily: ('Varela'), fontSize: 15.0
                             //Frases em português
                             ))
