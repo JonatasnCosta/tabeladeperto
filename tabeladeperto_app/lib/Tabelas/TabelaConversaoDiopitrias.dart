@@ -22,7 +22,7 @@ class _TabelaConversaoDiopitriasState extends State<TabelaConversaoDiopitrias> {
   BannerAd _bannerAd;
   BannerAd createBannerAd() {
     return BannerAd(
-        adUnitId: 'ca-app-pub-7677202089790115/3393606173',
+        adUnitId: 'ca-app-pub-7677202089790115/7305972971',
         size: AdSize.banner,
         targetingInfo: targetingInfo,
         listener: (MobileAdEvent event) {
