@@ -1167,7 +1167,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 5.0, left: 10.0, right: 40.0, bottom: 200.0),
+                              top: 5.0, left: 10.0, right: 40.0),
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
@@ -1184,6 +1184,21 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                               builder: (context) =>
                                                   ReceitaExpress()));
                                     }),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 5.0, left: 10.0, right: 40.0, bottom: 200.0),
+                          child: RaisedButton(
+                              color: Color(0xFFd7ccc8),
+                              textColor: Colors.black,
+                              padding: EdgeInsets.all(15.0),
+                              child: Text('Voltar'),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: new BorderRadius.circular(18.0),
+                                  side: BorderSide(color: Colors.black)),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              }),
                         ),
                         SizedBox(height: 20.0)
                       ],
