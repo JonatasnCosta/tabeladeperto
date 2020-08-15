@@ -678,8 +678,17 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
     '3.50'
   ];
   var _currentItemSelectedADD = '  0.00';
+  var _miopia = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedMIOP = 'Escolher';
+  var _hipermetropia = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedHIPERMETROPIA = 'Escolher';
+  var _astigmatismo = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedASTIGMATISMO = 'Escolher';
+  var _presbiopia = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedPRESBIOPIA = 'Escolher';
 
   bool _isButtonDisabled = true;
+
   final pdf = pw.Document();
   writeOnPdf() {
     pdf.addPage(pw.MultiPage(
@@ -747,6 +756,55 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                   fontSize: 30.0,
                 )),
           ]),
+          pw.SizedBox(
+            height: 20.0,
+          ),
+          pw.Row(children: [
+            pw.Paragraph(
+                text: "Miopia:  $_currentItemSelectedMIOP",
+                style: pw.TextStyle(
+                  fontSize: 30.0,
+                )),
+          ]),
+          pw.Paragraph(
+              text: 'Hipermetropia:   $_currentItemSelectedHIPERMETROPIA',
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.Paragraph(
+              text: 'Astigmatismo:  $_currentItemSelectedASTIGMATISMO',
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.Paragraph(
+              text: 'Presbiopoia:   $_currentItemSelectedPRESBIOPIA',
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.SizedBox(
+            height: 20.0,
+          ),
+          pw.Paragraph(
+              text:
+                  "1- É normal nos primeiros dias sentir tonteira, cefaléia, náuseas, ver desníveis no chão ou me escadas.",
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.Paragraph(
+              text:
+                  "2- Para Multifocal ou Bifocal a adaptação poderá velar de 7 a 15 dias, podendo ter os mesmos sintomas acima.",
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.Paragraph(
+              text:
+                  "3- Um exame de vista é sempre oportuno antes de seu filho começar a estudar.",
+              style: pw.TextStyle(
+                fontSize: 30.0,
+              )),
+          pw.SizedBox(
+            height: 20.0,
+          ),
           pw.Row(children: [
             pw.Paragraph(
                 text: "Observações:",
@@ -1098,6 +1156,157 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 });
                               },
                               value: _currentItemSelectedADD,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Ametropias:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Miopia:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                            Text(
+                              'Hipermetropia:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                            Text(
+                              'Astigmatismo:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                            Text(
+                              'Presbiotropia:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            DropdownButton<String>(
+                              items: _miopia.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedmiop) {
+                                setState(() {
+                                  this._currentItemSelectedMIOP =
+                                      newValueSelectedmiop;
+                                });
+                              },
+                              value: _currentItemSelectedMIOP,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items: _hipermetropia
+                                  .map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedhiper) {
+                                setState(() {
+                                  this._currentItemSelectedHIPERMETROPIA =
+                                      newValueSelectedhiper;
+                                });
+                              },
+                              value: _currentItemSelectedHIPERMETROPIA,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items: _astigmatismo
+                                  .map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedastig) {
+                                setState(() {
+                                  this._currentItemSelectedASTIGMATISMO =
+                                      newValueSelectedastig;
+                                });
+                              },
+                              value: _currentItemSelectedASTIGMATISMO,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items:
+                                  _presbiopia.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedpresbio) {
+                                setState(() {
+                                  this._currentItemSelectedPRESBIOPIA =
+                                      newValueSelectedpresbio;
+                                });
+                              },
+                              value: _currentItemSelectedPRESBIOPIA,
                             ),
                           ],
                         ),
