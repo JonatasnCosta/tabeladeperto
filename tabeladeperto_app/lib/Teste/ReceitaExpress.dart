@@ -687,6 +687,24 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _presbiopia = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedPRESBIOPIA = 'Escolher';
 
+  var _vs = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedVISAOSIMPLES = 'Escolher';
+
+  var _multifocal = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedMULTIFOCAL = 'Escolher';
+
+  var _bifocal = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedBIFOCAL = 'Escolher';
+
+  var _incolor = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedINCOLOR = 'Escolher';
+
+  var _ar = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedAR = 'Escolher';
+
+  var _foto = ['Escolher', 'Sim', 'Não'];
+  var _currentItemSelectedFOTO = 'Escolher';
+
   bool _isButtonDisabled = true;
 
   final pdf = pw.Document();
@@ -1307,6 +1325,213 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 });
                               },
                               value: _currentItemSelectedPRESBIOPIA,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Visão Simples:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                            Text(
+                              'Multifocal:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                            Text(
+                              'Bifocal:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            DropdownButton<String>(
+                              items: _vs.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedvs) {
+                                setState(() {
+                                  this._currentItemSelectedVISAOSIMPLES =
+                                      newValueSelectedvs;
+                                });
+                              },
+                              value: _currentItemSelectedVISAOSIMPLES,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items:
+                                  _multifocal.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedmult) {
+                                setState(() {
+                                  this._currentItemSelectedMULTIFOCAL =
+                                      newValueSelectedmult;
+                                });
+                              },
+                              value: _currentItemSelectedMULTIFOCAL,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items: _bifocal.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedbifo) {
+                                setState(() {
+                                  this._currentItemSelectedBIFOCAL =
+                                      newValueSelectedbifo;
+                                });
+                              },
+                              value: _currentItemSelectedBIFOCAL,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Incolor:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                            Text(
+                              'A.R:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                            Text(
+                              'Fotossensível:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            DropdownButton<String>(
+                              items: _incolor.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedincolor) {
+                                setState(() {
+                                  this._currentItemSelectedINCOLOR =
+                                      newValueSelectedincolor;
+                                });
+                              },
+                              value: _currentItemSelectedINCOLOR,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items: _ar.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedar) {
+                                setState(() {
+                                  this._currentItemSelectedAR =
+                                      newValueSelectedar;
+                                });
+                              },
+                              value: _currentItemSelectedAR,
+                            ),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                            DropdownButton<String>(
+                              items: _foto.map((String dropDownStringItem) {
+                                return DropdownMenuItem<String>(
+                                  value: dropDownStringItem,
+                                  child: Text(dropDownStringItem),
+                                );
+                              }).toList(),
+                              onChanged: (String newValueSelectedfoto) {
+                                setState(() {
+                                  this._currentItemSelectedFOTO =
+                                      newValueSelectedfoto;
+                                });
+                              },
+                              value: _currentItemSelectedFOTO,
                             ),
                           ],
                         ),
