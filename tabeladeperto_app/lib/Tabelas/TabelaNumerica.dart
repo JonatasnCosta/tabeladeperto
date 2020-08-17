@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:tabeladeperto_app/Menu.dart';
 
-const String testDevice = '9A88AAC62836EFF2EF922D024CB9D9BE';
+const String testDevice = 'Mobile_id';
 
 class TabelaNumerica extends StatefulWidget {
   final assetPath, cookiename;
