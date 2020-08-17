@@ -725,53 +725,53 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
             pw.Paragraph(
                 text: "Nome do paciente: ",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
             pw.Paragraph(
                 text: _controllerNomePaciente.text,
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.Row(children: [
             pw.Paragraph(
                 text: "OD: $_currentItemSelectedOD ",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
             pw.Paragraph(
                 text: '  Cil:  $_currentItemSelectedCILOD',
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
             pw.Paragraph(
                 text: '  Eixo:  $_currentItemSelectedEIXOOD',
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.Row(children: [
             pw.Paragraph(
                 text: "OE: $_currentItemSelectedOE",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
             pw.Paragraph(
                 text: '  Cil:  $_currentItemSelectedCILOE',
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
             pw.Paragraph(
                 text: '  Eixo:  $_currentItemSelectedEIXOOE',
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.Row(children: [
             pw.Paragraph(
                 text: "Adição:  $_currentItemSelectedADD",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.SizedBox(
@@ -781,60 +781,97 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
             pw.Paragraph(
                 text: "Miopia:  $_currentItemSelectedMIOP",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.Paragraph(
               text: 'Hipermetropia:   $_currentItemSelectedHIPERMETROPIA',
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.Paragraph(
               text: 'Astigmatismo:  $_currentItemSelectedASTIGMATISMO',
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.Paragraph(
               text: 'Presbiopoia:   $_currentItemSelectedPRESBIOPIA',
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.SizedBox(
             height: 20.0,
           ),
           pw.Paragraph(
               text:
-                  "1- É normal nos primeiros dias sentir tonteira, cefaléia, náuseas, ver desníveis no chão ou me escadas.",
+                  "1- É normal nos primeiros dias sentir tonteira, cefaléia, náuseas, ver desníveis no chão ou em escadas.",
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.Paragraph(
               text:
                   "2- Para Multifocal ou Bifocal a adaptação poderá velar de 7 a 15 dias, podendo ter os mesmos sintomas acima.",
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.Paragraph(
               text:
                   "3- Um exame de vista é sempre oportuno antes de seu filho começar a estudar.",
               style: pw.TextStyle(
-                fontSize: 30.0,
+                fontSize: 25.0,
               )),
           pw.SizedBox(
             height: 20.0,
           ),
           pw.Row(children: [
             pw.Paragraph(
+                text: "Visão Simples:  $_currentItemSelectedVISAOSIMPLES",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+          ]),
+          pw.Paragraph(
+              text: 'Multifocal:   $_currentItemSelectedMULTIFOCAL',
+              style: pw.TextStyle(
+                fontSize: 25.0,
+              )),
+          pw.Paragraph(
+              text: 'Bifocal:  $_currentItemSelectedBIFOCAL',
+              style: pw.TextStyle(
+                fontSize: 25.0,
+              )),
+          pw.SizedBox(
+            height: 20.0,
+          ),
+          pw.Row(children: [
+            pw.Paragraph(
+                text: "Incolor:  $_currentItemSelectedINCOLOR",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+          ]),
+          pw.Paragraph(
+              text: 'Anti-Reflexo:   $_currentItemSelectedAR',
+              style: pw.TextStyle(
+                fontSize: 25.0,
+              )),
+          pw.Paragraph(
+              text: 'Fotossensível:  $_currentItemSelectedFOTO',
+              style: pw.TextStyle(
+                fontSize: 25.0,
+              )),
+          pw.Row(children: [
+            pw.Paragraph(
                 text: "Observações:",
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
           pw.Row(children: [
             pw.Paragraph(
                 text: _controllerObsercacoes.text,
                 style: pw.TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 25.0,
                 )),
           ]),
         ];
@@ -1358,7 +1395,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                                    EdgeInsets.only(top: 10.0, left: 60.0)),
                             Text(
                               'Bifocal:',
                               style: TextStyle(
@@ -1395,7 +1432,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                                    EdgeInsets.only(top: 10.0, left: 50.0)),
                             DropdownButton<String>(
                               items:
                                   _multifocal.map((String dropDownStringItem) {
@@ -1414,7 +1451,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                                    EdgeInsets.only(top: 10.0, left: 40.0)),
                             DropdownButton<String>(
                               items: _bifocal.map((String dropDownStringItem) {
                                 return DropdownMenuItem<String>(
@@ -1451,7 +1488,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                                    EdgeInsets.only(top: 10.0, left: 80.0)),
                             Text(
                               'A.R:',
                               style: TextStyle(
@@ -1462,7 +1499,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                                    EdgeInsets.only(top: 10.0, left: 90.0)),
                             Text(
                               'Fotossensível:',
                               style: TextStyle(
@@ -1499,7 +1536,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                                    EdgeInsets.only(top: 10.0, left: 40.0)),
                             DropdownButton<String>(
                               items: _ar.map((String dropDownStringItem) {
                                 return DropdownMenuItem<String>(
@@ -1517,7 +1554,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
+                                    EdgeInsets.only(top: 10.0, left: 50.0)),
                             DropdownButton<String>(
                               items: _foto.map((String dropDownStringItem) {
                                 return DropdownMenuItem<String>(
