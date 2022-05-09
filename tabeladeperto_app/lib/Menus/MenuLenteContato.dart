@@ -23,19 +23,19 @@ class MenuLenteContato extends StatelessWidget {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     ditanciapositivabuildCard('Distância-Vértice +',
-                        'assets/lente_3.jpg', false, false, context),
+                        'assets/lente_3.jpg', false, context),
                     distancianegativabuildCard('Distância-Vértice - ',
-                        'assets/lente_2.jpg', false, false, context),
+                        'assets/lente_2.jpg', false, context),
                     conversaobuildCard('Conversão Dioptrias ',
-                        'assets/conversao.jpg', false, false, context),
-                    inglesbuildCard('Lente de Contato',
-                        'assets/lentedecontato.png', false, false, context)
+                        'assets/conversao.jpg', false, context),
+                    lentecontatobuildCard('Lente de Contato',
+                        'assets/lentedecontato.png', false, context)
                   ]))
         ]));
   }
 
   Widget ditanciapositivabuildCard(
-      String name, String imgPath, bool added, bool isFavorite, context) {
+      String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
@@ -58,15 +58,10 @@ class MenuLenteContato extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.all(5.0),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            isFavorite
-                                ? Icon(Icons.favorite, color: Color(0xffef7532))
-                                : Icon(Icons.favorite_border,
-                                    color: Color(0xffef7532))
-                          ])),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                      )),
                   Container(
-                      height: 100.0,
+                      height: 120.0,
                       width: 100.0,
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -85,7 +80,7 @@ class MenuLenteContato extends StatelessWidget {
 }
 
 Widget distancianegativabuildCard(
-    String name_1, String imgPath_1, bool added, bool isFavorite, context) {
+    String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -108,15 +103,10 @@ Widget distancianegativabuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -134,7 +124,7 @@ Widget distancianegativabuildCard(
 }
 
 Widget conversaobuildCard(
-    String name_3, String imgPath_3, bool added, bool isFavorite, context) {
+    String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -157,15 +147,10 @@ Widget conversaobuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -182,8 +167,8 @@ Widget conversaobuildCard(
               ]))));
 }
 
-Widget inglesbuildCard(
-    String name_4, String imgPath_4, bool added, bool isFavorite, context) {
+Widget lentecontatobuildCard(
+    String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -206,15 +191,10 @@ Widget inglesbuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
