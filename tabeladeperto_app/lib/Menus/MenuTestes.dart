@@ -20,20 +20,19 @@ class MenuTestes extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    ditanciapositivabuildCard('Teste de Ishihara',
-                        'assets/figura1.png', false, false, context),
-                    distancianegativabuildCard('Receita Express',
-                        'assets/logoreceitaexpress.png', false, false, context),
-                    conversaobuildCard('Em desenvolvimento',
-                        'assets/emdesenvolvimento.png', false, false, context),
-                    inglesbuildCard('Em desenvolvimento',
-                        'assets/emdesenvolvimento.png', false, false, context)
+                    ishiharabuildCard('Teste de Ishihara', 'assets/figura1.png',
+                        false, context),
+                    receitaexpressbuildCard('Receita Express',
+                        'assets/logoreceitaexpress.png', false, context),
+                    desenvolvimento_1buildCard('Em desenvolvimento',
+                        'assets/emdesenvolvimento.png', false, context),
+                    desenvolvimento_2buildCard('Em desenvolvimento',
+                        'assets/emdesenvolvimento.png', false, context)
                   ]))
         ]));
   }
 
-  Widget ditanciapositivabuildCard(
-      String name, String imgPath, bool added, bool isFavorite, context) {
+  Widget ishiharabuildCard(String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
@@ -56,15 +55,10 @@ class MenuTestes extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.all(5.0),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            isFavorite
-                                ? Icon(Icons.favorite, color: Color(0xffef7532))
-                                : Icon(Icons.favorite_border,
-                                    color: Color(0xffef7532))
-                          ])),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                      )),
                   Container(
-                      height: 100.0,
+                      height: 120.0,
                       width: 100.0,
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -82,8 +76,8 @@ class MenuTestes extends StatelessWidget {
   }
 }
 
-Widget distancianegativabuildCard(
-    String name_1, String imgPath_1, bool added, bool isFavorite, context) {
+Widget receitaexpressbuildCard(
+    String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -105,15 +99,10 @@ Widget distancianegativabuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -130,8 +119,8 @@ Widget distancianegativabuildCard(
               ]))));
 }
 
-Widget conversaobuildCard(
-    String name_3, String imgPath_3, bool added, bool isFavorite, context) {
+Widget desenvolvimento_1buildCard(
+    String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -150,15 +139,10 @@ Widget conversaobuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -175,8 +159,8 @@ Widget conversaobuildCard(
               ]))));
 }
 
-Widget inglesbuildCard(
-    String name_4, String imgPath_4, bool added, bool isFavorite, context) {
+Widget desenvolvimento_2buildCard(
+    String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -195,15 +179,10 @@ Widget inglesbuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
