@@ -26,7 +26,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           elevation: 0.0,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.blur_on, color: Color(0xff545d68)),
+            icon: Icon(Icons.monetization_on, color: Color(0xff545d68)),
             onPressed: () {},
           ),
           title: Text("Optical tabelas",

@@ -15,6 +15,7 @@ class ReceitaExpress extends StatefulWidget {
 class _ReceitaExpressState extends State<ReceitaExpress> {
   TextEditingController _controllerNomePaciente = TextEditingController();
   TextEditingController _controllerObsercacoes = TextEditingController();
+  TextEditingController _controllerNomeProfissional = TextEditingController();
 
   var _od = [
     '  0.00',
@@ -723,6 +724,18 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
           ),
           pw.Row(children: [
             pw.Paragraph(
+                text: "Nome do profissional: ",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.Paragraph(
+                text: _controllerNomeProfissional.text,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+          ]),
+          pw.Row(children: [
+            pw.Paragraph(
                 text: "Nome do paciente: ",
                 style: pw.TextStyle(
                   fontSize: 25.0,
@@ -957,6 +970,37 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         ),
                         SizedBox(
                           height: 20.0,
+                        ),
+                        Container(
+                          height: 90.0,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                top: 10.0, left: 10.0, right: 40.0),
+                            child: Container(
+                              padding: EdgeInsets.only(left: 45.0),
+                              height: 50.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25.0),
+                                  color: Color(0xFFd7ccc8)),
+                              child: Center(
+                                child: TextField(
+                                  keyboardType: TextInputType.text,
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    labelText: 'Nome do profissional',
+                                    labelStyle: TextStyle(
+                                        fontFamily: 'Varela',
+                                        fontSize: 15.0,
+                                        color: Colors.black),
+                                  ),
+                                  controller: _controllerNomeProfissional,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
                         ),
                         Container(
                           height: 90.0,
@@ -1274,7 +1318,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
                               'Presbiotropia:',
                               style: TextStyle(
@@ -1605,6 +1649,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Padding(
                           padding: EdgeInsets.only(
                               top: 10.0, left: 10.0, right: 40.0),
+                          // ignore: deprecated_member_use
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
@@ -1620,6 +1665,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Padding(
                           padding: EdgeInsets.only(
                               top: 5.0, left: 10.0, right: 40.0),
+                          // ignore: deprecated_member_use
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
@@ -1640,6 +1686,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Padding(
                           padding: EdgeInsets.only(
                               top: 5.0, left: 10.0, right: 40.0),
+                          // ignore: deprecated_member_use
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
@@ -1660,6 +1707,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Padding(
                           padding: EdgeInsets.only(
                               top: 5.0, left: 10.0, right: 40.0),
+                          // ignore: deprecated_member_use
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
@@ -1675,6 +1723,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Padding(
                           padding: EdgeInsets.only(
                               top: 5.0, left: 10.0, right: 40.0, bottom: 200.0),
+                          // ignore: deprecated_member_use
                           child: RaisedButton(
                               color: Color(0xFFd7ccc8),
                               textColor: Colors.black,
