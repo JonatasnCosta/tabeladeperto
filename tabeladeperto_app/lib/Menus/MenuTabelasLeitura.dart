@@ -22,16 +22,19 @@ class MenuTabelasLeitura extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    letrasbuildCard('Letras', 'assets/letras.jpg', false),
-                    numericabuildCard('Numérica', 'assets/numerica.jpg', false),
-                    portuguesbuildCard(
-                        'Frases Português', 'assets/portugues.jpg', false),
-                    inglesbuildCard('Frases Inglês', 'assets/ingles.jpg', false)
+                    letrasbuildCard(
+                        'Letras', 'assets/letras.jpg', false, context),
+                    numericabuildCard(
+                        'Numérica', 'assets/numerica.jpg', false, context),
+                    portuguesbuildCard('Frases Português',
+                        'assets/portugues.jpg', false, context),
+                    inglesbuildCard(
+                        'Frases Inglês', 'assets/ingles.jpg', false, context)
                   ]))
         ]));
   }
 
-  Widget letrasbuildCard(String name, String imgPath, context) {
+  Widget letrasbuildCard(String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
@@ -70,7 +73,7 @@ class MenuTabelasLeitura extends StatelessWidget {
   }
 }
 
-Widget numericabuildCard(String name_1, String imgPath_1, context) {
+Widget numericabuildCard(String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -113,7 +116,8 @@ Widget numericabuildCard(String name_1, String imgPath_1, context) {
           )));
 }
 
-Widget portuguesbuildCard(String name_3, String imgPath_3, context) {
+Widget portuguesbuildCard(
+    String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -156,7 +160,7 @@ Widget portuguesbuildCard(String name_3, String imgPath_3, context) {
               ]))));
 }
 
-Widget inglesbuildCard(String name_4, String imgPath_4, context) {
+Widget inglesbuildCard(String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(

@@ -23,19 +23,18 @@ class MenuTabelasRefracao extends StatelessWidget {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     dinamicabuildCard('Dinamica 40 cm', 'assets/dinamica.png',
-                        false, false, context),
+                        false, context),
                     adicaobuildCard('Tabela de Adição', 'assets/adicao.jpg',
-                        false, false, context),
+                        false, context),
                     amplitudebuildCard('Amplitude de ACC',
-                        'assets/convergencia.png', false, false, context),
-                    acomodacaobuildCard('Acomodação', 'assets/acomodacao.jpg',
-                        false, false, context)
+                        'assets/convergencia.png', false, context),
+                    acomodacaobuildCard(
+                        'Acomodação', 'assets/acomodacao.jpg', false, context)
                   ]))
         ]));
   }
 
-  Widget dinamicabuildCard(
-      String name, String imgPath, bool added, bool isFavorite, context) {
+  Widget dinamicabuildCard(String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
@@ -58,15 +57,10 @@ class MenuTabelasRefracao extends StatelessWidget {
                   Padding(
                       padding: EdgeInsets.all(5.0),
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            isFavorite
-                                ? Icon(Icons.favorite, color: Color(0xffef7532))
-                                : Icon(Icons.favorite_border,
-                                    color: Color(0xffef7532))
-                          ])),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                      )),
                   Container(
-                      height: 100.0,
+                      height: 120.0,
                       width: 100.0,
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -84,8 +78,7 @@ class MenuTabelasRefracao extends StatelessWidget {
   }
 }
 
-Widget adicaobuildCard(
-    String name_1, String imgPath_1, bool added, bool isFavorite, context) {
+Widget adicaobuildCard(String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -108,15 +101,10 @@ Widget adicaobuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -134,7 +122,7 @@ Widget adicaobuildCard(
 }
 
 Widget amplitudebuildCard(
-    String name_3, String imgPath_3, bool added, bool isFavorite, context) {
+    String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -157,15 +145,10 @@ Widget amplitudebuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -183,7 +166,7 @@ Widget amplitudebuildCard(
 }
 
 Widget acomodacaobuildCard(
-    String name_4, String imgPath_4, bool added, bool isFavorite, context) {
+    String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
@@ -206,15 +189,10 @@ Widget acomodacaobuildCard(
                 Padding(
                     padding: EdgeInsets.all(5.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          isFavorite
-                              ? Icon(Icons.favorite, color: Color(0xffef7532))
-                              : Icon(Icons.favorite_border,
-                                  color: Color(0xffef7532))
-                        ])),
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
                 Container(
-                    height: 100.0,
+                    height: 120.0,
                     width: 100.0,
                     decoration: BoxDecoration(
                         image: DecorationImage(
