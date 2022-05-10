@@ -7,6 +7,7 @@ import 'package:tabeladeperto_app/Home.dart';
 import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:tabeladeperto_app/Receita/CilOlhoEsquerdoController.dart';
 import 'package:tabeladeperto_app/Receita/CilOlhodireitoController.dart';
 import 'package:tabeladeperto_app/Receita/EixoOlhoDireitoController.dart';
 import 'package:tabeladeperto_app/Receita/OlhoDireitoController.dart';
@@ -38,86 +39,13 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerOE = OlhoEsquerdoController();
   get oe => controllerOE.oe;
 
+  final controllerCilOE = CilOlhoEsquerdoController();
+  get ciloe => controllerCilOE.ciloe;
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
   var _currentItemSelectedOE = '  0.00';
-
-  var _ciloe = [
-    '  0.00',
-    '-0.25',
-    '-0.50',
-    '-0.75',
-    '-1.00',
-    '-1.25',
-    '-1.50',
-    '-1.75',
-    '-2.00',
-    '-2.25',
-    '-2.50',
-    '-2.75',
-    '-3.00',
-    '-3.25',
-    '-3.50',
-    '-3.75',
-    '-4.00',
-    '-4.25',
-    '-4.50',
-    '-4.75',
-    '-5.00',
-    '-5.25',
-    '-5.50',
-    '-5.75',
-    '-6.00',
-    '-6.25',
-    '-6.50',
-    '-6.75',
-    '-7.00',
-    '-7.25',
-    '-7.50',
-    '-7.75',
-    '-8.00',
-    '-8.25',
-    '-8.50',
-    '-8.75',
-    '-9.00',
-    '-10.25',
-    '-10.50',
-    '-10.75',
-    '-11.00',
-    '-11.25',
-    '-11.50',
-    '-11.75',
-    '-12.00',
-    '-12.25',
-    '-12.50',
-    '-12.75',
-    '-13.00',
-    '-13.25',
-    '-13.50',
-    '-13.75',
-    '-14.00',
-    '-14.25',
-    '-14.50',
-    '-14.75',
-    '-15.00',
-    '-15.25',
-    '-15.50',
-    '-15.75',
-    '-16.00',
-    '-17.25',
-    '-17.50',
-    '-17.75',
-    '-18.00',
-    '-18.25',
-    '-18.50',
-    '-18.75',
-    '-19.00',
-    '-19.25',
-    '-19.50',
-    '-19.75',
-    '-20.00',
-  ];
   var _currentItemSelectedCILOE = '  0.00';
 
   var _eixooe = [
@@ -722,7 +650,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   padding:
                                       EdgeInsets.only(top: 15.0, left: 10.0)),
                               DropdownButton<String>(
-                                items: _ciloe.map((String dropDownStringItem) {
+                                items: controllerCilOE.ciloe
+                                    .map((String dropDownStringItem) {
                                   return DropdownMenuItem<String>(
                                     value: dropDownStringItem,
                                     child: Text(dropDownStringItem),
