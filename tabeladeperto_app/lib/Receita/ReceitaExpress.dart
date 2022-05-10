@@ -8,6 +8,7 @@ import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/CilOlhodireitoController.dart';
+import 'package:tabeladeperto_app/Receita/EixoOlhoDireitoController.dart';
 import 'package:tabeladeperto_app/Receita/OlhoDireitoController.dart';
 import 'package:tabeladeperto_app/Receita/OlhoEsquerdoController.dart';
 
@@ -28,57 +29,20 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerOD = OlhoDireitoController();
   get od => controllerOD.od;
 
-  final controllerOE = OlhoEsquerdoController();
-  get oe => controllerOE.oe;
-
   final controllerCilOD = CilOlhoDireitoController();
   get cilod => controllerCilOD.cilod;
 
+  final controllerEixoOD = EixoOlhoDireitoController();
+  get eixood => controllerEixoOD.eixood;
+
+  final controllerOE = OlhoEsquerdoController();
+  get oe => controllerOE.oe;
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
-
-  var _eixood = [
-    '  0',
-    '5',
-    '10',
-    '15',
-    '20',
-    '25',
-    '30',
-    '35',
-    '40',
-    '45',
-    '50',
-    '55',
-    '60',
-    '65',
-    '70',
-    '75',
-    '80',
-    '85',
-    '90',
-    '95',
-    '100',
-    '105',
-    '110',
-    '115',
-    '120',
-    '125',
-    '130',
-    '135',
-    '140',
-    '145',
-    '150',
-    '155',
-    '160',
-    '165',
-    '170',
-    '175',
-    '180'
-  ];
   var _currentItemSelectedEIXOOD = '  0';
-
   var _currentItemSelectedOE = '  0.00';
+
   var _ciloe = [
     '  0.00',
     '-0.25',
@@ -688,7 +652,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   padding:
                                       EdgeInsets.only(top: 15.0, left: 10.0)),
                               DropdownButton<String>(
-                                items: _eixood.map((String dropDownStringItem) {
+                                items: controllerEixoOD.eixood
+                                    .map((String dropDownStringItem) {
                                   return DropdownMenuItem<String>(
                                     value: dropDownStringItem,
                                     child: Text(dropDownStringItem),
