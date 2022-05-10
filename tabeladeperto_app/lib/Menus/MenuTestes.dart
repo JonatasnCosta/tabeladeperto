@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabeladeperto_app/Teste/Ishihara.dart';
-import 'package:tabeladeperto_app/Teste/ReceitaExpress.dart';
+import 'package:tabeladeperto_app/Receita/ReceitaExpress.dart';
 
 class MenuTestes extends StatelessWidget {
   @override
