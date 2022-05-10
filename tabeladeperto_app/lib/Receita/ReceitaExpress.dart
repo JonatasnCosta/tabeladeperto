@@ -10,6 +10,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/CilOlhoEsquerdoController.dart';
 import 'package:tabeladeperto_app/Receita/CilOlhodireitoController.dart';
 import 'package:tabeladeperto_app/Receita/EixoOlhoDireitoController.dart';
+import 'package:tabeladeperto_app/Receita/EixoOlhoEsquerdoController.dart';
 import 'package:tabeladeperto_app/Receita/OlhoDireitoController.dart';
 import 'package:tabeladeperto_app/Receita/OlhoEsquerdoController.dart';
 
@@ -42,52 +43,16 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerCilOE = CilOlhoEsquerdoController();
   get ciloe => controllerCilOE.ciloe;
 
+  final controllerEixoOE = EixoOlhoEsquerdoController();
+  get eixooe => controllerEixoOE.eixooe;
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
   var _currentItemSelectedOE = '  0.00';
   var _currentItemSelectedCILOE = '  0.00';
-
-  var _eixooe = [
-    '  0',
-    '5',
-    '10',
-    '15',
-    '20',
-    '25',
-    '30',
-    '35',
-    '40',
-    '45',
-    '50',
-    '55',
-    '60',
-    '65',
-    '70',
-    '75',
-    '80',
-    '85',
-    '90',
-    '95',
-    '100',
-    '105',
-    '110',
-    '115',
-    '120',
-    '125',
-    '130',
-    '135',
-    '140',
-    '145',
-    '150',
-    '155',
-    '160',
-    '165',
-    '170',
-    '175',
-    '180'
-  ];
   var _currentItemSelectedEIXOOE = '  0';
+
   var _add = [
     '  0.00',
     '0.75',
@@ -680,7 +645,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   padding:
                                       EdgeInsets.only(top: 15.0, left: 10.0)),
                               DropdownButton<String>(
-                                items: _eixooe.map((String dropDownStringItem) {
+                                items: controllerEixoOE.eixooe
+                                    .map((String dropDownStringItem) {
                                   return DropdownMenuItem<String>(
                                     value: dropDownStringItem,
                                     child: Text(dropDownStringItem),
