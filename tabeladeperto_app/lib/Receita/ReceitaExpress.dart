@@ -7,6 +7,7 @@ import 'package:tabeladeperto_app/Home.dart';
 import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:tabeladeperto_app/Receita/AdicaoController.dart';
 import 'package:tabeladeperto_app/Receita/CilOlhoEsquerdoController.dart';
 import 'package:tabeladeperto_app/Receita/CilOlhodireitoController.dart';
 import 'package:tabeladeperto_app/Receita/EixoOlhoDireitoController.dart';
@@ -46,6 +47,9 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerEixoOE = EixoOlhoEsquerdoController();
   get eixooe => controllerEixoOE.eixooe;
 
+  final controllerADD = AdicaoController();
+  get add => controllerADD.add;
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
@@ -53,21 +57,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedCILOE = '  0.00';
   var _currentItemSelectedEIXOOE = '  0';
 
-  var _add = [
-    '  0.00',
-    '0.75',
-    '1.00',
-    '1.25',
-    '1.50',
-    '1.75',
-    '2.00',
-    '2.25',
-    '2.50',
-    '2.75',
-    '3.00',
-    '3.25',
-    '3.50'
-  ];
   var _currentItemSelectedADD = '  0.00';
   var _miopia = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedMIOP = 'Escolher';
@@ -682,7 +671,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 padding:
                                     EdgeInsets.only(top: 15.0, left: 10.0)),
                             DropdownButton<String>(
-                              items: _add.map((String dropDownStringItem) {
+                              items: controllerADD.add
+                                  .map((String dropDownStringItem) {
                                 return DropdownMenuItem<String>(
                                   value: dropDownStringItem,
                                   child: Text(dropDownStringItem),
