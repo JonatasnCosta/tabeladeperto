@@ -9,6 +9,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/MultifocalCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/VisaoSimplesCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
@@ -85,17 +86,19 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get funcaoVisaoSimples =>
       controllerVisaoSimples.funcionVisaoSimplesCheckbox();
 
+  final controllerMultifocal = MultifocalCheckBoxController();
+  get estaselecionadoMultifocal =>
+      controllerMultifocal.estaselecionadoMultifocal;
+  get naoMultifocal => controllerMultifocal.naoMultifocal;
+  get funcaoMultifocal => controllerMultifocal.funcionMultifocalCheckbox();
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
   var _currentItemSelectedOE = '  0.00';
   var _currentItemSelectedCILOE = '  0.00';
   var _currentItemSelectedEIXOOE = '  0';
-
   var _currentItemSelectedADD = '  0.00';
-
-  var _multifocal = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedMULTIFOCAL = 'Escolher';
 
   var _bifocal = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedBIFOCAL = 'Escolher';
@@ -261,7 +264,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 )),
           ]),
           pw.Paragraph(
-              text: 'Multifocal:   $_currentItemSelectedMULTIFOCAL',
+              text: 'Multifocal: ' + controllerMultifocal.naoMultifocal,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -876,9 +879,20 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerMultifocal
+                                    .estaselecionadoMultifocal,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerMultifocal
+                                        .funcionMultifocalCheckbox();
+                                    controllerMultifocal
+                                        .estaselecionadoMultifocal = valor;
+                                  });
+                                }),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 60.0)),
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
                               'Bifocal:',
                               style: TextStyle(
@@ -895,22 +909,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            DropdownButton<String>(
-                              items:
-                                  _multifocal.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedmult) {
-                                setState(() {
-                                  this._currentItemSelectedMULTIFOCAL =
-                                      newValueSelectedmult;
-                                });
-                              },
-                              value: _currentItemSelectedMULTIFOCAL,
-                            ),
                             Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 40.0)),
