@@ -10,6 +10,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/VisaoSimplesCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/HipermetropiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhoEsquerdoController.dart';
@@ -77,6 +78,13 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get naoPresbiopia => controllerPresbiopia.naoPesbiopia;
   get funcaoPresbiopia => controllerPresbiopia.funcionPresbiopiaCheckbox();
 
+  final controllerVisaoSimples = VisaoSimplesCheckBoxController();
+  get estaselecionadoVisaoSimples =>
+      controllerVisaoSimples.estaselecionadoVisaoSimples;
+  get naoVisaoSimpples => controllerVisaoSimples.naoVisaoSimples;
+  get funcaoVisaoSimples =>
+      controllerVisaoSimples.funcionVisaoSimplesCheckbox();
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
@@ -85,8 +93,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedEIXOOE = '  0';
 
   var _currentItemSelectedADD = '  0.00';
-  var _vs = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedVISAOSIMPLES = 'Escolher';
 
   var _multifocal = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedMULTIFOCAL = 'Escolher';
@@ -248,7 +254,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
           ),
           pw.Row(children: [
             pw.Paragraph(
-                text: "Visão Simples:  $_currentItemSelectedVISAOSIMPLES",
+                text:
+                    "Visão Simples: " + controllerVisaoSimples.naoVisaoSimples,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
@@ -847,6 +854,17 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerVisaoSimples
+                                    .estaselecionadoVisaoSimples,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerVisaoSimples
+                                        .funcionVisaoSimplesCheckbox();
+                                    controllerVisaoSimples
+                                        .estaselecionadoVisaoSimples = valor;
+                                  });
+                                }),
                             Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 40.0)),
@@ -877,27 +895,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            DropdownButton<String>(
-                              items: _vs.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedvs) {
-                                setState(() {
-                                  this._currentItemSelectedVISAOSIMPLES =
-                                      newValueSelectedvs;
-                                });
-                              },
-                              value: _currentItemSelectedVISAOSIMPLES,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 50.0)),
                             DropdownButton<String>(
                               items:
                                   _multifocal.map((String dropDownStringItem) {
