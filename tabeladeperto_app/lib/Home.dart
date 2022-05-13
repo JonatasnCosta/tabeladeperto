@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tabeladeperto_app/AreaPix.dart';
 import 'package:tabeladeperto_app/Menu.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
@@ -27,7 +28,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.monetization_on, color: Color(0xff545d68)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => AreaPix()));
+            },
           ),
           title: Text("Optical tabelas",
               style: TextStyle(
