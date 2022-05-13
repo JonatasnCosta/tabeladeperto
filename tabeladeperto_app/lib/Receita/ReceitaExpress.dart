@@ -8,6 +8,7 @@ import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/BifocalCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MultifocalCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
@@ -92,6 +93,11 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get naoMultifocal => controllerMultifocal.naoMultifocal;
   get funcaoMultifocal => controllerMultifocal.funcionMultifocalCheckbox();
 
+  final controllerBifocal = BifocalCheckBoxController();
+  get estaselecionadoBifocal => controllerBifocal.estaselecionadoBifocal;
+  get naoBifocal => controllerBifocal.naoBifocal;
+  get funcaoBifocal => controllerBifocal.funcionBifocalCheckbox();
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
@@ -99,9 +105,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedCILOE = '  0.00';
   var _currentItemSelectedEIXOOE = '  0';
   var _currentItemSelectedADD = '  0.00';
-
-  var _bifocal = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedBIFOCAL = 'Escolher';
 
   var _incolor = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedINCOLOR = 'Escolher';
@@ -269,7 +272,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Bifocal:  $_currentItemSelectedBIFOCAL',
+              text: 'Bifocal: ' + controllerBifocal.naoBifocal,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -727,7 +730,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
-                              'Ametropias:',
+                              'Ametropias & Tipos de lentes:',
                               style: TextStyle(
                                   fontFamily: 'Varela',
                                   fontSize: 14.0,
@@ -870,7 +873,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 }),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
                               'Multifocal:',
                               style: TextStyle(
@@ -901,36 +904,19 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerBifocal.estaselecionadoBifocal,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerBifocal.funcionBifocalCheckbox();
+                                    controllerBifocal.estaselecionadoBifocal =
+                                        valor;
+                                  });
+                                }),
                           ],
                         ),
                         SizedBox(
                           height: 10.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 40.0)),
-                            DropdownButton<String>(
-                              items: _bifocal.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedbifo) {
-                                setState(() {
-                                  this._currentItemSelectedBIFOCAL =
-                                      newValueSelectedbifo;
-                                });
-                              },
-                              value: _currentItemSelectedBIFOCAL,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
