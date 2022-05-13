@@ -7,6 +7,8 @@ import 'package:tabeladeperto_app/Home.dart';
 import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/HipermetropiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhoEsquerdoController.dart';
@@ -54,7 +56,20 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerHipermetropia = HipermetropiaCheckBoxController();
   get estaselecionado => controllerHipermetropia.estaselecionado;
   get naoHipermetropia => controllerHipermetropia.naoHipermetropia;
-  get funcao => controllerHipermetropia.funcionHipermetropiaCheckbox();
+  get funcaoHipermetropia =>
+      controllerHipermetropia.funcionHipermetropiaCheckbox();
+
+  final controllerMiopia = MiopiaCheckBoxController();
+  get estaselecionadoMiopia => controllerMiopia.estaselecionadoMiopia;
+  get naoMiopia => controllerMiopia.naoMiopia;
+  get funcaoMiopia => controllerMiopia.funcionMiopiaCheckbox();
+
+  final controllerAstigmatismo = AstigmatismoCheckBoxController();
+  get estaselecionadoAstigmatismo =>
+      controllerAstigmatismo.estaselecionadoAstigmatismo;
+  get naoAstigmatismo => controllerAstigmatismo.naoAstigmatismo;
+  get funcaoAstigmatismo =>
+      controllerAstigmatismo.funcionAstigmatismoCheckbox();
 
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
@@ -64,14 +79,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedEIXOOE = '  0';
 
   var _currentItemSelectedADD = '  0.00';
-  var _miopia = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedMIOP = 'Escolher';
-
-  var _astigmatismo = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedASTIGMATISMO = 'Escolher';
-  var _presbiopia = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedPRESBIOPIA = 'Escolher';
-
   var _vs = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedVISAOSIMPLES = 'Escolher';
 
@@ -188,7 +195,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
           ),
           pw.Row(children: [
             pw.Paragraph(
-                text: "Miopia:  $_currentItemSelectedMIOP",
+                text: 'Miopia: ' + controllerMiopia.naoMiopia,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
@@ -200,12 +207,12 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Astigmatismo:  $_currentItemSelectedASTIGMATISMO',
+              text: 'Astigmatismo: ' + controllerAstigmatismo.naoAstigmatismo,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Presbiopoia:   $_currentItemSelectedPRESBIOPIA',
+              text: 'Presbiopoia: aqui',
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -730,9 +737,18 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerMiopia.estaselecionadoMiopia,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerMiopia.funcionMiopiaCheckbox();
+                                    controllerMiopia.estaselecionadoMiopia =
+                                        valor;
+                                  });
+                                }),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 30.0)),
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
                               'Hipermetropia:',
                               style: TextStyle(
@@ -745,12 +761,23 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 value: controllerHipermetropia.estaselecionado,
                                 onChanged: (bool valor) {
                                   setState(() {
-                                    controllerHipermetropia.estaselecionado =
-                                        valor;
                                     controllerHipermetropia
                                         .funcionHipermetropiaCheckbox();
+                                    controllerHipermetropia.estaselecionado =
+                                        valor;
                                   });
                                 }),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
                             Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
@@ -762,77 +789,27 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
-                            /* Padding(
+                            Checkbox(
+                                value: controllerAstigmatismo
+                                    .estaselecionadoAstigmatismo,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerAstigmatismo
+                                        .funcionAstigmatismoCheckbox();
+                                    controllerAstigmatismo
+                                        .estaselecionadoAstigmatismo = valor;
+                                  });
+                                }),
+                            Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
-                              'Presbiotropia:',
+                              'Presbiopia:',
                               style: TextStyle(
                                   fontFamily: 'Varela',
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
-                            ),*/
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            DropdownButton<String>(
-                              items: _miopia.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedmiop) {
-                                setState(() {
-                                  this._currentItemSelectedMIOP =
-                                      newValueSelectedmiop;
-                                });
-                              },
-                              value: _currentItemSelectedMIOP,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
-                            DropdownButton<String>(
-                              items: _astigmatismo
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedastig) {
-                                setState(() {
-                                  this._currentItemSelectedASTIGMATISMO =
-                                      newValueSelectedastig;
-                                });
-                              },
-                              value: _currentItemSelectedASTIGMATISMO,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
-                            DropdownButton<String>(
-                              items:
-                                  _presbiopia.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedpresbio) {
-                                setState(() {
-                                  this._currentItemSelectedPRESBIOPIA =
-                                      newValueSelectedpresbio;
-                                });
-                              },
-                              value: _currentItemSelectedPRESBIOPIA,
                             ),
                           ],
                         ),
