@@ -7,13 +7,14 @@ import 'package:tabeladeperto_app/Home.dart';
 import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:tabeladeperto_app/Receita/AdicaoController.dart';
-import 'package:tabeladeperto_app/Receita/CilOlhoEsquerdoController.dart';
-import 'package:tabeladeperto_app/Receita/CilOlhodireitoController.dart';
-import 'package:tabeladeperto_app/Receita/EixoOlhoDireitoController.dart';
-import 'package:tabeladeperto_app/Receita/EixoOlhoEsquerdoController.dart';
-import 'package:tabeladeperto_app/Receita/OlhoDireitoController.dart';
-import 'package:tabeladeperto_app/Receita/OlhoEsquerdoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/HipermetropiaCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhoEsquerdoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhodireitoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/EixoOlhoDireitoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/EixoOlhoEsquerdoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/OlhoDireitoController.dart';
+import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/OlhoEsquerdoController.dart';
 
 class ReceitaExpress extends StatefulWidget {
   @override
@@ -50,6 +51,11 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   final controllerADD = AdicaoController();
   get add => controllerADD.add;
 
+  final controllerHipermetropia = HipermetropiaCheckBoxController();
+  get estaselecionado => controllerHipermetropia.estaselecionado;
+  get naoHipermetropia => controllerHipermetropia.naoHipermetropia;
+  get funcao => controllerHipermetropia.funcionHipermetropiaCheckbox();
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
@@ -60,8 +66,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedADD = '  0.00';
   var _miopia = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedMIOP = 'Escolher';
-  var _hipermetropia = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedHIPERMETROPIA = 'Escolher';
+
   var _astigmatismo = ['Escolher', 'Sim', 'Não'];
   var _currentItemSelectedASTIGMATISMO = 'Escolher';
   var _presbiopia = ['Escolher', 'Sim', 'Não'];
@@ -189,7 +194,8 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 )),
           ]),
           pw.Paragraph(
-              text: 'Hipermetropia:   $_currentItemSelectedHIPERMETROPIA',
+              text:
+                  'Hipermetropia: ' + controllerHipermetropia.naoHipermetropia,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -726,7 +732,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                             ),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 40.0)),
+                                    EdgeInsets.only(top: 10.0, left: 30.0)),
                             Text(
                               'Hipermetropia:',
                               style: TextStyle(
@@ -735,9 +741,19 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerHipermetropia.estaselecionado,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerHipermetropia.estaselecionado =
+                                        valor;
+                                    controllerHipermetropia
+                                        .funcionHipermetropiaCheckbox();
+                                  });
+                                }),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 15.0)),
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
                               'Astigmatismo:',
                               style: TextStyle(
@@ -746,7 +762,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
-                            Padding(
+                            /* Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
@@ -756,7 +772,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
-                            ),
+                            ),*/
                           ],
                         ),
                         Row(
@@ -779,25 +795,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 });
                               },
                               value: _currentItemSelectedMIOP,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 20.0)),
-                            DropdownButton<String>(
-                              items: _hipermetropia
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedhiper) {
-                                setState(() {
-                                  this._currentItemSelectedHIPERMETROPIA =
-                                      newValueSelectedhiper;
-                                });
-                              },
-                              value: _currentItemSelectedHIPERMETROPIA,
                             ),
                             Padding(
                                 padding:
