@@ -7,8 +7,11 @@ import 'package:tabeladeperto_app/Home.dart';
 import 'package:tabeladeperto_app/PdfPreviewScreen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:tabeladeperto_app/Receita/Checkbox/ArCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/BifocalCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/FotossensivelCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/IncolorCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MultifocalCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
@@ -98,6 +101,21 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get naoBifocal => controllerBifocal.naoBifocal;
   get funcaoBifocal => controllerBifocal.funcionBifocalCheckbox();
 
+  final controllerIncolor = IncolorCheckBoxController();
+  get estaselecionadoIncolor => controllerIncolor.estaselecionadoIncolor;
+  get naoIncolor => controllerIncolor.naoIncolor;
+  get funcaoIncolor => controllerIncolor.funcionIncolorCheckbox();
+
+  final controllerAR = ArCheckBoxController();
+  get estaselecionadoAR => controllerAR.estaselecionadoAr;
+  get naoAR => controllerAR.naoAR;
+  get funcaoAR => controllerAR.funcionARCheckbox();
+
+  final controllerFoto = FotossensivelCheckBoxController();
+  get estaselecionadoFoto => controllerFoto.estaselecionadoFoto;
+  get naoFoto => controllerFoto.naoFoto;
+  get funcaoFoto => controllerFoto.funcionFotoCheckbox();
+
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
   var _currentItemSelectedEIXOOD = '  0';
@@ -105,15 +123,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedCILOE = '  0.00';
   var _currentItemSelectedEIXOOE = '  0';
   var _currentItemSelectedADD = '  0.00';
-
-  var _incolor = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedINCOLOR = 'Escolher';
-
-  var _ar = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedAR = 'Escolher';
-
-  var _foto = ['Escolher', 'Sim', 'Não'];
-  var _currentItemSelectedFOTO = 'Escolher';
 
   bool _isButtonDisabled = true;
 
@@ -230,7 +239,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Presbiopoia: ' + controllerPresbiopia.naoPesbiopia,
+              text: 'Presbiopia: ' + controllerPresbiopia.naoPesbiopia,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -281,18 +290,18 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
           ),
           pw.Row(children: [
             pw.Paragraph(
-                text: "Incolor:  $_currentItemSelectedINCOLOR",
+                text: "Incolor: " + controllerIncolor.naoIncolor,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
           ]),
           pw.Paragraph(
-              text: 'Anti-Reflexo:   $_currentItemSelectedAR',
+              text: 'Anti-Reflexo: ' + controllerAR.naoAR,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Fotossensível:  $_currentItemSelectedFOTO',
+              text: 'Fotossensível: ' + controllerFoto.naoFoto,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -746,28 +755,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            Text(
-                              'Miopia:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: controllerMiopia.estaselecionadoMiopia,
-                                onChanged: (bool valor) {
-                                  setState(() {
-                                    controllerMiopia.funcionMiopiaCheckbox();
-                                    controllerMiopia.estaselecionadoMiopia =
-                                        valor;
-                                  });
-                                }),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                                padding: EdgeInsets.only(top: 10.0, left: 5.0)),
                             Text(
                               'Hipermetropia:',
                               style: TextStyle(
@@ -788,7 +776,43 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 }),
                             Padding(
                                 padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                                    EdgeInsets.only(top: 10.0, left: 32.0)),
+                            Text(
+                              'Miopia:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                value: controllerMiopia.estaselecionadoMiopia,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerMiopia.funcionMiopiaCheckbox();
+                                    controllerMiopia.estaselecionadoMiopia =
+                                        valor;
+                                  });
+                                }),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 32.0)),
+                            Text(
+                              'A.R:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                value: controllerAR.estaselecionadoAr,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerAR.funcionARCheckbox();
+                                    controllerAR.estaselecionadoAr = valor;
+                                  });
+                                }),
                           ],
                         ),
                         SizedBox(
@@ -820,8 +844,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   });
                                 }),
                             Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                                padding: EdgeInsets.only(top: 10.0, left: 8.0)),
                             Text(
                               'Presbiopia:',
                               style: TextStyle(
@@ -839,6 +862,26 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                         .funcionPresbiopiaCheckbox();
                                     controllerPresbiopia
                                         .estaselecionadoPresbiopia = valor;
+                                  });
+                                }),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Incolor:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                value: controllerIncolor.estaselecionadoIncolor,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerIncolor.funcionIncolorCheckbox();
+                                    controllerIncolor.estaselecionadoIncolor =
+                                        valor;
                                   });
                                 }),
                           ],
@@ -925,28 +968,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
-                              'Incolor:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 80.0)),
-                            Text(
-                              'A.R:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 90.0)),
-                            Text(
                               'Fotossensível:',
                               style: TextStyle(
                                   fontFamily: 'Varela',
@@ -954,72 +975,18 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerFoto.estaselecionadoFoto,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerFoto.funcionFotoCheckbox();
+                                    controllerFoto.estaselecionadoFoto = valor;
+                                  });
+                                }),
                           ],
                         ),
                         SizedBox(
                           height: 10.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            DropdownButton<String>(
-                              items: _incolor.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedincolor) {
-                                setState(() {
-                                  this._currentItemSelectedINCOLOR =
-                                      newValueSelectedincolor;
-                                });
-                              },
-                              value: _currentItemSelectedINCOLOR,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 40.0)),
-                            DropdownButton<String>(
-                              items: _ar.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedar) {
-                                setState(() {
-                                  this._currentItemSelectedAR =
-                                      newValueSelectedar;
-                                });
-                              },
-                              value: _currentItemSelectedAR,
-                            ),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 50.0)),
-                            DropdownButton<String>(
-                              items: _foto.map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              onChanged: (String newValueSelectedfoto) {
-                                setState(() {
-                                  this._currentItemSelectedFOTO =
-                                      newValueSelectedfoto;
-                                });
-                              },
-                              value: _currentItemSelectedFOTO,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20.0,
                         ),
                         Container(
                           height: 90.0,
