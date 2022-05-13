@@ -9,6 +9,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:tabeladeperto_app/Receita/Checkbox/AstigmatismoCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
+import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/HipermetropiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhoEsquerdoController.dart';
@@ -70,6 +71,11 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get naoAstigmatismo => controllerAstigmatismo.naoAstigmatismo;
   get funcaoAstigmatismo =>
       controllerAstigmatismo.funcionAstigmatismoCheckbox();
+
+  final controllerPresbiopia = PresbiopiaCheckBoxController();
+  get estaselecionadoPresbiopia => controllerMiopia.estaselecionadoMiopia;
+  get naoPresbiopia => controllerPresbiopia.naoPesbiopia;
+  get funcaoPresbiopia => controllerPresbiopia.funcionPresbiopiaCheckbox();
 
   var _currentItemSelectedOD = '  0.00';
   var _currentItemSelectedCILOD = '  0.00';
@@ -212,7 +218,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 fontSize: 25.0,
               )),
           pw.Paragraph(
-              text: 'Presbiopoia: aqui',
+              text: 'Presbiopoia: ' + controllerPresbiopia.naoPesbiopia,
               style: pw.TextStyle(
                 fontSize: 25.0,
               )),
@@ -811,6 +817,17 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                            Checkbox(
+                                value: controllerPresbiopia
+                                    .estaselecionadoPresbiopia,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerPresbiopia
+                                        .funcionPresbiopiaCheckbox();
+                                    controllerPresbiopia
+                                        .estaselecionadoPresbiopia = valor;
+                                  });
+                                }),
                           ],
                         ),
                         SizedBox(
