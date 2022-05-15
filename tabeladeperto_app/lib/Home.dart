@@ -27,7 +27,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           elevation: 0.0,
           centerTitle: true,
           leading: IconButton(
-            icon: Icon(Icons.monetization_on, color: Color(0xff545d68)),
+            icon: Icon(
+              Icons.monetization_on,
+              color: Color(0xff545d68),
+              size: 30.00,
+            ),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => AreaPix()));
@@ -36,11 +40,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           title: Text("Optical tabelas",
               style: TextStyle(
                   fontFamily: 'Varela',
-                  fontSize: 20.0,
+                  fontSize: 35.0,
                   color: Color(0xff545d68))),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
+              icon: Icon(
+                Icons.more_vert,
+                color: Color(0xff545d68),
+                size: 30.00,
+              ),
               onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Menu()));

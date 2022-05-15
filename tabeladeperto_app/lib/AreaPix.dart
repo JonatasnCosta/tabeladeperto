@@ -151,9 +151,6 @@ class _AreaPixState extends State<AreaPix> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(
-                  height: 10.00,
-                ),
                 TextButton.icon(
                   onPressed: () =>
                       _lounchLink('https://www.linkedin.com/in/jonatasncosta'),

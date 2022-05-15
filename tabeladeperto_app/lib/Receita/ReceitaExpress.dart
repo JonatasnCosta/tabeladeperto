@@ -15,7 +15,6 @@ import 'package:tabeladeperto_app/Receita/Checkbox/IncolorCheckBoxController.dar
 import 'package:tabeladeperto_app/Receita/Checkbox/MiopiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/MultifocalCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/PresbiopiaCheckBoxController.dart';
-import 'package:tabeladeperto_app/Receita/Checkbox/VisaoSimplesCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/AdicaoController.dart';
 import 'package:tabeladeperto_app/Receita/Checkbox/HipermetropiaCheckBoxController.dart';
 import 'package:tabeladeperto_app/Receita/SelecaoDeGrauController/CilOlhoEsquerdoController.dart';
@@ -32,7 +31,7 @@ class ReceitaExpress extends StatefulWidget {
 
 class _ReceitaExpressState extends State<ReceitaExpress> {
   TextEditingController _controllerNomePaciente = TextEditingController();
-  TextEditingController _controllerObsercacoes = TextEditingController();
+  TextEditingController _controllerObservacoes = TextEditingController();
   TextEditingController _controllerNomeProfissional = TextEditingController();
   TextEditingController _controllerData = TextEditingController();
 
@@ -83,13 +82,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   get naoPresbiopia => controllerPresbiopia.naoPesbiopia;
   get funcaoPresbiopia => controllerPresbiopia.funcionPresbiopiaCheckbox();
 
-  final controllerVisaoSimples = VisaoSimplesCheckBoxController();
-  get estaselecionadoVisaoSimples =>
-      controllerVisaoSimples.estaselecionadoVisaoSimples;
-  get naoVisaoSimpples => controllerVisaoSimples.naoVisaoSimples;
-  get funcaoVisaoSimples =>
-      controllerVisaoSimples.funcionVisaoSimplesCheckbox();
-
   final controllerMultifocal = MultifocalCheckBoxController();
   get estaselecionadoMultifocal =>
       controllerMultifocal.estaselecionadoMultifocal;
@@ -133,11 +125,16 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
       margin: pw.EdgeInsets.all(32),
       build: (pw.Context context) {
         return <pw.Widget>[
-          pw.Header(
-            level: 0,
+          pw.Center(
             child: pw.Text("Receita",
                 style: pw.TextStyle(
                   fontSize: 40.0,
+                )),
+          ),
+          pw.Header(
+            child: pw.Text("",
+                style: pw.TextStyle(
+                  fontSize: 10.0,
                 )),
           ),
           pw.Row(children: [
@@ -217,94 +214,71 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                   fontSize: 25.0,
                 )),
           ]),
+          pw.SizedBox(height: 20.0),
+          pw.Row(children: [
+            pw.Paragraph(
+              text: 'Miopia: ' + controllerMiopia.naoMiopia,
+              style: pw.TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+            pw.SizedBox(width: 20.00),
+            pw.Paragraph(
+                text: 'Hipermetropia: ' +
+                    controllerHipermetropia.naoHipermetropia,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.SizedBox(width: 20.00),
+            pw.Paragraph(
+                text: 'Astigmatismo: ' + controllerAstigmatismo.naoAstigmatismo,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+          ]),
           pw.SizedBox(
             height: 20.0,
           ),
           pw.Row(children: [
             pw.Paragraph(
-                text: 'Miopia: ' + controllerMiopia.naoMiopia,
+                text: 'Presbiopia: ' + controllerPresbiopia.naoPesbiopia,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
-          ]),
-          pw.Paragraph(
-              text:
-                  'Hipermetropia: ' + controllerHipermetropia.naoHipermetropia,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text: 'Astigmatismo: ' + controllerAstigmatismo.naoAstigmatismo,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text: 'Presbiopia: ' + controllerPresbiopia.naoPesbiopia,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.SizedBox(
-            height: 20.0,
-          ),
-          pw.Paragraph(
-              text:
-                  "1- É normal nos primeiros dias sentir tonteira, cefaléia, náuseas, ver desníveis no chão ou em escadas.",
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text:
-                  "2- Para Multifocal ou Bifocal a adaptação poderá velar de 7 a 15 dias, podendo ter os mesmos sintomas acima.",
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text:
-                  "3- Um exame de vista é sempre oportuno antes de seu filho começar a estudar.",
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.SizedBox(
-            height: 20.0,
-          ),
-          pw.Row(children: [
+            pw.SizedBox(width: 20.00),
             pw.Paragraph(
-                text:
-                    "Visão Simples: " + controllerVisaoSimples.naoVisaoSimples,
+                text: 'Multifocal: ' + controllerMultifocal.naoMultifocal,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.SizedBox(width: 20.00),
+            pw.Paragraph(
+                text: 'Bifocal: ' + controllerBifocal.naoBifocal,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
           ]),
-          pw.Paragraph(
-              text: 'Multifocal: ' + controllerMultifocal.naoMultifocal,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text: 'Bifocal: ' + controllerBifocal.naoBifocal,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.SizedBox(
-            height: 20.0,
-          ),
+          pw.SizedBox(height: 20.0),
           pw.Row(children: [
             pw.Paragraph(
                 text: "Incolor: " + controllerIncolor.naoIncolor,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
+            pw.SizedBox(width: 20.00),
+            pw.Paragraph(
+                text: 'Anti-Reflexo: ' + controllerAR.naoAR,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.SizedBox(width: 20.00),
+            pw.Paragraph(
+                text: 'Fotossensível: ' + controllerFoto.naoFoto,
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
           ]),
-          pw.Paragraph(
-              text: 'Anti-Reflexo: ' + controllerAR.naoAR,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
-          pw.Paragraph(
-              text: 'Fotossensível: ' + controllerFoto.naoFoto,
-              style: pw.TextStyle(
-                fontSize: 25.0,
-              )),
+          pw.SizedBox(height: 40),
           pw.Row(children: [
             pw.Paragraph(
                 text: "Observações:",
@@ -314,11 +288,34 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
           ]),
           pw.Row(children: [
             pw.Paragraph(
-                text: _controllerObsercacoes.text,
+                text: _controllerObservacoes.text,
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
           ]),
+          pw.Column(children: [
+            pw.SizedBox(
+              height: 20.0,
+            ),
+            pw.Paragraph(
+                text:
+                    "1- É normal nos primeiros dias sentir tonteira, cefaléia, náuseas, ver desníveis no chão ou em escadas.",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.Paragraph(
+                text:
+                    "2- Para Multifocal ou Bifocal a adaptação poderá velar de 7 a 15 dias, podendo ter os mesmos sintomas acima.",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+            pw.Paragraph(
+                text:
+                    "3- Um exame de vista é sempre oportuno antes de seu filho começar a estudar.",
+                style: pw.TextStyle(
+                  fontSize: 25.0,
+                )),
+          ])
         ];
       },
     ));
@@ -896,28 +893,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
-                              'Visão Simples:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: controllerVisaoSimples
-                                    .estaselecionadoVisaoSimples,
-                                onChanged: (bool valor) {
-                                  setState(() {
-                                    controllerVisaoSimples
-                                        .funcionVisaoSimplesCheckbox();
-                                    controllerVisaoSimples
-                                        .estaselecionadoVisaoSimples = valor;
-                                  });
-                                }),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            Text(
                               'Multifocal:',
                               style: TextStyle(
                                   fontFamily: 'Varela',
@@ -1010,7 +985,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                           fontSize: 15.0,
                                           color: Colors.black),
                                     ),
-                                    controller: _controllerObsercacoes),
+                                    controller: _controllerObservacoes),
                               ),
                             ),
                           ),
