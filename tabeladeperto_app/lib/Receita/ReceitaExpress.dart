@@ -752,6 +752,27 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Miopia:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                activeColor: Colors.black,
+                                value: controllerMiopia.estaselecionadoMiopia,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerMiopia.funcionMiopiaCheckbox();
+                                    controllerMiopia.estaselecionadoMiopia =
+                                        valor;
+                                  });
+                                }),
+                            Padding(
                                 padding: EdgeInsets.only(top: 10.0, left: 5.0)),
                             Text(
                               'Hipermetropia:',
@@ -762,6 +783,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerHipermetropia.estaselecionado,
                                 onChanged: (bool valor) {
                                   setState(() {
@@ -771,53 +793,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                         valor;
                                   });
                                 }),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 32.0)),
-                            Text(
-                              'Miopia:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: controllerMiopia.estaselecionadoMiopia,
-                                onChanged: (bool valor) {
-                                  setState(() {
-                                    controllerMiopia.funcionMiopiaCheckbox();
-                                    controllerMiopia.estaselecionadoMiopia =
-                                        valor;
-                                  });
-                                }),
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 32.0)),
-                            Text(
-                              'A.R:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: controllerAR.estaselecionadoAr,
-                                onChanged: (bool valor) {
-                                  setState(() {
-                                    controllerAR.funcionARCheckbox();
-                                    controllerAR.estaselecionadoAr = valor;
-                                  });
-                                }),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
                             Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
@@ -830,6 +805,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerAstigmatismo
                                     .estaselecionadoAstigmatismo,
                                 onChanged: (bool valor) {
@@ -840,6 +816,14 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                         .estaselecionadoAstigmatismo = valor;
                                   });
                                 }),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
                             Padding(
                                 padding: EdgeInsets.only(top: 10.0, left: 8.0)),
                             Text(
@@ -851,6 +835,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerPresbiopia
                                     .estaselecionadoPresbiopia,
                                 onChanged: (bool valor) {
@@ -865,34 +850,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
                             Text(
-                              'Incolor:',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: controllerIncolor.estaselecionadoIncolor,
-                                onChanged: (bool valor) {
-                                  setState(() {
-                                    controllerIncolor.funcionIncolorCheckbox();
-                                    controllerIncolor.estaselecionadoIncolor =
-                                        valor;
-                                  });
-                                }),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                                padding:
-                                    EdgeInsets.only(top: 10.0, left: 10.0)),
-                            Text(
                               'Multifocal:',
                               style: TextStyle(
                                   fontFamily: 'Varela',
@@ -901,6 +858,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerMultifocal
                                     .estaselecionadoMultifocal,
                                 onChanged: (bool valor) {
@@ -923,6 +881,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerBifocal.estaselecionadoBifocal,
                                 onChanged: (bool valor) {
                                   setState(() {
@@ -933,12 +892,51 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                 }),
                           ],
                         ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        SizedBox(height: 20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 10.0)),
+                            Text(
+                              'Incolor:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                activeColor: Colors.black,
+                                value: controllerIncolor.estaselecionadoIncolor,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerIncolor.funcionIncolorCheckbox();
+                                    controllerIncolor.estaselecionadoIncolor =
+                                        valor;
+                                  });
+                                }),
+                            Padding(
+                                padding:
+                                    EdgeInsets.only(top: 10.0, left: 32.0)),
+                            Text(
+                              'A.R:',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                            Checkbox(
+                                activeColor: Colors.black,
+                                value: controllerAR.estaselecionadoAr,
+                                onChanged: (bool valor) {
+                                  setState(() {
+                                    controllerAR.funcionARCheckbox();
+                                    controllerAR.estaselecionadoAr = valor;
+                                  });
+                                }),
                             Padding(
                                 padding:
                                     EdgeInsets.only(top: 10.0, left: 10.0)),
@@ -951,6 +949,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                   color: Colors.black),
                             ),
                             Checkbox(
+                                activeColor: Colors.black,
                                 value: controllerFoto.estaselecionadoFoto,
                                 onChanged: (bool valor) {
                                   setState(() {
