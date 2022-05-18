@@ -119,6 +119,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   bool _isButtonDisabled = true;
 
   final pdf = pw.Document();
+
   writeOnPdf() {
     pdf.addPage(pw.MultiPage(
       pageFormat: PdfPageFormat.a3,
@@ -315,7 +316,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                 style: pw.TextStyle(
                   fontSize: 25.0,
                 )),
-          ])
+          ]),
         ];
       },
     ));
