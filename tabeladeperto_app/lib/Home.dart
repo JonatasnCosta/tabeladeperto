@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/AreaPix.dart';
+import 'package:tabeladeperto_app/Pix/AreaPix.dart';
 import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
 import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
 import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
