@@ -29,7 +29,7 @@ class Menu extends StatelessWidget {
           ),
           Padding(
               padding: EdgeInsets.only(left: 90.0),
-              child: Text('Versão 2.0.0',
+              child: Text('Versão 4.0.0',
                   style: TextStyle(
                       fontFamily: 'Varela',
                       fontSize: 20.0,

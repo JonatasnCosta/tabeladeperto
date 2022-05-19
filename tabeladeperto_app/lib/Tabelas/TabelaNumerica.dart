@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/Menu.dart';
+import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
@@ -80,7 +80,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela Numérica',
+                  child: Text('Tabela numérica',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,

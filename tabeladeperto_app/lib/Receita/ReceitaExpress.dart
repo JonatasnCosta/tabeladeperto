@@ -117,9 +117,7 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
   var _currentItemSelectedADD = '  0.00';
 
   bool _isButtonDisabled = true;
-
   final pdf = pw.Document();
-
   writeOnPdf() {
     pdf.addPage(pw.MultiPage(
       pageFormat: PdfPageFormat.a3,
