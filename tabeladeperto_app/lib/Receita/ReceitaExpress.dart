@@ -1079,7 +1079,6 @@ class _ReceitaExpressState extends State<ReceitaExpress> {
                                     builder: (context) => Home()));
                               }),
                         ),
-                        SizedBox(height: 20.0)
                       ],
                     ),
                   )),
