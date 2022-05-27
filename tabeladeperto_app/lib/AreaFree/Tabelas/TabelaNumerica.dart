@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
-class TabelaPortugues extends StatefulWidget {
+class TabelaNumerica extends StatefulWidget {
   final assetPath, cookiename;
-  TabelaPortugues({this.assetPath, this.cookiename});
+  TabelaNumerica({this.assetPath, this.cookiename});
   @override
-  _TabelaPortuguesState createState() => _TabelaPortuguesState();
+  _TabelaNumericaState createState() => _TabelaNumericaState();
 }
 
-class _TabelaPortuguesState extends State<TabelaPortugues> {
+class _TabelaNumericaState extends State<TabelaNumerica> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
-    keywords: <String>['Credit', 'Lawyer'],
+    keywords: <String>['Mortgage', 'Attorney'],
   );
 
   BannerAd _bannerAd;
@@ -81,7 +80,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela de frases em português',
+                  child: Text('Tabela numérica',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,
@@ -102,9 +101,8 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "Suas lentes\n"
-                                  "tem correção,\n"
-                                  "cuide bem delas.\n",
+                                  "    8  4  6  2\n"
+                                  "    2  3  5  9   \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 22.0
                                       //Tamanho fonte J6
@@ -114,6 +112,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
+              // fonte J6
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -125,20 +124,22 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                     Container(
                         width: 250.0,
                         child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                  "Oferecem visão nítida\n"
-                                  "e transições suaves.\n",
-                                  style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 18.0
-                                      //Tamanho fonte J5
-                                      )),
-                              Text('J5',
-                                  style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 21.0))
-                            ]))
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                                "      6  8  3  2 \n"
+                                "      5  2  7  9  \n",
+                                style: TextStyle(
+                                    fontFamily: ('Varela'), fontSize: 18.0
+                                    //Tamanho fonte J5
+                                    )),
+                            Text('J5',
+                                style: TextStyle(
+                                    fontFamily: ('Varela'), fontSize: 21.0))
+                          ],
+                        ))
                   ]),
+              // fonte J5
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -153,18 +154,19 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "Consulte as condições\n"
-                                  "e coberturas da garantia\n"
-                                  "das suas lentes.\n",
-                                  style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 14.0
-                                      //Tamanho fonte J4
-                                      )),
+                                "          8  5  4  9\n"
+                                "          6  2  8  3\n",
+                                style: TextStyle(
+                                    fontFamily: ('Varela'), fontSize: 14.0
+                                    //Tamanho fonte J4
+                                    ),
+                              ),
                               Text('J4',
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
+              // fonte J4
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -179,10 +181,8 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  " As revolucionárias lentes\n"
-                                  " reinventam a visão\n"
-                                  "de perto para\n"
-                                  " pessoas com mais de 40 anos.\n",
+                                  "         2  8  3  4  6  \n"
+                                  "         6  9  2  5  2 \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 13.0
                                       //Tamanho fonte J3
@@ -192,8 +192,9 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
+              // fonte J3
               Padding(
-                  padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0)),
+                  padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -206,9 +207,8 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  " As pessoas estão\n"
-                                  " o tempo inteiro entre \n"
-                                  " computador, tablet e smartphone.\n",
+                                  "          4  2  8  3  9\n"
+                                  "          9  5  3  8  2 \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 12.0
                                       //Tamanho fonte J2
@@ -218,8 +218,9 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
+              // fonte J2
               Padding(
-                  padding: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0)),
+                  padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -232,9 +233,8 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "Essas lentes são para você,\n"
-                                  "além de estar de acordo\n"
-                                  " com algo mais refinado.\n",
+                                  "          6  2  3  9  6  4\n"
+                                  "          9  3  4  7  5  8 \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 11.0
                                       // Tamanho da fonte J1
@@ -242,6 +242,7 @@ class _TabelaPortuguesState extends State<TabelaPortugues> {
                               Text('J1',
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 21.0))
+                              // fonte J1
                             ]))
                   ]),
               Padding(padding: EdgeInsets.only(bottom: 200.0))

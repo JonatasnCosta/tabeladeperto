@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Pix/AreaPix.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
-import 'package:tabeladeperto_app/Menus/MenuLenteContato.dart';
-import 'package:tabeladeperto_app/Menus/MenuTabelasLeitura.dart';
-import 'package:tabeladeperto_app/Menus/MenuTabelasRefracao.dart';
-import 'package:tabeladeperto_app/Menus/MenuTestes.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/Menus/MenuLenteContato.dart';
+import 'package:tabeladeperto_app/AreaFree/Menus/MenuTabelasLeitura.dart';
+import 'package:tabeladeperto_app/AreaFree/Menus/MenuTabelasRefracao.dart';
+import 'package:tabeladeperto_app/AreaFree/Menus/MenuTestes.dart';
+import 'package:tabeladeperto_app/AreaFree/Pix/AreaPix.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -105,8 +105,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               width: double.infinity,
               child: TabBarView(controller: _tabController, children: <Widget>[
                 MenuTabelasLeitura(),
-                MenuTabelasRefracao(),
                 MenuLenteContato(),
+                MenuTabelasRefracao(),
                 MenuTestes()
               ]))
         ]));

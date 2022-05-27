@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
-class TabelaAmplitude extends StatefulWidget {
+class TabelaAcomodacao extends StatefulWidget {
   final assetPath, cookiename;
-  TabelaAmplitude({this.assetPath, this.cookiename});
+  TabelaAcomodacao({this.assetPath, this.cookiename});
   @override
-  _TabelaAmplitudeState createState() => _TabelaAmplitudeState();
+  _TabelaAcomodacaoState createState() => _TabelaAcomodacaoState();
 }
 
-class _TabelaAmplitudeState extends State<TabelaAmplitude> {
+class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
@@ -80,7 +80,7 @@ class _TabelaAmplitudeState extends State<TabelaAmplitude> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela de Amplitude de Acc',
+                  child: Text('Tabela de Acomodação - Emétrope',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,
@@ -98,14 +98,16 @@ class _TabelaAmplitudeState extends State<TabelaAmplitude> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                            'Idade                    AA\n'
-                            '  5                          18\n'
-                            '  10                        14\n'
-                            '  18                        12\n'
-                            '  30                         6\n'
-                            '  40                         4\n'
-                            '  50                         1\n'
-                            '  60                        0,50\n',
+                            'Distância                 ACC(D)s\n'
+                            '  6 m                           0,16\n'
+                            '  3 m                           0,33\n'
+                            '  1 m                           1,00\n'
+                            ' 50 cm                        2,00\n'
+                            ' 40 cm                        2,50\n'
+                            ' 33 cm                        3,00\n'
+                            ' 20 cm                        5,00\n'
+                            ' 10 cm                       10,00\n'
+                            '   5 cm                       20,00\n',
                             style: TextStyle(
                                 fontFamily: ('Varela'), fontSize: 21.0))
                       ])),

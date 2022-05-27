@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Teste/Ishihara.dart';
-import 'package:tabeladeperto_app/Receita/ReceitaExpress.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaAcomodacao.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaAdicao.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaAmplitude.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaDinamicaCC.dart';
 
-class MenuTestes extends StatelessWidget {
+class MenuTabelasRefracao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,26 +22,26 @@ class MenuTestes extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    ishiharabuildCard('Teste de Ishihara', 'assets/figura1.png',
+                    dinamicabuildCard('Dinamica 40 cm', 'assets/dinamica.png',
                         false, context),
-                    receitaexpressbuildCard('Receita Express',
-                        'assets/logoreceitaexpress.png', false, context),
-                    desenvolvimento_1buildCard('Em desenvolvimento',
-                        'assets/emdesenvolvimento.png', false, context),
-                    desenvolvimento_2buildCard('Em desenvolvimento',
-                        'assets/emdesenvolvimento.png', false, context)
+                    adicaobuildCard('Tabela de Adição', 'assets/adicao.jpg',
+                        false, context),
+                    amplitudebuildCard('Amplitude de ACC',
+                        'assets/convergencia.png', false, context),
+                    acomodacaobuildCard(
+                        'Acomodação', 'assets/acomodacao.jpg', false, context)
                   ]))
         ]));
   }
 
-  Widget ishiharabuildCard(String name, String imgPath, bool added, context) {
+  Widget dinamicabuildCard(String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) =>
-                      Ishihara(cookiename: name, assetPath: imgPath)));
+                      TabelaDinamicaCC(cookiename: name, assetPath: imgPath)));
             },
             child: Container(
                 decoration: BoxDecoration(
@@ -76,14 +78,14 @@ class MenuTestes extends StatelessWidget {
   }
 }
 
-Widget receitaexpressbuildCard(
-    String name_1, String imgPath_1, bool added, context) {
+Widget adicaobuildCard(String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
           onTap: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => ReceitaExpress()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) =>
+                    TabelaAdicao(cookiename: name_1, assetPath: imgPath_1)));
           },
           child: Container(
               decoration: BoxDecoration(
@@ -119,12 +121,16 @@ Widget receitaexpressbuildCard(
               ]))));
 }
 
-Widget desenvolvimento_1buildCard(
+Widget amplitudebuildCard(
     String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) =>
+                    TabelaAmplitude(cookiename: name_3, assetPath: imgPath_3)));
+          },
           child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
@@ -159,12 +165,16 @@ Widget desenvolvimento_1buildCard(
               ]))));
 }
 
-Widget desenvolvimento_2buildCard(
+Widget acomodacaobuildCard(
     String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => TabelaAcomodacao(
+                    cookiename: name_4, assetPath: imgPath_4)));
+          },
           child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),

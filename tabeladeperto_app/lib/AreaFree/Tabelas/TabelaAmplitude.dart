@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
-class TabelaDinamicaCC extends StatefulWidget {
+class TabelaAmplitude extends StatefulWidget {
   final assetPath, cookiename;
-  TabelaDinamicaCC({this.assetPath, this.cookiename});
+  TabelaAmplitude({this.assetPath, this.cookiename});
   @override
-  _TabelaDinamicaCCState createState() => _TabelaDinamicaCCState();
+  _TabelaAmplitudeState createState() => _TabelaAmplitudeState();
 }
 
-class _TabelaDinamicaCCState extends State<TabelaDinamicaCC> {
+class _TabelaAmplitudeState extends State<TabelaAmplitude> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
@@ -49,30 +49,29 @@ class _TabelaDinamicaCCState extends State<TabelaDinamicaCC> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-          centerTitle: true,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-          title: Text(
-            "Optical tabelas",
-            style: TextStyle(
-                fontFamily: 'Varela', fontSize: 20.0, color: Color(0xff545d68)),
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
+            backgroundColor: Colors.white,
+            elevation: 0.0,
+            centerTitle: true,
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Menu()));
+                Navigator.of(context).pop();
               },
-            )
-          ],
-        ),
+            ),
+            title: Text("Optical tabelas",
+                style: TextStyle(
+                    fontFamily: 'Varela',
+                    fontSize: 20.0,
+                    color: Color(0xff545d68))),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Menu()));
+                },
+              )
+            ]),
         body: ListView(
             padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
             children: <Widget>[
@@ -81,7 +80,7 @@ class _TabelaDinamicaCCState extends State<TabelaDinamicaCC> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela Dinâmica 40 cm',
+                  child: Text('Tabela de Amplitude de Acc',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,
@@ -99,15 +98,14 @@ class _TabelaDinamicaCCState extends State<TabelaDinamicaCC> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                            '     Idade                        Adição\n'
-                            'Até40 Anos                  -1,25\n'
-                            '41-44 Anos                  -1,50\n'
-                            '45-49 Anos                  -1,75\n'
-                            '50-54 Anos                  -2,00\n'
-                            '55-59 Anos                  -2,25\n'
-                            '60-64 Anos                  -2,50\n'
-                            '65-69 Anos                  -2,75\n'
-                            '  +70   Anos                  -3,00\n',
+                            'Idade                    AA\n'
+                            '  5                          18\n'
+                            '  10                        14\n'
+                            '  18                        12\n'
+                            '  30                         6\n'
+                            '  40                         4\n'
+                            '  50                         1\n'
+                            '  60                        0,50\n',
                             style: TextStyle(
                                 fontFamily: ('Varela'), fontSize: 21.0))
                       ])),

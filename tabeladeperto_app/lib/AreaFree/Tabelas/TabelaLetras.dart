@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
-class TabelaNumerica extends StatefulWidget {
+class TabelaLetras extends StatefulWidget {
   final assetPath, cookiename;
-  TabelaNumerica({this.assetPath, this.cookiename});
+  TabelaLetras({this.assetPath, this.cookiename});
   @override
-  _TabelaNumericaState createState() => _TabelaNumericaState();
+  _TabelaLetrasState createState() => _TabelaLetrasState();
 }
 
-class _TabelaNumericaState extends State<TabelaNumerica> {
+class _TabelaLetrasState extends State<TabelaLetras> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
-    keywords: <String>['Mortgage', 'Attorney'],
+    keywords: <String>['Donate', 'Degree'],
   );
 
   BannerAd _bannerAd;
@@ -49,29 +49,30 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-            centerTitle: true,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          title: Text(
+            "Optical tabelas",
+            style: TextStyle(
+                fontFamily: 'Varela', fontSize: 20.0, color: Color(0xff545d68)),
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Menu()));
               },
             ),
-            title: Text("Optical tabelas",
-                style: TextStyle(
-                    fontFamily: 'Varela',
-                    fontSize: 20.0,
-                    color: Color(0xff545d68))),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Menu()));
-                },
-              )
-            ]),
+          ],
+        ),
         body: ListView(
             padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
             children: <Widget>[
@@ -80,7 +81,7 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela numérica',
+                  child: Text('Tabela de Letras',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,
@@ -95,24 +96,28 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                     Text('1,25m',
                         style:
                             TextStyle(fontFamily: ('Varela'), fontSize: 21.0)),
-                    Container(
-                        width: 250.0,
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                  "    8  4  6  2\n"
-                                  "    2  3  5  9   \n",
+                    Padding(
+                      padding: EdgeInsets.only(left: 5.0),
+                      child: Container(
+                          width: 250.0,
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                    "C  O  H  Z  V  L  G\n"
+                                    "S  Z  N  D  C  J  X \n",
+                                    style: TextStyle(
+                                        fontFamily: ('Varela'), fontSize: 22.0
+                                        //Tamanho fonte J6
+                                        )),
+                                Text(
+                                  'J6',
                                   style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 22.0
-                                      //Tamanho fonte J6
-                                      )),
-                              Text('J6',
-                                  style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 21.0))
-                            ]))
+                                      fontFamily: ('Varela'), fontSize: 21.0),
+                                )
+                              ])),
+                    )
                   ]),
-              // fonte J6
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -124,22 +129,20 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                     Container(
                         width: 250.0,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text(
-                                "      6  8  3  2 \n"
-                                "      5  2  7  9  \n",
-                                style: TextStyle(
-                                    fontFamily: ('Varela'), fontSize: 18.0
-                                    //Tamanho fonte J5
-                                    )),
-                            Text('J5',
-                                style: TextStyle(
-                                    fontFamily: ('Varela'), fontSize: 21.0))
-                          ],
-                        ))
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text(
+                                  "  K  C  N  R  D  B  S \n"
+                                  "  V  O  Y  W  S  J  L  \n",
+                                  style: TextStyle(
+                                      fontFamily: ('Varela'), fontSize: 18.0
+                                      //Tamanho fonte J5
+                                      )),
+                              Text('J5',
+                                  style: TextStyle(
+                                      fontFamily: ('Varela'), fontSize: 21.0))
+                            ]))
                   ]),
-              // fonte J5
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -154,8 +157,8 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                "          8  5  4  9\n"
-                                "          6  2  8  3\n",
+                                "     M  N  Q  O  W  M\n"
+                                "     L  D  S  A  N  Z  X \n",
                                 style: TextStyle(
                                     fontFamily: ('Varela'), fontSize: 14.0
                                     //Tamanho fonte J4
@@ -166,7 +169,6 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
-              // fonte J4
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -181,8 +183,8 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "         2  8  3  4  6  \n"
-                                  "         6  9  2  5  2 \n",
+                                  "       B  M  N  Q  O  W  \n"
+                                  "       F  C  L  D  S  A  N \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 13.0
                                       //Tamanho fonte J3
@@ -192,7 +194,6 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
-              // fonte J3
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -207,8 +208,8 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "          4  2  8  3  9\n"
-                                  "          9  5  3  8  2 \n",
+                                  "        S  C  O  A  Q  V  P\n"
+                                  "        Z  X  L  D  G  H  C\n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 12.0
                                       //Tamanho fonte J2
@@ -218,7 +219,6 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                                       fontFamily: ('Varela'), fontSize: 21.0))
                             ]))
                   ]),
-              // fonte J2
               Padding(
                   padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0)),
               Row(
@@ -233,16 +233,17 @@ class _TabelaNumericaState extends State<TabelaNumerica> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                  "          6  2  3  9  6  4\n"
-                                  "          9  3  4  7  5  8 \n",
+                                  "           X  V  T  D  A  P  S  \n"
+                                  "           L  R  S  F  Q  L  E  \n",
                                   style: TextStyle(
                                       fontFamily: ('Varela'), fontSize: 11.0
-                                      // Tamanho da fonte J1
+                                      //Tamanho fonte J1
                                       )),
-                              Text('J1',
-                                  style: TextStyle(
-                                      fontFamily: ('Varela'), fontSize: 21.0))
-                              // fonte J1
+                              Text(
+                                'J1',
+                                style: TextStyle(
+                                    fontFamily: ('Varela'), fontSize: 21.0),
+                              )
                             ]))
                   ]),
               Padding(padding: EdgeInsets.only(bottom: 200.0))

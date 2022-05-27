@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
-import 'package:tabeladeperto_app/MenuInformacoes/Menu.dart';
+import 'package:tabeladeperto_app/AreaFree/MenuInformacoes/Menu.dart';
 
 const String testDevice = 'Mobile_id';
 
-class TabelaAcomodacao extends StatefulWidget {
+class TabelaDinamicaCC extends StatefulWidget {
   final assetPath, cookiename;
-  TabelaAcomodacao({this.assetPath, this.cookiename});
+  TabelaDinamicaCC({this.assetPath, this.cookiename});
   @override
-  _TabelaAcomodacaoState createState() => _TabelaAcomodacaoState();
+  _TabelaDinamicaCCState createState() => _TabelaDinamicaCCState();
 }
 
-class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
+class _TabelaDinamicaCCState extends State<TabelaDinamicaCC> {
   static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
     testDevices: testDevice != null ? <String>[testDevice] : null,
     nonPersonalizedAds: true,
@@ -49,29 +49,30 @@ class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-            centerTitle: true,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Color(0xff545d68)),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          title: Text(
+            "Optical tabelas",
+            style: TextStyle(
+                fontFamily: 'Varela', fontSize: 20.0, color: Color(0xff545d68)),
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Menu()));
               },
-            ),
-            title: Text("Optical tabelas",
-                style: TextStyle(
-                    fontFamily: 'Varela',
-                    fontSize: 20.0,
-                    color: Color(0xff545d68))),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.more_vert, color: Color(0xff545d68)),
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Menu()));
-                },
-              )
-            ]),
+            )
+          ],
+        ),
         body: ListView(
             padding: EdgeInsets.only(left: 15.0, top: 20.0, right: 15.0),
             children: <Widget>[
@@ -80,7 +81,7 @@ class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
               ),
               Padding(
                   padding: EdgeInsets.only(left: 20.0),
-                  child: Text('Tabela de Acomodação - Emétrope',
+                  child: Text('Tabela Dinâmica 40 cm',
                       style: TextStyle(
                           fontFamily: 'Varela',
                           fontSize: 20.0,
@@ -98,16 +99,15 @@ class _TabelaAcomodacaoState extends State<TabelaAcomodacao> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                            'Distância                 ACC(D)s\n'
-                            '  6 m                           0,16\n'
-                            '  3 m                           0,33\n'
-                            '  1 m                           1,00\n'
-                            ' 50 cm                        2,00\n'
-                            ' 40 cm                        2,50\n'
-                            ' 33 cm                        3,00\n'
-                            ' 20 cm                        5,00\n'
-                            ' 10 cm                       10,00\n'
-                            '   5 cm                       20,00\n',
+                            '     Idade                        Adição\n'
+                            'Até40 Anos                  -1,25\n'
+                            '41-44 Anos                  -1,50\n'
+                            '45-49 Anos                  -1,75\n'
+                            '50-54 Anos                  -2,00\n'
+                            '55-59 Anos                  -2,25\n'
+                            '60-64 Anos                  -2,50\n'
+                            '65-69 Anos                  -2,75\n'
+                            '  +70   Anos                  -3,00\n',
                             style: TextStyle(
                                 fontFamily: ('Varela'), fontSize: 21.0))
                       ])),

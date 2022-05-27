@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaIngles.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaLetras.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaNumerica.dart';
-import 'package:tabeladeperto_app/Tabelas/TabelaPortugues.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaConversaoDiopitrias.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaDistanciaNegativa.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaDistanciaPositiva.dart';
+import 'package:tabeladeperto_app/AreaFree/Tabelas/TabelaLenteContato.dart';
 
-class MenuTabelasLeitura extends StatelessWidget {
+class MenuLenteContato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,26 +22,26 @@ class MenuTabelasLeitura extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    letrasbuildCard(
-                        'Letras', 'assets/letras.jpg', false, context),
-                    numericabuildCard(
-                        'Numérica', 'assets/numerica.jpg', false, context),
-                    portuguesbuildCard('Frases Português',
-                        'assets/portugues.jpg', false, context),
-                    inglesbuildCard(
-                        'Frases Inglês', 'assets/ingles.jpg', false, context)
+                    ditanciapositivabuildCard('Distância-Vértice +',
+                        'assets/lente_3.jpg', false, context),
+                    distancianegativabuildCard('Distância-Vértice - ',
+                        'assets/lente_2.jpg', false, context),
+                    conversaobuildCard('Conversão Dioptrias ',
+                        'assets/conversao.jpg', false, context),
+                    lentecontatobuildCard('Lente de Contato',
+                        'assets/lentedecontato.png', false, context)
                   ]))
         ]));
   }
 
-  Widget letrasbuildCard(String name, String imgPath, bool added, context) {
+  Widget ditanciapositivabuildCard(
+      String name, String imgPath, bool added, context) {
     return Padding(
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) =>
-                      TabelaLetras(cookiename: name, assetPath: imgPath)));
+                  builder: (context) => TabelaDistanciaPositiva()));
             },
             child: Container(
                 decoration: BoxDecoration(
@@ -54,6 +54,11 @@ class MenuTabelasLeitura extends StatelessWidget {
                     ],
                     color: Colors.white),
                 child: Column(children: <Widget>[
+                  Padding(
+                      padding: EdgeInsets.all(5.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                      )),
                   Container(
                       height: 120.0,
                       width: 100.0,
@@ -62,7 +67,7 @@ class MenuTabelasLeitura extends StatelessWidget {
                               image: AssetImage(imgPath),
                               fit: BoxFit.contain))),
                   SizedBox(
-                    height: 20.0,
+                    height: 7.0,
                   ),
                   Text(name,
                       style: TextStyle(
@@ -73,58 +78,59 @@ class MenuTabelasLeitura extends StatelessWidget {
   }
 }
 
-Widget numericabuildCard(String name_1, String imgPath_1, bool added, context) {
+Widget distancianegativabuildCard(
+    String name_1, String imgPath_1, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) =>
-                    TabelaNumerica(cookiename: name_1, assetPath: imgPath_1)));
+                builder: (context) => TabelaDistanciaNegativa(
+                    cookiename: name_1, assetPath: imgPath_1)));
           },
           child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 3.0,
-                      blurRadius: 5.0)
-                ],
-                color: Colors.white),
-            child: Column(children: <Widget>[
-              Padding(
-                  padding: EdgeInsets.all(5.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                  )),
-              Container(
-                  height: 120.0,
-                  width: 100.0,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(imgPath_1), fit: BoxFit.contain))),
-              SizedBox(
-                height: 13.0,
-              ),
-              Text(name_1,
-                  style: TextStyle(
-                      fontFamily: 'Varela',
-                      fontSize: 14.0,
-                      color: Color(0xff575e67)))
-            ]),
-          )));
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 3.0,
+                        blurRadius: 5.0)
+                  ],
+                  color: Colors.white),
+              child: Column(children: <Widget>[
+                Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    )),
+                Container(
+                    height: 120.0,
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(imgPath_1),
+                            fit: BoxFit.contain))),
+                SizedBox(
+                  height: 7.0,
+                ),
+                Text(name_1,
+                    style: TextStyle(
+                        fontFamily: 'Varela',
+                        fontSize: 14.0,
+                        color: Color(0xff575e67)))
+              ]))));
 }
 
-Widget portuguesbuildCard(
+Widget conversaobuildCard(
     String name_3, String imgPath_3, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) =>
-                    TabelaPortugues(cookiename: name_3, assetPath: imgPath_3)));
+                builder: (context) => TabelaConversaoDiopitrias(
+                    cookiename: name_3, assetPath: imgPath_3)));
           },
           child: Container(
               decoration: BoxDecoration(
@@ -160,14 +166,15 @@ Widget portuguesbuildCard(
               ]))));
 }
 
-Widget inglesbuildCard(String name_4, String imgPath_4, bool added, context) {
+Widget lentecontatobuildCard(
+    String name_4, String imgPath_4, bool added, context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) =>
-                    TabelaIngles(cookiename: name_4, assetPath: imgPath_4)));
+                builder: (context) => TabelaLenteContato(
+                    cookiename: name_4, assetPath: imgPath_4)));
           },
           child: Container(
               decoration: BoxDecoration(
@@ -193,7 +200,7 @@ Widget inglesbuildCard(String name_4, String imgPath_4, bool added, context) {
                             image: AssetImage(imgPath_4),
                             fit: BoxFit.contain))),
                 SizedBox(
-                  height: 5.0,
+                  height: 3.0,
                 ),
                 Text(name_4,
                     style: TextStyle(

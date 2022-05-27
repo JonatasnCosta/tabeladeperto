@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tabeladeperto_app/HomePageFree/HomePagerFree.dart';
+import 'package:tabeladeperto_app/AreaFree/HomePageFree/HomePagerFree.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AreaPix extends StatefulWidget {
