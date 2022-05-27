@@ -15,3 +15,4 @@ void main() {
 //Criado o ponto para integrar admob
 //Criado o ponto para integrar a opcao de receita
 //Criado ponto de integração para refatorar a receita
+//Ponto de integração para receber opção paga
